@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "gLTXlAl9anni/+/DwyhuoyR/KrnbNbTTMr85UwFOYm8M6K15t5qWjBb6RMwyA9Y41WiZxl65oc/ibc8SXPH2EQ==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\Restaurant\\Restaurant-Menu\\RestaurantMenu\\Service\\Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
