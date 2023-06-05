@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MUYM3n3s1e9gAzIM1c9I9uRnwDfEoLat77q1REDg9m3kFELQwP1Ernf3rLPKwJUMTUyKSkKMWM6OLlLo+Zmdzw==",
+  "dgSpecHash": "LFUhTT5DODn4gBCvRDziQp4wrX0uVvLX28jqYBBe15SuPtPvVJcUubLdNBtJSqCZKaW04+NJiuDKSexGofNhJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Programmer\\Source\\Repos\\Restaurant-Menu\\RestaurantMenu\\UI\\UI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\C#\\Restaurant\\Restaurant-Menu\\RestaurantMenu\\UI\\UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Kodi\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\6.0.16\\microsoft.netcore.app.host.win-x86.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
