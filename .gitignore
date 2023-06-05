@@ -262,7 +262,7 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
+#*.mdf
 *.ldf
 *.ndf
 
@@ -396,3 +396,31 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+RestaurantMenu/.vs/ProjectEvaluation/restaurantmenu.metadata.v6.1
+RestaurantMenu/.vs/ProjectEvaluation/restaurantmenu.projects.v6.1
+RestaurantMenu/.vs/RestaurantMenu/DesignTimeBuild/.dtbcache.v2
+RestaurantMenu/.vs/RestaurantMenu/v17/.futdcache.v2
+RestaurantMenu/.vs/RestaurantMenu/v17/.suo
+RestaurantMenu/Data/Restaurant.mdf
+RestaurantMenu/Repository/obj/Debug/net6.0-windows/Repository.assets.cache
+RestaurantMenu/Repository/obj/Debug/net6.0-windows/Repository.csproj.AssemblyReference.cache
+RestaurantMenu/Repository/obj/Debug/net6.0-windows/Repository.GeneratedMSBuildEditorConfig.editorconfig
+RestaurantMenu/Repository/obj/project.assets.json
+RestaurantMenu/Repository/obj/project.nuget.cache
+RestaurantMenu/Repository/obj/Repository.csproj.nuget.dgspec.json
+RestaurantMenu/Repository/obj/Repository.csproj.nuget.g.props
+RestaurantMenu/Service/obj/Debug/net6.0-windows/Service.assets.cache
+RestaurantMenu/Service/obj/Debug/net6.0-windows/Service.csproj.AssemblyReference.cache
+RestaurantMenu/Service/obj/Debug/net6.0-windows/Service.GeneratedMSBuildEditorConfig.editorconfig
+RestaurantMenu/Service/obj/project.assets.json
+RestaurantMenu/Service/obj/project.nuget.cache
+RestaurantMenu/Service/obj/Service.csproj.nuget.dgspec.json
+RestaurantMenu/Service/obj/Service.csproj.nuget.g.props
+RestaurantMenu/UI/obj/Debug/net6.0-windows/UI.assets.cache
+RestaurantMenu/UI/obj/Debug/net6.0-windows/UI.csproj.AssemblyReference.cache
+RestaurantMenu/UI/obj/Debug/net6.0-windows/UI.designer.runtimeconfig.json
+RestaurantMenu/UI/obj/Debug/net6.0-windows/UI.GeneratedMSBuildEditorConfig.editorconfig
+RestaurantMenu/UI/obj/project.assets.json
+RestaurantMenu/UI/obj/project.nuget.cache
+RestaurantMenu/UI/obj/UI.csproj.nuget.dgspec.json
+RestaurantMenu/UI/obj/UI.csproj.nuget.g.props
