@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PanelMenu = new System.Windows.Forms.Panel();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.Btn4 = new System.Windows.Forms.Button();
-            this.Btn3 = new System.Windows.Forms.Button();
-            this.Btn2 = new System.Windows.Forms.Button();
-            this.Btn1 = new System.Windows.Forms.Button();
-            this.PanelLogo = new System.Windows.Forms.Panel();
             this.PanelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
@@ -61,12 +54,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.PanelMenu.SuspendLayout();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.PanelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.Btn1 = new System.Windows.Forms.Button();
+            this.Btn2 = new System.Windows.Forms.Button();
+            this.Btn3 = new System.Windows.Forms.Button();
+            this.Btn4 = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.PanelLogo = new System.Windows.Forms.Panel();
             this.PanelTitleBar.SuspendLayout();
             this.PanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,129 +69,9 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PanelMenu
-            // 
-            this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(252)))));
-            this.PanelMenu.Controls.Add(this.BtnExit);
-            this.PanelMenu.Controls.Add(this.Btn4);
-            this.PanelMenu.Controls.Add(this.Btn3);
-            this.PanelMenu.Controls.Add(this.Btn2);
-            this.PanelMenu.Controls.Add(this.Btn1);
-            this.PanelMenu.Controls.Add(this.PanelLogo);
-            this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelMenu.Location = new System.Drawing.Point(817, 0);
-            this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(175, 510);
-            this.PanelMenu.TabIndex = 0;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnExit.ForeColor = System.Drawing.Color.Black;
-            this.BtnExit.Image = global::UI.Properties.Resources.icons8_close_window_40px;
-            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(0, 320);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnExit.Size = new System.Drawing.Size(175, 60);
-            this.BtnExit.TabIndex = 5;
-            this.BtnExit.Text = "خروج";
-            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // Btn4
-            // 
-            this.Btn4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn4.FlatAppearance.BorderSize = 0;
-            this.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn4.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn4.ForeColor = System.Drawing.Color.Black;
-            this.Btn4.Image = global::UI.Properties.Resources.ifood_40px;
-            this.Btn4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn4.Location = new System.Drawing.Point(0, 260);
-            this.Btn4.Name = "Btn4";
-            this.Btn4.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.Btn4.Size = new System.Drawing.Size(175, 60);
-            this.Btn4.TabIndex = 4;
-            this.Btn4.Text = "رستوران 4";
-            this.Btn4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn4.UseVisualStyleBackColor = true;
-            // 
-            // Btn3
-            // 
-            this.Btn3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn3.FlatAppearance.BorderSize = 0;
-            this.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn3.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn3.ForeColor = System.Drawing.Color.Black;
-            this.Btn3.Image = global::UI.Properties.Resources.ifood_40px;
-            this.Btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn3.Location = new System.Drawing.Point(0, 200);
-            this.Btn3.Name = "Btn3";
-            this.Btn3.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.Btn3.Size = new System.Drawing.Size(175, 60);
-            this.Btn3.TabIndex = 3;
-            this.Btn3.Text = "رستوران 3";
-            this.Btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn3.UseVisualStyleBackColor = true;
-            // 
-            // Btn2
-            // 
-            this.Btn2.BackColor = System.Drawing.Color.Coral;
-            this.Btn2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn2.FlatAppearance.BorderSize = 0;
-            this.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn2.Font = new System.Drawing.Font("B Zar", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn2.ForeColor = System.Drawing.Color.Black;
-            this.Btn2.Image = global::UI.Properties.Resources.ifood_40px;
-            this.Btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn2.Location = new System.Drawing.Point(0, 140);
-            this.Btn2.Name = "Btn2";
-            this.Btn2.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.Btn2.Size = new System.Drawing.Size(175, 60);
-            this.Btn2.TabIndex = 2;
-            this.Btn2.Text = "رستوران 2";
-            this.Btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn2.UseVisualStyleBackColor = false;
-            // 
-            // Btn1
-            // 
-            this.Btn1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn1.FlatAppearance.BorderSize = 0;
-            this.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn1.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn1.ForeColor = System.Drawing.Color.Black;
-            this.Btn1.Image = global::UI.Properties.Resources.ifood_40px;
-            this.Btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn1.Location = new System.Drawing.Point(0, 80);
-            this.Btn1.Name = "Btn1";
-            this.Btn1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.Btn1.Size = new System.Drawing.Size(175, 60);
-            this.Btn1.TabIndex = 1;
-            this.Btn1.Text = "رستوران 1";
-            this.Btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn1.UseVisualStyleBackColor = true;
-            // 
-            // PanelLogo
-            // 
-            this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(244)))), ((int)(((byte)(170)))));
-            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(175, 80);
-            this.PanelLogo.TabIndex = 0;
             // 
             // PanelTitleBar
             // 
@@ -205,7 +80,7 @@
             this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.PanelTitleBar.Name = "PanelTitleBar";
-            this.PanelTitleBar.Size = new System.Drawing.Size(817, 80);
+            this.PanelTitleBar.Size = new System.Drawing.Size(814, 80);
             this.PanelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -216,7 +91,7 @@
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(817, 80);
+            this.lblTitle.Size = new System.Drawing.Size(814, 80);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "دسته بندی ها و غذاها";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,7 +104,7 @@
             this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelMain.Location = new System.Drawing.Point(0, 80);
             this.PanelMain.Name = "PanelMain";
-            this.PanelMain.Size = new System.Drawing.Size(817, 430);
+            this.PanelMain.Size = new System.Drawing.Size(814, 430);
             this.PanelMain.TabIndex = 2;
             // 
             // dataGridView1
@@ -248,7 +123,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(445, 323);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 323);
             this.dataGridView1.TabIndex = 1;
             // 
             // FoodId
@@ -290,7 +165,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 323);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(445, 107);
+            this.panel2.Size = new System.Drawing.Size(442, 107);
             this.panel2.TabIndex = 2;
             // 
             // label12
@@ -340,7 +215,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(445, 46);
+            this.panel3.Size = new System.Drawing.Size(442, 46);
             this.panel3.TabIndex = 0;
             // 
             // button4
@@ -382,9 +257,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.flowLayoutPanel2);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(445, 0);
+            this.panel1.Location = new System.Drawing.Point(442, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 430);
             this.panel1.TabIndex = 0;
@@ -398,9 +272,9 @@
             this.flowLayoutPanel2.Controls.Add(this.label9);
             this.flowLayoutPanel2.Controls.Add(this.label8);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(372, 330);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(372, 430);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label5
@@ -493,77 +367,134 @@
             this.label8.Text = "کباب لقمه";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel1
+            // panel4
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.label3);
-            this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(372, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.panel4.Controls.Add(this.PanelMenu);
+            this.panel4.Controls.Add(this.PanelLogo);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(814, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(178, 510);
+            this.panel4.TabIndex = 7;
             // 
-            // label1
+            // PanelMenu
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(254, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(5);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(5);
-            this.label1.Size = new System.Drawing.Size(113, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "نوشیدنی ها";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(252)))));
+            this.PanelMenu.Controls.Add(this.Btn1);
+            this.PanelMenu.Controls.Add(this.Btn2);
+            this.PanelMenu.Controls.Add(this.Btn3);
+            this.PanelMenu.Controls.Add(this.Btn4);
+            this.PanelMenu.Controls.Add(this.BtnExit);
+            this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelMenu.Location = new System.Drawing.Point(0, 80);
+            this.PanelMenu.Name = "PanelMenu";
+            this.PanelMenu.Size = new System.Drawing.Size(178, 430);
+            this.PanelMenu.TabIndex = 3;
             // 
-            // label2
+            // Btn1
             // 
-            this.label2.BackColor = System.Drawing.Color.Goldenrod;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(131, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(5);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(5);
-            this.label2.Size = new System.Drawing.Size(113, 40);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "فست فود";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Btn1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn1.FlatAppearance.BorderSize = 0;
+            this.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn1.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn1.ForeColor = System.Drawing.Color.Black;
+            this.Btn1.Image = global::UI.Properties.Resources.ifood_40px;
+            this.Btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn1.Location = new System.Drawing.Point(0, 3);
+            this.Btn1.Name = "Btn1";
+            this.Btn1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.Btn1.Size = new System.Drawing.Size(175, 60);
+            this.Btn1.TabIndex = 6;
+            this.Btn1.Text = "رستوران 1";
+            this.Btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn1.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // Btn2
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(8, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(5);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(5);
-            this.label3.Size = new System.Drawing.Size(113, 40);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "محلی";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Btn2.BackColor = System.Drawing.Color.Coral;
+            this.Btn2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn2.FlatAppearance.BorderSize = 0;
+            this.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn2.Font = new System.Drawing.Font("B Zar", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn2.ForeColor = System.Drawing.Color.Black;
+            this.Btn2.Image = global::UI.Properties.Resources.ifood_40px;
+            this.Btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn2.Location = new System.Drawing.Point(0, 69);
+            this.Btn2.Name = "Btn2";
+            this.Btn2.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.Btn2.Size = new System.Drawing.Size(175, 60);
+            this.Btn2.TabIndex = 12;
+            this.Btn2.Text = "رستوران 2";
+            this.Btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn2.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // Btn3
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(254, 55);
-            this.label4.Margin = new System.Windows.Forms.Padding(5);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(5);
-            this.label4.Size = new System.Drawing.Size(113, 40);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "شیرینی";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Btn3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn3.FlatAppearance.BorderSize = 0;
+            this.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn3.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn3.ForeColor = System.Drawing.Color.Black;
+            this.Btn3.Image = global::UI.Properties.Resources.ifood_40px;
+            this.Btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn3.Location = new System.Drawing.Point(0, 135);
+            this.Btn3.Name = "Btn3";
+            this.Btn3.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.Btn3.Size = new System.Drawing.Size(175, 60);
+            this.Btn3.TabIndex = 13;
+            this.Btn3.Text = "رستوران 3";
+            this.Btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn3.UseVisualStyleBackColor = true;
+            // 
+            // Btn4
+            // 
+            this.Btn4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn4.FlatAppearance.BorderSize = 0;
+            this.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn4.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn4.ForeColor = System.Drawing.Color.Black;
+            this.Btn4.Image = global::UI.Properties.Resources.ifood_40px;
+            this.Btn4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn4.Location = new System.Drawing.Point(0, 201);
+            this.Btn4.Name = "Btn4";
+            this.Btn4.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.Btn4.Size = new System.Drawing.Size(175, 60);
+            this.Btn4.TabIndex = 14;
+            this.Btn4.Text = "رستوران 4";
+            this.Btn4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn4.UseVisualStyleBackColor = true;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnExit.ForeColor = System.Drawing.Color.Black;
+            this.BtnExit.Image = global::UI.Properties.Resources.icons8_close_window_40px;
+            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.Location = new System.Drawing.Point(0, 267);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.BtnExit.Size = new System.Drawing.Size(175, 60);
+            this.BtnExit.TabIndex = 15;
+            this.BtnExit.Text = "خروج";
+            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            // 
+            // PanelLogo
+            // 
+            this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(244)))), ((int)(((byte)(170)))));
+            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
+            this.PanelLogo.Name = "PanelLogo";
+            this.PanelLogo.Size = new System.Drawing.Size(178, 80);
+            this.PanelLogo.TabIndex = 2;
             // 
             // MainUserForm
             // 
@@ -572,7 +503,7 @@
             this.ClientSize = new System.Drawing.Size(992, 510);
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelTitleBar);
-            this.Controls.Add(this.PanelMenu);
+            this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("B Zar", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -580,7 +511,7 @@
             this.Name = "MainUserForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.PanelMenu.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.MainUserForm_Load);
             this.PanelTitleBar.ResumeLayout(false);
             this.PanelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -588,29 +519,17 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.PanelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PanelMenu;
-        private System.Windows.Forms.Button Btn1;
-        private System.Windows.Forms.Panel PanelLogo;
         private System.Windows.Forms.Panel PanelTitleBar;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel PanelMain;
-        private Button BtnExit;
-        private Button Btn4;
-        private Button Btn3;
-        private Button Btn2;
         private Panel panel1;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
         private FlowLayoutPanel flowLayoutPanel2;
         private Label label5;
         private Label label6;
@@ -633,5 +552,13 @@
         private Button button5;
         private Label label12;
         private Label label11;
+        private Panel panel4;
+        private Panel PanelLogo;
+        private FlowLayoutPanel PanelMenu;
+        private Button Btn1;
+        private Button Btn2;
+        private Button Btn3;
+        private Button Btn4;
+        private Button BtnExit;
     }
 }

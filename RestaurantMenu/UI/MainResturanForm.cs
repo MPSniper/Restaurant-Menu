@@ -17,11 +17,6 @@ namespace UI
             InitializeComponent();
         }
 
-        private void BtnCategory_Click(object sender, EventArgs e)
-        {
-            new CategoriesForm().ShowDialog();
-        }
-
         private void BtnFoods_Click(object sender, EventArgs e)
         {
             new FoodsForm().ShowDialog();

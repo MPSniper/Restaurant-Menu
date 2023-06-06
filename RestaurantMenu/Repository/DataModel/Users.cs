@@ -13,7 +13,10 @@ namespace Repository.DataModel
         ConnectToDB connect = new ConnectToDB();
         string userName, userFamily, userNation, userAddress;
 
+        public Users()
+        {
 
+        }
 
         public Users(string userName, string userFamily, string userNation, string userAddress)
         {
@@ -53,6 +56,33 @@ namespace Repository.DataModel
                     MessageBox.Show("Error");
                     return -1;
                 }
+            }
+        }
+
+        public int Login(string nationalCode, string password)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(ConnectToDB.strConnString);
+                con.Open();
+                SqlCommand command = new SqlCommand("select ID From User_Table Where NationalCode = @nationalCode and [Password] = @pass", con);
+                command.Parameters.AddWithValue("@nationalCode", nationalCode);
+                command.Parameters.AddWithValue("@pass", password);
+                int id = 0;
+                try
+                {
+                    id = Convert.ToInt32(command.ExecuteScalar());
+                }
+                catch
+                {
+                    id = 0;
+                }
+                return id;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "خطا در ارتباط با دیتابیس", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
             }
         }
     }

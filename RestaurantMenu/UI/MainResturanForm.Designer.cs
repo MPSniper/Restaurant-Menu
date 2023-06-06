@@ -32,7 +32,6 @@
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnFactors = new System.Windows.Forms.Button();
             this.BtnFoods = new System.Windows.Forms.Button();
-            this.BtnCategory = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.PanelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@
             this.PanelMenu.Controls.Add(this.BtnExit);
             this.PanelMenu.Controls.Add(this.BtnFactors);
             this.PanelMenu.Controls.Add(this.BtnFoods);
-            this.PanelMenu.Controls.Add(this.BtnCategory);
             this.PanelMenu.Controls.Add(this.PanelLogo);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanelMenu.Location = new System.Drawing.Point(894, 0);
@@ -64,7 +62,7 @@
             this.BtnExit.ForeColor = System.Drawing.Color.Black;
             this.BtnExit.Image = global::UI.Properties.Resources.icons8_close_window_40px;
             this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(0, 260);
+            this.BtnExit.Location = new System.Drawing.Point(0, 200);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.BtnExit.Size = new System.Drawing.Size(220, 60);
@@ -84,7 +82,7 @@
             this.BtnFactors.ForeColor = System.Drawing.Color.Black;
             this.BtnFactors.Image = global::UI.Properties.Resources.arabic_book_40px;
             this.BtnFactors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFactors.Location = new System.Drawing.Point(0, 200);
+            this.BtnFactors.Location = new System.Drawing.Point(0, 140);
             this.BtnFactors.Name = "BtnFactors";
             this.BtnFactors.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.BtnFactors.Size = new System.Drawing.Size(220, 60);
@@ -97,6 +95,7 @@
             // 
             // BtnFoods
             // 
+            this.BtnFoods.BackColor = System.Drawing.Color.Coral;
             this.BtnFoods.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnFoods.FlatAppearance.BorderSize = 0;
             this.BtnFoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,7 +103,7 @@
             this.BtnFoods.ForeColor = System.Drawing.Color.Black;
             this.BtnFoods.Image = global::UI.Properties.Resources.food_cart_40px;
             this.BtnFoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFoods.Location = new System.Drawing.Point(0, 140);
+            this.BtnFoods.Location = new System.Drawing.Point(0, 80);
             this.BtnFoods.Name = "BtnFoods";
             this.BtnFoods.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.BtnFoods.Size = new System.Drawing.Size(220, 60);
@@ -112,29 +111,8 @@
             this.BtnFoods.Text = "محصولات";
             this.BtnFoods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFoods.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnFoods.UseVisualStyleBackColor = true;
+            this.BtnFoods.UseVisualStyleBackColor = false;
             this.BtnFoods.Click += new System.EventHandler(this.BtnFoods_Click);
-            // 
-            // BtnCategory
-            // 
-            this.BtnCategory.BackColor = System.Drawing.Color.Coral;
-            this.BtnCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCategory.FlatAppearance.BorderSize = 0;
-            this.BtnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCategory.Font = new System.Drawing.Font("B Zar", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnCategory.ForeColor = System.Drawing.Color.Black;
-            this.BtnCategory.Image = global::UI.Properties.Resources.home_40px;
-            this.BtnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategory.Location = new System.Drawing.Point(0, 80);
-            this.BtnCategory.Name = "BtnCategory";
-            this.BtnCategory.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnCategory.Size = new System.Drawing.Size(220, 60);
-            this.BtnCategory.TabIndex = 2;
-            this.BtnCategory.Text = "دسته بندی ها";
-            this.BtnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnCategory.UseVisualStyleBackColor = false;
-            this.BtnCategory.Click += new System.EventHandler(this.BtnCategory_Click);
             // 
             // PanelLogo
             // 
@@ -207,6 +185,5 @@
         private Button BtnExit;
         private Button BtnFactors;
         private Button BtnFoods;
-        private Button BtnCategory;
     }
 }

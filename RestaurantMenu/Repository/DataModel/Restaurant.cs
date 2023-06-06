@@ -11,9 +11,13 @@ namespace Repository.DataModel
     public class Restaurant
     {
         ConnectToDB connect = new ConnectToDB();
-        string RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress;
+        public string RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress;
+        public int Id;
 
+        public Restaurant()
+        {
 
+        }
 
         public Restaurant(string RestaurantName, string OwnerName, string strStartTime,string strEndTime, string ResAddress)
         {
@@ -56,6 +60,34 @@ namespace Repository.DataModel
                     MessageBox.Show("Error");
                     return -1;
                 }
+            }
+        }
+
+        public List<Restaurant> GetRestaurants()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(ConnectToDB.strConnString);
+                con.Open();
+                SqlCommand command = new SqlCommand("Select * from Restaurant_Table", con);
+                List<Restaurant> result = new List<Restaurant>();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Restaurant res = new Restaurant();
+                        res.Id = Convert.ToInt32(reader["Id"].ToString());
+                        res.RestaurantName = reader["RestaurantName"].ToString();
+                        result.Add(res);
+                    }
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "خطا در ارتباط با دیتابیس", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Restaurant>();
             }
         }
     }
