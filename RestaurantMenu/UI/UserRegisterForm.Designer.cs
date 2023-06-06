@@ -166,6 +166,7 @@
             label4.TabIndex = 1;
             label4.Text = "آدرس : ";
             label4.TextAlign = ContentAlignment.MiddleCenter;
+            label4.Click += label4_Click;
             // 
             // label3
             // 
