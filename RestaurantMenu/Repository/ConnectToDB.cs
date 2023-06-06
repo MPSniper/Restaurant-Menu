@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Repository.DataModel
+namespace Repository
 {
     public class ConnectToDB
     {
