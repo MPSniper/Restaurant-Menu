@@ -61,11 +61,71 @@ namespace UI
             PanelMenu.Controls.Add(BtnExit);
         }
 
-        private void BtnResturan_Click(object? sender, EventArgs e)
+        private void AddFoods(int resturanId)
         {
+            PanelFoods.Controls.Clear();
+            Foods foods = new Foods();
+            foreach (var item in foods.GetResturanFoods(resturanId))
+            {
+                Label foodsLabel = new Label();
+                foodsLabel.BackColor = SystemColors.ScrollBar;
+                foodsLabel.BorderStyle = BorderStyle.FixedSingle;
+                foodsLabel.Cursor = Cursors.Hand;
+                foodsLabel.Padding = new Padding(5);
+                foodsLabel.Margin = new Padding(5);
+                foodsLabel.Size = new Size(113, 40);
+                foodsLabel.Text = item.Food;
+                foodsLabel.Tag = item;
+                foodsLabel.TextAlign = ContentAlignment.MiddleCenter;
+                foodsLabel.Click += FoodsLabel_Click;
+                foodsLabel.MouseHover += FoodsLabel_MouseHover;
+                PanelFoods.Controls.Add(foodsLabel);
+            }
+        }
+
+        private void FoodsLabel_MouseHover(object? sender, EventArgs e)
+        {
+            var foodLabel = sender as Label;
+            if (foodLabel is null)
+                return;
+            Foods? food = foodLabel.Tag as Foods;
+            if (food is null)
+                return;
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(foodLabel, food.Price.ToString());
         }
 
         #endregion
+
+        private void FoodsLabel_Click(object? sender, EventArgs e)
+        {
+        }
+
+        private void BtnResturan_Click(object? sender, EventArgs e)
+        {
+            var resturanButton = sender as Button;
+            if (resturanButton is null)
+                return;
+            int id = Convert.ToInt32(resturanButton.Tag);
+            AddFoods(id);
+            foreach (var item in PanelMenu.Controls)
+            {
+                if (item is Button)
+                {
+                    var btn = item as Button;
+                    if (btn is null)
+                        return;
+                    if (btn.Tag == resturanButton.Tag)
+                    {
+                        btn.BackColor = Color.Coral;
+                    }
+                    else
+                    {
+                        btn.BackColor = Color.FromArgb(252, 194, 252);
+                    }
+                }
+            }
+        }
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
@@ -75,6 +135,7 @@ namespace UI
         private void MainUserForm_Load(object sender, EventArgs e)
         {
             AddResturant();
+            AddFoods(0);
         }
     }
 }

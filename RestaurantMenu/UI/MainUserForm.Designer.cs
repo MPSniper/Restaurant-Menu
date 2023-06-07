@@ -47,7 +47,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.PanelFoods = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.PanelFoods.SuspendLayout();
             this.panel4.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -256,26 +256,26 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.flowLayoutPanel2);
+            this.panel1.Controls.Add(this.PanelFoods);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(442, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 430);
             this.panel1.TabIndex = 0;
             // 
-            // flowLayoutPanel2
+            // PanelFoods
             // 
-            this.flowLayoutPanel2.Controls.Add(this.label5);
-            this.flowLayoutPanel2.Controls.Add(this.label6);
-            this.flowLayoutPanel2.Controls.Add(this.label7);
-            this.flowLayoutPanel2.Controls.Add(this.label10);
-            this.flowLayoutPanel2.Controls.Add(this.label9);
-            this.flowLayoutPanel2.Controls.Add(this.label8);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(372, 430);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.PanelFoods.Controls.Add(this.label5);
+            this.PanelFoods.Controls.Add(this.label6);
+            this.PanelFoods.Controls.Add(this.label7);
+            this.PanelFoods.Controls.Add(this.label10);
+            this.PanelFoods.Controls.Add(this.label9);
+            this.PanelFoods.Controls.Add(this.label8);
+            this.PanelFoods.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelFoods.Location = new System.Drawing.Point(0, 0);
+            this.PanelFoods.Name = "PanelFoods";
+            this.PanelFoods.Size = new System.Drawing.Size(372, 430);
+            this.PanelFoods.TabIndex = 1;
             // 
             // label5
             // 
@@ -518,7 +518,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.PanelFoods.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.PanelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -530,7 +530,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel PanelMain;
         private Panel panel1;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel PanelFoods;
         private Label label5;
         private Label label6;
         private Label label7;
