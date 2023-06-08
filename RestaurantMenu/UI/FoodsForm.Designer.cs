@@ -33,30 +33,21 @@
             this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsDeleted = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.TxtPrice = new System.Windows.Forms.NumericUpDown();
-            this.CmbCategory = new System.Windows.Forms.ComboBox();
             this.BtnAddOrEdit = new System.Windows.Forms.Button();
             this.BtnCancell = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.BtnDisableAndEnable = new System.Windows.Forms.Button();
+            this.BtnDeleteFood = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TxtNameSearch = new System.Windows.Forms.TextBox();
             this.TxtPriceSearch = new System.Windows.Forms.NumericUpDown();
-            this.CmbCategorySearch = new System.Windows.Forms.ComboBox();
-            this.CmbStatusSearch = new System.Windows.Forms.ComboBox();
             this.BtnAll = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).BeginInit();
@@ -85,10 +76,7 @@
             this.DataFoods.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FoodId,
             this.FoodName,
-            this.FoodPrice,
-            this.FoodCategory,
-            this.IsDeleted,
-            this.CreationDate});
+            this.FoodPrice});
             this.DataFoods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataFoods.Location = new System.Drawing.Point(0, 0);
             this.DataFoods.Name = "DataFoods";
@@ -97,6 +85,7 @@
             this.DataFoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataFoods.Size = new System.Drawing.Size(894, 331);
             this.DataFoods.TabIndex = 0;
+            this.DataFoods.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataFoods_CellClick);
             // 
             // FoodId
             // 
@@ -116,24 +105,6 @@
             this.FoodPrice.Name = "FoodPrice";
             this.FoodPrice.ReadOnly = true;
             // 
-            // FoodCategory
-            // 
-            this.FoodCategory.HeaderText = "دسته بندی محصول";
-            this.FoodCategory.Name = "FoodCategory";
-            this.FoodCategory.ReadOnly = true;
-            // 
-            // IsDeleted
-            // 
-            this.IsDeleted.HeaderText = "وضعیت";
-            this.IsDeleted.Name = "IsDeleted";
-            this.IsDeleted.ReadOnly = true;
-            // 
-            // CreationDate
-            // 
-            this.CreationDate.HeaderText = "تاریخ ایجاد";
-            this.CreationDate.Name = "CreationDate";
-            this.CreationDate.ReadOnly = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox2);
@@ -148,11 +119,9 @@
             // 
             this.groupBox2.Controls.Add(this.TxtName);
             this.groupBox2.Controls.Add(this.TxtPrice);
-            this.groupBox2.Controls.Add(this.CmbCategory);
             this.groupBox2.Controls.Add(this.BtnAddOrEdit);
             this.groupBox2.Controls.Add(this.BtnCancell);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.BtnDisableAndEnable);
+            this.groupBox2.Controls.Add(this.BtnDeleteFood);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -188,19 +157,6 @@
             this.TxtPrice.Size = new System.Drawing.Size(219, 32);
             this.TxtPrice.TabIndex = 22;
             // 
-            // CmbCategory
-            // 
-            this.CmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCategory.FormattingEnabled = true;
-            this.CmbCategory.Items.AddRange(new object[] {
-            "همه",
-            "فعال",
-            "غیرفعال"});
-            this.CmbCategory.Location = new System.Drawing.Point(147, 116);
-            this.CmbCategory.Name = "CmbCategory";
-            this.CmbCategory.Size = new System.Drawing.Size(219, 33);
-            this.CmbCategory.TabIndex = 21;
-            // 
             // BtnAddOrEdit
             // 
             this.BtnAddOrEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -211,7 +167,7 @@
             this.BtnAddOrEdit.ForeColor = System.Drawing.Color.Gainsboro;
             this.BtnAddOrEdit.Image = global::UI.Properties.Resources.add_32px;
             this.BtnAddOrEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAddOrEdit.Location = new System.Drawing.Point(3, 21);
+            this.BtnAddOrEdit.Location = new System.Drawing.Point(3, 27);
             this.BtnAddOrEdit.Name = "BtnAddOrEdit";
             this.BtnAddOrEdit.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.BtnAddOrEdit.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -219,6 +175,7 @@
             this.BtnAddOrEdit.TabIndex = 18;
             this.BtnAddOrEdit.Text = "افزودن";
             this.BtnAddOrEdit.UseVisualStyleBackColor = false;
+            this.BtnAddOrEdit.Click += new System.EventHandler(this.BtnAddOrEdit_Click);
             // 
             // BtnCancell
             // 
@@ -230,7 +187,7 @@
             this.BtnCancell.ForeColor = System.Drawing.Color.Gainsboro;
             this.BtnCancell.Image = global::UI.Properties.Resources.cancel_32px;
             this.BtnCancell.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancell.Location = new System.Drawing.Point(3, 113);
+            this.BtnCancell.Location = new System.Drawing.Point(3, 119);
             this.BtnCancell.Name = "BtnCancell";
             this.BtnCancell.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.BtnCancell.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -239,36 +196,28 @@
             this.BtnCancell.Text = "کنسل";
             this.BtnCancell.UseVisualStyleBackColor = false;
             this.BtnCancell.Visible = false;
+            this.BtnCancell.Click += new System.EventHandler(this.BtnCancell_Click);
             // 
-            // label7
+            // BtnDeleteFood
             // 
-            this.label7.Location = new System.Drawing.Point(372, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 32);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "دسته بندی : ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BtnDisableAndEnable
-            // 
-            this.BtnDisableAndEnable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDisableAndEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.BtnDisableAndEnable.FlatAppearance.BorderSize = 0;
-            this.BtnDisableAndEnable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDisableAndEnable.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnDisableAndEnable.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnDisableAndEnable.Image = global::UI.Properties.Resources.unavailable_32px;
-            this.BtnDisableAndEnable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnDisableAndEnable.Location = new System.Drawing.Point(3, 67);
-            this.BtnDisableAndEnable.Name = "BtnDisableAndEnable";
-            this.BtnDisableAndEnable.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnDisableAndEnable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnDisableAndEnable.Size = new System.Drawing.Size(135, 40);
-            this.BtnDisableAndEnable.TabIndex = 18;
-            this.BtnDisableAndEnable.Text = "فعال سازی";
-            this.BtnDisableAndEnable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDisableAndEnable.UseVisualStyleBackColor = false;
-            this.BtnDisableAndEnable.Visible = false;
+            this.BtnDeleteFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDeleteFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.BtnDeleteFood.FlatAppearance.BorderSize = 0;
+            this.BtnDeleteFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteFood.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnDeleteFood.ForeColor = System.Drawing.Color.Gainsboro;
+            this.BtnDeleteFood.Image = global::UI.Properties.Resources.unavailable_32px;
+            this.BtnDeleteFood.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnDeleteFood.Location = new System.Drawing.Point(3, 73);
+            this.BtnDeleteFood.Name = "BtnDeleteFood";
+            this.BtnDeleteFood.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.BtnDeleteFood.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnDeleteFood.Size = new System.Drawing.Size(135, 40);
+            this.BtnDeleteFood.TabIndex = 18;
+            this.BtnDeleteFood.Text = "حذف";
+            this.BtnDeleteFood.UseVisualStyleBackColor = false;
+            this.BtnDeleteFood.Visible = false;
+            this.BtnDeleteFood.Click += new System.EventHandler(this.BtnDeleteFood_Click);
             // 
             // label2
             // 
@@ -292,13 +241,9 @@
             // 
             this.groupBox1.Controls.Add(this.TxtNameSearch);
             this.groupBox1.Controls.Add(this.TxtPriceSearch);
-            this.groupBox1.Controls.Add(this.CmbCategorySearch);
-            this.groupBox1.Controls.Add(this.CmbStatusSearch);
             this.groupBox1.Controls.Add(this.BtnAll);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.BtnSearch);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(449, 0);
@@ -333,32 +278,6 @@
             this.TxtPriceSearch.Size = new System.Drawing.Size(129, 32);
             this.TxtPriceSearch.TabIndex = 22;
             // 
-            // CmbCategorySearch
-            // 
-            this.CmbCategorySearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCategorySearch.FormattingEnabled = true;
-            this.CmbCategorySearch.Items.AddRange(new object[] {
-            "همه",
-            "فعال",
-            "غیرفعال"});
-            this.CmbCategorySearch.Location = new System.Drawing.Point(229, 75);
-            this.CmbCategorySearch.Name = "CmbCategorySearch";
-            this.CmbCategorySearch.Size = new System.Drawing.Size(110, 33);
-            this.CmbCategorySearch.TabIndex = 21;
-            // 
-            // CmbStatusSearch
-            // 
-            this.CmbStatusSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbStatusSearch.FormattingEnabled = true;
-            this.CmbStatusSearch.Items.AddRange(new object[] {
-            "همه",
-            "فعال",
-            "غیرفعال"});
-            this.CmbStatusSearch.Location = new System.Drawing.Point(32, 73);
-            this.CmbStatusSearch.Name = "CmbStatusSearch";
-            this.CmbStatusSearch.Size = new System.Drawing.Size(129, 33);
-            this.CmbStatusSearch.TabIndex = 21;
-            // 
             // BtnAll
             // 
             this.BtnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
@@ -377,15 +296,7 @@
             this.BtnAll.Text = "مشاهده همه";
             this.BtnAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAll.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(345, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 32);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "دسته بندی : ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnAll.Click += new System.EventHandler(this.BtnAll_Click);
             // 
             // BtnSearch
             // 
@@ -405,6 +316,7 @@
             this.BtnSearch.Text = "جست و جو";
             this.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSearch.UseVisualStyleBackColor = false;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // label4
             // 
@@ -414,15 +326,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "قیمت : ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(167, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 32);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "وضعیت : ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -446,6 +349,7 @@
             this.Name = "FoodsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FoodsForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -465,31 +369,22 @@
         private System.Windows.Forms.DataGridView DataFoods;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnSearch;
-        private System.Windows.Forms.Button BtnDisableAndEnable;
         private System.Windows.Forms.Button BtnAddOrEdit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox CmbStatusSearch;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnCancell;
         private System.Windows.Forms.Button BtnAll;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsDeleted;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CreationDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown TxtPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown TxtPriceSearch;
-        private System.Windows.Forms.ComboBox CmbCategorySearch;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox CmbCategory;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.TextBox TxtNameSearch;
+        private DataGridViewTextBoxColumn FoodId;
+        private DataGridViewTextBoxColumn FoodName;
+        private DataGridViewTextBoxColumn FoodPrice;
+        private Button BtnDeleteFood;
     }
 }

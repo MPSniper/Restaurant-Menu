@@ -24,7 +24,10 @@
 
         private void BtnMainResturan_Click(object sender, EventArgs e)
         {
-            new MainResturanForm().ShowDialog();
+            new MainResturanForm()
+            {
+                ResturanKey = 1
+            }.ShowDialog();
         }
 
         private void BtnMainUser_Click(object sender, EventArgs e)

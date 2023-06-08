@@ -12,6 +12,8 @@ namespace UI
 {
     public partial class MainResturanForm : Form
     {
+        public int ResturanKey { get; set; }
+
         public MainResturanForm()
         {
             InitializeComponent();
@@ -19,7 +21,10 @@ namespace UI
 
         private void BtnFoods_Click(object sender, EventArgs e)
         {
-            new FoodsForm().ShowDialog();
+            new FoodsForm()
+            {
+                ResturanKey = ResturanKey,
+            }.ShowDialog();
         }
 
         private void BtnFactors_Click(object sender, EventArgs e)
