@@ -163,7 +163,7 @@
             this.ClientSize = new System.Drawing.Size(309, 369);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("B Zar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserLoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

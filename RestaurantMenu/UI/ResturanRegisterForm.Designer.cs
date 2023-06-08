@@ -28,251 +28,236 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panel2 = new Panel();
-            EndTime = new NumericUpDown();
-            StartTime = new NumericUpDown();
-            RestaurantBox = new TextBox();
-            AddressBox = new TextBox();
-            Owner = new TextBox();
-            BtnBack = new Label();
-            BtnLogin = new Label();
-            label1 = new Label();
-            label4 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label6 = new Label();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EndTime).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)StartTime).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.EndTime = new System.Windows.Forms.NumericUpDown();
+            this.StartTime = new System.Windows.Forms.NumericUpDown();
+            this.RestaurantBox = new System.Windows.Forms.TextBox();
+            this.AddressBox = new System.Windows.Forms.TextBox();
+            this.Owner = new System.Windows.Forms.TextBox();
+            this.BtnBack = new System.Windows.Forms.Label();
+            this.BtnLogin = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(label6);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.RightToLeft = RightToLeft.Yes;
-            panel1.Size = new Size(470, 345);
-            panel1.TabIndex = 20;
-            panel1.Paint += panel1_Paint;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.panel1.Size = new System.Drawing.Size(470, 345);
+            this.panel1.TabIndex = 20;
             // 
             // panel2
             // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(EndTime);
-            panel2.Controls.Add(StartTime);
-            panel2.Controls.Add(RestaurantBox);
-            panel2.Controls.Add(AddressBox);
-            panel2.Controls.Add(Owner);
-            panel2.Controls.Add(BtnBack);
-            panel2.Controls.Add(BtnLogin);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(3, 56);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(456, 282);
-            panel2.TabIndex = 3;
-            panel2.Paint += panel2_Paint;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.EndTime);
+            this.panel2.Controls.Add(this.StartTime);
+            this.panel2.Controls.Add(this.RestaurantBox);
+            this.panel2.Controls.Add(this.AddressBox);
+            this.panel2.Controls.Add(this.Owner);
+            this.panel2.Controls.Add(this.BtnBack);
+            this.panel2.Controls.Add(this.BtnLogin);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(3, 56);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(456, 282);
+            this.panel2.TabIndex = 3;
             // 
             // EndTime
             // 
-            EndTime.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            EndTime.Location = new Point(262, 219);
-            EndTime.Name = "EndTime";
-            EndTime.Size = new Size(44, 41);
-            EndTime.TabIndex = 3;
-            EndTime.ValueChanged += EndTime_ValueChanged;
+            this.EndTime.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EndTime.Location = new System.Drawing.Point(262, 219);
+            this.EndTime.Name = "EndTime";
+            this.EndTime.Size = new System.Drawing.Size(44, 41);
+            this.EndTime.TabIndex = 3;
             // 
             // StartTime
             // 
-            StartTime.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            StartTime.Location = new Point(358, 220);
-            StartTime.Name = "StartTime";
-            StartTime.Size = new Size(44, 41);
-            StartTime.TabIndex = 3;
-            StartTime.ValueChanged += StartTime_ValueChanged;
+            this.StartTime.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.StartTime.Location = new System.Drawing.Point(358, 220);
+            this.StartTime.Name = "StartTime";
+            this.StartTime.Size = new System.Drawing.Size(44, 41);
+            this.StartTime.TabIndex = 3;
             // 
             // RestaurantBox
             // 
-            RestaurantBox.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            RestaurantBox.Location = new Point(262, 47);
-            RestaurantBox.Name = "RestaurantBox";
-            RestaurantBox.Size = new Size(186, 41);
-            RestaurantBox.TabIndex = 2;
-            RestaurantBox.TextChanged += RestaurantName_TextChanged;
+            this.RestaurantBox.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RestaurantBox.Location = new System.Drawing.Point(262, 47);
+            this.RestaurantBox.Name = "RestaurantBox";
+            this.RestaurantBox.Size = new System.Drawing.Size(186, 41);
+            this.RestaurantBox.TabIndex = 2;
             // 
             // AddressBox
             // 
-            AddressBox.AcceptsReturn = true;
-            AddressBox.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            AddressBox.Location = new Point(3, 47);
-            AddressBox.Multiline = true;
-            AddressBox.Name = "AddressBox";
-            AddressBox.ScrollBars = ScrollBars.Vertical;
-            AddressBox.Size = new Size(243, 129);
-            AddressBox.TabIndex = 2;
-            AddressBox.TextChanged += Address_TextChanged;
+            this.AddressBox.AcceptsReturn = true;
+            this.AddressBox.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddressBox.Location = new System.Drawing.Point(3, 47);
+            this.AddressBox.Multiline = true;
+            this.AddressBox.Name = "AddressBox";
+            this.AddressBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.AddressBox.Size = new System.Drawing.Size(243, 129);
+            this.AddressBox.TabIndex = 2;
             // 
             // Owner
             // 
-            Owner.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Owner.Location = new Point(262, 135);
-            Owner.Name = "Owner";
-            Owner.Size = new Size(186, 41);
-            Owner.TabIndex = 2;
-            Owner.TextChanged += OwnerName_TextChanged;
+            this.Owner.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Owner.Location = new System.Drawing.Point(262, 135);
+            this.Owner.Name = "Owner";
+            this.Owner.Size = new System.Drawing.Size(186, 41);
+            this.Owner.TabIndex = 2;
             // 
             // BtnBack
             // 
-            BtnBack.BorderStyle = BorderStyle.FixedSingle;
-            BtnBack.Cursor = Cursors.Hand;
-            BtnBack.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnBack.Image = Properties.Resources.icons8_back_to_40px_1;
-            BtnBack.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnBack.Location = new Point(3, 233);
-            BtnBack.Name = "BtnBack";
-            BtnBack.Size = new Size(243, 43);
-            BtnBack.TabIndex = 0;
-            BtnBack.Text = "بازگشت";
-            BtnBack.TextAlign = ContentAlignment.MiddleCenter;
-            BtnBack.Click += BtnBack_Click;
+            this.BtnBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBack.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnBack.Image = global::UI.Properties.Resources.icons8_back_to_40px_1;
+            this.BtnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBack.Location = new System.Drawing.Point(3, 233);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(243, 43);
+            this.BtnBack.TabIndex = 0;
+            this.BtnBack.Text = "بازگشت";
+            this.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BtnLogin
             // 
-            BtnLogin.BorderStyle = BorderStyle.FixedSingle;
-            BtnLogin.Cursor = Cursors.Hand;
-            BtnLogin.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnLogin.Image = Properties.Resources.icons8_asian_street_food_40px;
-            BtnLogin.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLogin.Location = new Point(3, 180);
-            BtnLogin.Name = "BtnLogin";
-            BtnLogin.Size = new Size(243, 43);
-            BtnLogin.TabIndex = 0;
-            BtnLogin.Text = "ثبت اطلاعات";
-            BtnLogin.TextAlign = ContentAlignment.MiddleCenter;
-            BtnLogin.Click += BtnLogin_Click;
+            this.BtnLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLogin.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnLogin.Image = global::UI.Properties.Resources.icons8_asian_street_food_40px;
+            this.BtnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogin.Location = new System.Drawing.Point(3, 180);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(243, 43);
+            this.BtnLogin.TabIndex = 0;
+            this.BtnLogin.Text = "ثبت اطلاعات";
+            this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            label1.Cursor = Cursors.Hand;
-            label1.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ImageAlign = ContentAlignment.MiddleRight;
-            label1.Location = new Point(262, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(186, 41);
-            label1.TabIndex = 1;
-            label1.Text = "نام رستوران : ";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(262, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 41);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "نام رستوران : ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            label4.Cursor = Cursors.Hand;
-            label4.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ImageAlign = ContentAlignment.MiddleRight;
-            label4.Location = new Point(3, 3);
-            label4.Name = "label4";
-            label4.Size = new Size(243, 41);
-            label4.TabIndex = 1;
-            label4.Text = "آدرس : ";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            label4.Click += label4_Click;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(243, 41);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "آدرس : ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
-            label8.Cursor = Cursors.Hand;
-            label8.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ImageAlign = ContentAlignment.MiddleRight;
-            label8.Location = new Point(312, 219);
-            label8.Name = "label8";
-            label8.Size = new Size(40, 41);
-            label8.TabIndex = 1;
-            label8.Text = "تا : ";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            label8.Click += label8_Click;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(312, 219);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 41);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "تا : ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            label7.Cursor = Cursors.Hand;
-            label7.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ImageAlign = ContentAlignment.MiddleRight;
-            label7.Location = new Point(408, 220);
-            label7.Name = "label7";
-            label7.Size = new Size(40, 41);
-            label7.TabIndex = 1;
-            label7.Text = "از : ";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            label7.Click += label7_Click;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Location = new System.Drawing.Point(408, 220);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 41);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "از : ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            label3.Cursor = Cursors.Hand;
-            label3.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ImageAlign = ContentAlignment.MiddleRight;
-            label3.Location = new Point(262, 179);
-            label3.Name = "label3";
-            label3.Size = new Size(186, 41);
-            label3.TabIndex = 1;
-            label3.Text = "شیفت کاری : ";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(262, 179);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 41);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "شیفت کاری : ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ImageAlign = ContentAlignment.MiddleRight;
-            label2.Location = new Point(262, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(186, 41);
-            label2.TabIndex = 1;
-            label2.Text = "صاحب رستوران : ";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(262, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 41);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "صاحب رستوران : ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            label6.Cursor = Cursors.Hand;
-            label6.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ImageAlign = ContentAlignment.MiddleRight;
-            label6.Location = new Point(3, 12);
-            label6.Name = "label6";
-            label6.Size = new Size(456, 41);
-            label6.TabIndex = 1;
-            label6.Text = "اطلاعات رستوران";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            label6.Click += label6_Click;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(3, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(456, 41);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "اطلاعات رستوران";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ResturanRegisterForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 27F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources._45_;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(491, 369);
-            Controls.Add(panel1);
-            Font = new Font("B Zar", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "ResturanRegisterForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)EndTime).EndInit();
-            ((System.ComponentModel.ISupportInitialize)StartTime).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::UI.Properties.Resources._45_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(491, 369);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("B Zar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "ResturanRegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
