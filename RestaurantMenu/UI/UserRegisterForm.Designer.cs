@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.NameTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(456, 282);
             this.panel2.TabIndex = 3;
-=======
+
             panel1 = new Panel();
             panel2 = new Panel();
             PasswordTextBox = new TextBox();
@@ -128,7 +128,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(607, 352);
             panel2.TabIndex = 3;
->>>>>>> Stashed changes
+
             // 
             // PasswordTextBox
             // 
@@ -155,7 +155,7 @@
             // 
             // NameTextBox
             // 
-<<<<<<< Updated upstream
+
             this.NameTextBox.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NameTextBox.Location = new System.Drawing.Point(266, 47);
             this.NameTextBox.Name = "NameTextBox";
@@ -294,7 +294,6 @@
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
-=======
             NameTextBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             NameTextBox.Location = new Point(355, 59);
             NameTextBox.Margin = new Padding(4, 4, 4, 4);
@@ -453,7 +452,6 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
->>>>>>> Stashed changes
         }
 
         #endregion
