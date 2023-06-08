@@ -95,7 +95,7 @@
             // 
             // BtnFoods
             // 
-            this.BtnFoods.BackColor = System.Drawing.Color.Coral;
+            this.BtnFoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(252)))));
             this.BtnFoods.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnFoods.FlatAppearance.BorderSize = 0;
             this.BtnFoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

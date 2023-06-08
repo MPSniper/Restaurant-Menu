@@ -257,6 +257,7 @@
             this.Name = "FactorsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "مدیریت فاکتورها";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataFactors)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -30,9 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.DataFoods = new System.Windows.Forms.DataGridView();
-            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtName = new System.Windows.Forms.TextBox();
@@ -49,6 +46,9 @@
             this.BtnSearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).BeginInit();
             this.panel2.SuspendLayout();
@@ -86,24 +86,6 @@
             this.DataFoods.Size = new System.Drawing.Size(894, 331);
             this.DataFoods.TabIndex = 0;
             this.DataFoods.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataFoods_CellClick);
-            // 
-            // FoodId
-            // 
-            this.FoodId.HeaderText = "کد محصول";
-            this.FoodId.Name = "FoodId";
-            this.FoodId.ReadOnly = true;
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "نام محصول";
-            this.FoodName.Name = "FoodName";
-            this.FoodName.ReadOnly = true;
-            // 
-            // FoodPrice
-            // 
-            this.FoodPrice.HeaderText = "قیمت محصول";
-            this.FoodPrice.Name = "FoodPrice";
-            this.FoodPrice.ReadOnly = true;
             // 
             // panel2
             // 
@@ -336,6 +318,25 @@
             this.label3.Text = "نام : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // FoodId
+            // 
+            this.FoodId.HeaderText = "کد محصول";
+            this.FoodId.Name = "FoodId";
+            this.FoodId.ReadOnly = true;
+            this.FoodId.Visible = false;
+            // 
+            // FoodName
+            // 
+            this.FoodName.HeaderText = "نام محصول";
+            this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
+            // 
+            // FoodPrice
+            // 
+            this.FoodPrice.HeaderText = "قیمت محصول";
+            this.FoodPrice.Name = "FoodPrice";
+            this.FoodPrice.ReadOnly = true;
+            // 
             // FoodsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -349,6 +350,7 @@
             this.Name = "FoodsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "مدیریت محصولات";
             this.Load += new System.EventHandler(this.FoodsForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).EndInit();
@@ -382,9 +384,9 @@
         private System.Windows.Forms.NumericUpDown TxtPriceSearch;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.TextBox TxtNameSearch;
+        private Button BtnDeleteFood;
         private DataGridViewTextBoxColumn FoodId;
         private DataGridViewTextBoxColumn FoodName;
         private DataGridViewTextBoxColumn FoodPrice;
-        private Button BtnDeleteFood;
     }
 }
