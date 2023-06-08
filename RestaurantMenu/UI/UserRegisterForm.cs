@@ -23,8 +23,9 @@ namespace UI
             var userFamily = FamilyTextBox.Text;
             var userNation = NationalityTextBox.Text;
             var userAddress = AddressTextBox.Text;
+            var password = PasswordTextBox.Text;
 
-            Users userDataModel = new Users(userName, userFamily, userNation, userAddress);
+            Users userDataModel = new Users(userName, userFamily, userNation, userAddress, password);
 
             var flag = userDataModel.BtnLogin();
 
@@ -57,6 +58,16 @@ namespace UI
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }

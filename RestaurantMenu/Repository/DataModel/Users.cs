@@ -11,20 +11,21 @@ namespace Repository.DataModel
     public class Users
     {
         ConnectToDB connect = new ConnectToDB();
-        string userName, userFamily, userNation, userAddress;
+        string userName, userFamily, userNation, userAddress, password;
 
         public Users()
         {
 
         }
 
-        public Users(string userName, string userFamily, string userNation, string userAddress)
+        public Users(string userName, string userFamily, string userNation, string userAddress, string password)
         {
 
             this.userName = userName;
             this.userFamily = userFamily;
             this.userNation = userNation;
             this.userAddress = userAddress;
+            this.password = password;
 
         }
 
@@ -39,11 +40,13 @@ namespace Repository.DataModel
 
             else
             {
-                SqlCommand insertcommand = new SqlCommand("insert into User_Table(FirstName,LastName,NationalCode,Address) values(@userName,@userFamily,@userNation,@userAddress)");
+                SqlCommand insertcommand = new SqlCommand("insert into User_Table(FirstName,LastName,NationalCode,Address,Password) values(@userName,@userFamily,@userNation,@userAddress,@password)");
                 insertcommand.Parameters.AddWithValue("@username", userName);
                 insertcommand.Parameters.AddWithValue("@userFamily", userFamily);
                 insertcommand.Parameters.AddWithValue("@userNation", userNation);
                 insertcommand.Parameters.AddWithValue("@userAddress", userAddress);
+                insertcommand.Parameters.AddWithValue
+                ("@password", password);
                 var row = connect.ExecuteQuery(insertcommand);
 
                 if (row == 1)

@@ -8,18 +8,19 @@ namespace Repository
     {
         private static SqlConnection sqlConnection = new SqlConnection();
 
-        private static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
+        private static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
 
 
         public int ExecuteQuery(SqlCommand dbCommand)
         {
-            if (sqlConnection.State == 0)
+            
+            if (sqlConnection.State != 0)
+                MessageBox.Show("Connected.");
+            else if (sqlConnection.State == 0)
             {
-                MessageBox.Show("00");
+                MessageBox.Show("No Connection!!!");
                 CreateConnection();
             }
-            if (sqlConnection.State != 0)
-                MessageBox.Show("111");
 
             try
             {
