@@ -52,29 +52,27 @@ namespace UI
         private void BtnLogin_Click(object sender, EventArgs e)
         {
 
-
-
-            var RestaurantName = RestaurantBox.Text;
-            var OwnerName = Owner.Text;
+            var RestaurantName = RestaurantNameBox.Text;
+            var OwnerName = OwnerTextBox.Text;
 
             var decStartTime = StartTime.Value;
             TimeSpan ts1 = TimeSpan.FromHours((double)decStartTime);
             string strStartTime = ts1.ToString("h\\:mm");
+            //string strStartTime = "10:00:00";
             var decEndTime = EndTime.Value;
             TimeSpan ts2 = TimeSpan.FromHours((double)decEndTime);
             string strEndTime = ts2.ToString("h\\:mm");
-
+            //string strEndTime = "20:00:00";
             var ResAddress = AddressBox.Text;
+            var Password = PasswordBox.Text;
+            var NationalCode = NationalCodeBox.Text;
 
-            Restaurant restaurantDataModel = new Restaurant(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress);
-
+            Restaurant restaurantDataModel = new Restaurant(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, Password, NationalCode);
 
             var flag = restaurantDataModel.BtnLogin();
 
-
             if (flag == 1)
             {
-
                 this.Hide();
                 MainResturanForm mainResturanForm = new MainResturanForm();
                 mainResturanForm.Show();
@@ -107,6 +105,21 @@ namespace UI
 
         private void label2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void ResturanRegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
