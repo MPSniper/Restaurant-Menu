@@ -274,5 +274,38 @@ namespace UI
             }
             catch { }
         }
+
+        private void BtnDeleteRow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(DataCarts.SelectedRows[0].Cells[0].Value);
+                Cart.RemoveAll(x => x.FoodId == id);
+                DataCarts.Rows.RemoveAt(DataCarts.SelectedRows[0].Index);
+                ResetFoodsButton();
+                CalcCartSum();
+                if (Cart.Count == 0)
+                {
+                    PanelCartControls.Enabled = false;
+                    BtnPay.Enabled = false;
+                }
+                else
+                {
+                    PanelCartControls.Enabled = true;
+                    BtnPay.Enabled = true;
+                }
+            }
+            catch { }
+        }
+
+        private void BtnDeleteAllRow_Click(object sender, EventArgs e)
+        {
+            DataCarts.Rows.Clear();
+            Cart.Clear();
+            ResetFoodsButton();
+            CalcCartSum();
+            PanelCartControls.Enabled = false;
+            BtnPay.Enabled = false;
+        }
     }
 }

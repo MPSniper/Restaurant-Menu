@@ -228,6 +228,7 @@
             this.BtnDeleteAllRow.TabIndex = 0;
             this.BtnDeleteAllRow.Text = "حذف همه";
             this.BtnDeleteAllRow.UseVisualStyleBackColor = true;
+            this.BtnDeleteAllRow.Click += new System.EventHandler(this.BtnDeleteAllRow_Click);
             // 
             // BtnDeleteRow
             // 
@@ -237,6 +238,7 @@
             this.BtnDeleteRow.TabIndex = 0;
             this.BtnDeleteRow.Text = "حذف";
             this.BtnDeleteRow.UseVisualStyleBackColor = true;
+            this.BtnDeleteRow.Click += new System.EventHandler(this.BtnDeleteRow_Click);
             // 
             // BtnMinCount
             // 
