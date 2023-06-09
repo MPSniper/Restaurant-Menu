@@ -32,15 +32,20 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
             this.DataCarts = new System.Windows.Forms.DataGridView();
+            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SumPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LblCartSum = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.BtnPay = new System.Windows.Forms.Button();
             this.PanelCartControls = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnDeleteAllRow = new System.Windows.Forms.Button();
+            this.BtnDeleteRow = new System.Windows.Forms.Button();
+            this.BtnMinCount = new System.Windows.Forms.Button();
+            this.BtnAddCount = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelFoods = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,11 +62,6 @@
             this.Btn4 = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
-            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SumPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelTitleBar.SuspendLayout();
             this.PanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataCarts)).BeginInit();
@@ -127,6 +127,37 @@
             this.DataCarts.Size = new System.Drawing.Size(442, 323);
             this.DataCarts.TabIndex = 1;
             // 
+            // FoodId
+            // 
+            this.FoodId.HeaderText = "کد غذا";
+            this.FoodId.Name = "FoodId";
+            this.FoodId.ReadOnly = true;
+            this.FoodId.Visible = false;
+            // 
+            // FoodName
+            // 
+            this.FoodName.HeaderText = "نام غذا";
+            this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
+            // 
+            // FoodCount
+            // 
+            this.FoodCount.HeaderText = "تعداد";
+            this.FoodCount.Name = "FoodCount";
+            this.FoodCount.ReadOnly = true;
+            // 
+            // FoodPrice
+            // 
+            this.FoodPrice.HeaderText = "قیمت واحد";
+            this.FoodPrice.Name = "FoodPrice";
+            this.FoodPrice.ReadOnly = true;
+            // 
+            // SumPrice
+            // 
+            this.SumPrice.HeaderText = "جمع";
+            this.SumPrice.Name = "SumPrice";
+            this.SumPrice.ReadOnly = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.LblCartSum);
@@ -179,51 +210,51 @@
             // 
             // PanelCartControls
             // 
-            this.PanelCartControls.Controls.Add(this.button4);
-            this.PanelCartControls.Controls.Add(this.button3);
-            this.PanelCartControls.Controls.Add(this.button2);
-            this.PanelCartControls.Controls.Add(this.button1);
+            this.PanelCartControls.Controls.Add(this.BtnDeleteAllRow);
+            this.PanelCartControls.Controls.Add(this.BtnDeleteRow);
+            this.PanelCartControls.Controls.Add(this.BtnMinCount);
+            this.PanelCartControls.Controls.Add(this.BtnAddCount);
             this.PanelCartControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelCartControls.Location = new System.Drawing.Point(0, 0);
             this.PanelCartControls.Name = "PanelCartControls";
             this.PanelCartControls.Size = new System.Drawing.Size(442, 46);
             this.PanelCartControls.TabIndex = 0;
             // 
-            // button4
+            // BtnDeleteAllRow
             // 
-            this.button4.Location = new System.Drawing.Point(21, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 37);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "حذف همه";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnDeleteAllRow.Location = new System.Drawing.Point(21, 3);
+            this.BtnDeleteAllRow.Name = "BtnDeleteAllRow";
+            this.BtnDeleteAllRow.Size = new System.Drawing.Size(100, 37);
+            this.BtnDeleteAllRow.TabIndex = 0;
+            this.BtnDeleteAllRow.Text = "حذف همه";
+            this.BtnDeleteAllRow.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnDeleteRow
             // 
-            this.button3.Location = new System.Drawing.Point(127, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 37);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "حذف";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnDeleteRow.Location = new System.Drawing.Point(127, 3);
+            this.BtnDeleteRow.Name = "BtnDeleteRow";
+            this.BtnDeleteRow.Size = new System.Drawing.Size(100, 37);
+            this.BtnDeleteRow.TabIndex = 0;
+            this.BtnDeleteRow.Text = "حذف";
+            this.BtnDeleteRow.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnMinCount
             // 
-            this.button2.Location = new System.Drawing.Point(233, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 37);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "کاهش تعداد";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnMinCount.Location = new System.Drawing.Point(233, 3);
+            this.BtnMinCount.Name = "BtnMinCount";
+            this.BtnMinCount.Size = new System.Drawing.Size(100, 37);
+            this.BtnMinCount.TabIndex = 0;
+            this.BtnMinCount.Text = "کاهش تعداد";
+            this.BtnMinCount.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnAddCount
             // 
-            this.button1.Location = new System.Drawing.Point(339, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "افزایش تعداد";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnAddCount.Location = new System.Drawing.Point(339, 3);
+            this.BtnAddCount.Name = "BtnAddCount";
+            this.BtnAddCount.Size = new System.Drawing.Size(100, 37);
+            this.BtnAddCount.TabIndex = 0;
+            this.BtnAddCount.Text = "افزایش تعداد";
+            this.BtnAddCount.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -467,37 +498,6 @@
             this.PanelLogo.Size = new System.Drawing.Size(178, 80);
             this.PanelLogo.TabIndex = 2;
             // 
-            // FoodId
-            // 
-            this.FoodId.HeaderText = "کد غذا";
-            this.FoodId.Name = "FoodId";
-            this.FoodId.ReadOnly = true;
-            this.FoodId.Visible = false;
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "نام غذا";
-            this.FoodName.Name = "FoodName";
-            this.FoodName.ReadOnly = true;
-            // 
-            // FoodCount
-            // 
-            this.FoodCount.HeaderText = "تعداد";
-            this.FoodCount.Name = "FoodCount";
-            this.FoodCount.ReadOnly = true;
-            // 
-            // FoodPrice
-            // 
-            this.FoodPrice.HeaderText = "قیمت واحد";
-            this.FoodPrice.Name = "FoodPrice";
-            this.FoodPrice.ReadOnly = true;
-            // 
-            // SumPrice
-            // 
-            this.SumPrice.HeaderText = "جمع";
-            this.SumPrice.Name = "SumPrice";
-            this.SumPrice.ReadOnly = true;
-            // 
             // MainUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -542,10 +542,10 @@
         private DataGridView DataCarts;
         private Panel panel2;
         private Panel PanelCartControls;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button BtnDeleteAllRow;
+        private Button BtnDeleteRow;
+        private Button BtnMinCount;
+        private Button BtnAddCount;
         private Button BtnPay;
         private Label LblCartSum;
         private Label label11;

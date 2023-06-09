@@ -163,14 +163,40 @@ namespace UI
 
         private void FoodsLabel_Click(object? sender, EventArgs e)
         {
+            var foodButton = sender as Label;
+            if (foodButton is null)
+            {
+                return;
+            }
+            var food = foodButton.Tag as Foods;
+            if (food is null)
+            {
+                return;
+            }
+            if (!Cart.Any(x => x.FoodId == food.ID))
+            {
+                Cart.Add(new FoodCartViewModel(food.ID, food.Food, food.Price, 1));
+                AddCartFoods();
+                ResetFoodsButton();
+            }
         }
 
         private void BtnResturan_Click(object? sender, EventArgs e)
         {
+            if (Cart.Count > 0)
+            {
+                if (MessageBox.Show("با تغییر رستوران غذاهای اضافه شده با سبد خرید حذف خواهند شد ادامه می دهید؟", "هشدار", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
+                {
+                    return;
+                }
+            }
+            Cart = new();
+            AddCartFoods();
             var resturanButton = sender as Button;
             if (resturanButton is null)
                 return;
             int id = Convert.ToInt32(resturanButton.Tag);
+            ResturanKey = id;
             AddFoods(id);
             foreach (var item in PanelMenu.Controls)
             {
