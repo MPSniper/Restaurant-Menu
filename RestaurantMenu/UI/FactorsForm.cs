@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Repository.DataModel;
 
 namespace UI
 {
@@ -16,5 +17,11 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }     
+
     }
 }
