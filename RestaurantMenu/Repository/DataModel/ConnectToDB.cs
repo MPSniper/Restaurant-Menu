@@ -9,12 +9,9 @@ namespace Repository.DataModel
         private static SqlConnection sqlConnection = new SqlConnection();
 
 
-        
-        //public static string strConnString = "Data Source=.;Initial Catalog=RestaurantDB;Integrated Security=True";
-
         //public static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
-        //public static string strConnString = "Data Source=.;Initial Catalog=RestaurantDB;Integrated Security=True";
-        public static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
+        public static string strConnString = "Data Source=.;Initial Catalog=RestaurantDB;Integrated Security=True";
+        //public static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
 
 
 

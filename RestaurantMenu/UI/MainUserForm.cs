@@ -307,5 +307,23 @@ namespace UI
             PanelCartControls.Enabled = false;
             BtnPay.Enabled = false;
         }
+
+        private void BtnPay_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("آیا از ثبت سفارش مطمئن هستید؟", "تایید فاکتور", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                Factors factor = new Factors(Id, ResturanKey, CalcCartSum());
+                if (factor.InsertFactor() != -1)
+                {
+                    DataCarts.Rows.Clear();
+                    Cart.Clear();
+                    ResetFoodsButton();
+                    CalcCartSum();
+                    PanelCartControls.Enabled = false;
+                    BtnPay.Enabled = false;
+                    MessageBox.Show("سفارش با موفقیت ثبت شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

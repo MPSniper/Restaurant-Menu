@@ -207,6 +207,7 @@
             this.BtnPay.TabIndex = 0;
             this.BtnPay.Text = "پرداخت ";
             this.BtnPay.UseVisualStyleBackColor = false;
+            this.BtnPay.Click += new System.EventHandler(this.BtnPay_Click);
             // 
             // PanelCartControls
             // 
