@@ -8,7 +8,8 @@ namespace Repository
     {
         private static SqlConnection sqlConnection = new SqlConnection();
 
-        private static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
+        // private static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
+        public static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
 
 
         public int ExecuteQuery(SqlCommand dbCommand)
