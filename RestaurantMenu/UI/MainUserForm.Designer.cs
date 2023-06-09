@@ -246,6 +246,7 @@
             this.BtnMinCount.TabIndex = 0;
             this.BtnMinCount.Text = "کاهش تعداد";
             this.BtnMinCount.UseVisualStyleBackColor = true;
+            this.BtnMinCount.Click += new System.EventHandler(this.BtnMinCount_Click);
             // 
             // BtnAddCount
             // 
@@ -255,6 +256,7 @@
             this.BtnAddCount.TabIndex = 0;
             this.BtnAddCount.Text = "افزایش تعداد";
             this.BtnAddCount.UseVisualStyleBackColor = true;
+            this.BtnAddCount.Click += new System.EventHandler(this.BtnAddCount_Click);
             // 
             // panel1
             // 

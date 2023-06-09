@@ -227,5 +227,52 @@ namespace UI
             AddResturant();
             AddFoods(0);
         }
+
+        private void BtnAddCount_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(DataCarts.SelectedRows[0].Cells[0].Value);
+                foreach (var item in Cart)
+                {
+                    if (item.FoodId == id)
+                    {
+                        item.Count += 1;
+                        DataCarts.SelectedRows[0].Cells[2].Value = item.Count;
+                        DataCarts.SelectedRows[0].Cells[4].Value = item.Count * item.FoodPrice;
+                        break;
+                    }
+                }
+                CalcCartSum();
+            }
+            catch { }
+        }
+
+        private void BtnMinCount_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(DataCarts.SelectedRows[0].Cells[0].Value);
+                foreach (var item in Cart)
+                {
+                    if (item.FoodId == id)
+                    {
+                        if (item.Count > 1)
+                        {
+                            item.Count -= 1;
+                            DataCarts.SelectedRows[0].Cells[2].Value = item.Count;
+                            DataCarts.SelectedRows[0].Cells[4].Value = item.Count * item.FoodPrice;
+                            CalcCartSum();
+                        }
+                        else
+                        {
+                            MessageBox.Show("تعداد به حداقل رسیده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        break;
+                    }
+                }
+            }
+            catch { }
+        }
     }
 }
