@@ -1,4 +1,5 @@
 ﻿using Repository.DataModel;
+using Service.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,9 @@ namespace UI
 {
     public partial class MainUserForm : Form
     {
+        List<FoodCartViewModel> Cart = new();
         public int Id { get; set; }
+        int ResturanKey;
 
         public MainUserForm()
         {
@@ -93,6 +96,67 @@ namespace UI
                 return;
             ToolTip tip = new ToolTip();
             tip.SetToolTip(foodLabel, food.Price.ToString());
+        }
+
+        private void AddCartFoods()
+        {
+            DataCarts.Rows.Clear();
+            foreach (var item in Cart)
+            {
+                object[] ob = new object[5];
+                ob[0] = item.FoodId;
+                ob[1] = item.FoodName;
+                ob[2] = item.Count;
+                ob[3] = item.FoodPrice;
+                ob[4] = item.FoodPrice * item.Count;
+                DataCarts.Rows.Add(ob);
+            }
+            CalcCartSum();
+            if (Cart.Count == 0)
+            {
+                PanelCartControls.Enabled = false;
+                BtnPay.Enabled = false;
+            }
+            else
+            {
+                PanelCartControls.Enabled = true;
+                BtnPay.Enabled = true;
+            }
+        }
+
+        private decimal CalcCartSum()
+        {
+            decimal sum = 0;
+            foreach (var item in Cart)
+            {
+                sum += item.FoodPrice * item.Count;
+            }
+
+            LblCartSum.Text = sum.ToString();
+
+            return sum;
+        }
+
+        private void ResetFoodsButton()
+        {
+            foreach (var item in PanelFoods.Controls)
+            {
+                if (item != null && item is Label)
+                {
+                    var foodLabel = item as Label;
+                    if (foodLabel != null && foodLabel.Tag is Foods)
+                    {
+                        var food = foodLabel.Tag as Foods;
+                        if (food != null)
+                        {
+                            if (Cart.Any(x => x.FoodId == food.ID))
+                                foodLabel.BackColor = Color.Goldenrod;
+                            else
+                                foodLabel.BackColor = SystemColors.ScrollBar;
+                        }
+                    }
+                }
+            }
         }
 
         #endregion

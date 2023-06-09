@@ -31,17 +31,12 @@
             this.PanelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.PanelMain = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SumPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataCarts = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.LblCartSum = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnPay = new System.Windows.Forms.Button();
+            this.PanelCartControls = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,11 +57,16 @@
             this.Btn4 = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
+            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SumPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelTitleBar.SuspendLayout();
             this.PanelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataCarts)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.PanelCartControls.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PanelFoods.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -98,7 +98,7 @@
             // 
             // PanelMain
             // 
-            this.PanelMain.Controls.Add(this.dataGridView1);
+            this.PanelMain.Controls.Add(this.DataCarts);
             this.PanelMain.Controls.Add(this.panel2);
             this.PanelMain.Controls.Add(this.panel1);
             this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -107,78 +107,49 @@
             this.PanelMain.Size = new System.Drawing.Size(814, 430);
             this.PanelMain.TabIndex = 2;
             // 
-            // dataGridView1
+            // DataCarts
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataCarts.AllowUserToAddRows = false;
+            this.DataCarts.AllowUserToDeleteRows = false;
+            this.DataCarts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataCarts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FoodId,
             this.FoodName,
             this.FoodCount,
             this.FoodPrice,
             this.SumPrice});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 323);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // FoodId
-            // 
-            this.FoodId.HeaderText = "کد غذا";
-            this.FoodId.Name = "FoodId";
-            this.FoodId.ReadOnly = true;
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "نام غذا";
-            this.FoodName.Name = "FoodName";
-            this.FoodName.ReadOnly = true;
-            // 
-            // FoodCount
-            // 
-            this.FoodCount.HeaderText = "تعداد";
-            this.FoodCount.Name = "FoodCount";
-            this.FoodCount.ReadOnly = true;
-            // 
-            // FoodPrice
-            // 
-            this.FoodPrice.HeaderText = "قیمت واحد";
-            this.FoodPrice.Name = "FoodPrice";
-            this.FoodPrice.ReadOnly = true;
-            // 
-            // SumPrice
-            // 
-            this.SumPrice.HeaderText = "جمع";
-            this.SumPrice.Name = "SumPrice";
-            this.SumPrice.ReadOnly = true;
+            this.DataCarts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataCarts.Location = new System.Drawing.Point(0, 0);
+            this.DataCarts.Name = "DataCarts";
+            this.DataCarts.ReadOnly = true;
+            this.DataCarts.RowTemplate.Height = 25;
+            this.DataCarts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataCarts.Size = new System.Drawing.Size(442, 323);
+            this.DataCarts.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.LblCartSum);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.BtnPay);
+            this.panel2.Controls.Add(this.PanelCartControls);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 323);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(442, 107);
             this.panel2.TabIndex = 2;
             // 
-            // label12
+            // LblCartSum
             // 
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(174, 57);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(159, 41);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "1.000.000";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblCartSum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblCartSum.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblCartSum.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblCartSum.Location = new System.Drawing.Point(174, 57);
+            this.LblCartSum.Name = "LblCartSum";
+            this.LblCartSum.Size = new System.Drawing.Size(159, 41);
+            this.LblCartSum.TabIndex = 2;
+            this.LblCartSum.Text = "1.000.000";
+            this.LblCartSum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -192,31 +163,31 @@
             this.label11.Text = "جمع فاکتور : ";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // BtnPay
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Image = global::UI.Properties.Resources.payment_history_40px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 52);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 52);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "پرداخت ";
-            this.button5.UseVisualStyleBackColor = false;
+            this.BtnPay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnPay.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnPay.Image = global::UI.Properties.Resources.payment_history_40px;
+            this.BtnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPay.Location = new System.Drawing.Point(12, 52);
+            this.BtnPay.Name = "BtnPay";
+            this.BtnPay.Size = new System.Drawing.Size(156, 52);
+            this.BtnPay.TabIndex = 0;
+            this.BtnPay.Text = "پرداخت ";
+            this.BtnPay.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // PanelCartControls
             // 
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(442, 46);
-            this.panel3.TabIndex = 0;
+            this.PanelCartControls.Controls.Add(this.button4);
+            this.PanelCartControls.Controls.Add(this.button3);
+            this.PanelCartControls.Controls.Add(this.button2);
+            this.PanelCartControls.Controls.Add(this.button1);
+            this.PanelCartControls.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelCartControls.Location = new System.Drawing.Point(0, 0);
+            this.PanelCartControls.Name = "PanelCartControls";
+            this.PanelCartControls.Size = new System.Drawing.Size(442, 46);
+            this.PanelCartControls.TabIndex = 0;
             // 
             // button4
             // 
@@ -496,6 +467,37 @@
             this.PanelLogo.Size = new System.Drawing.Size(178, 80);
             this.PanelLogo.TabIndex = 2;
             // 
+            // FoodId
+            // 
+            this.FoodId.HeaderText = "کد غذا";
+            this.FoodId.Name = "FoodId";
+            this.FoodId.ReadOnly = true;
+            this.FoodId.Visible = false;
+            // 
+            // FoodName
+            // 
+            this.FoodName.HeaderText = "نام غذا";
+            this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
+            // 
+            // FoodCount
+            // 
+            this.FoodCount.HeaderText = "تعداد";
+            this.FoodCount.Name = "FoodCount";
+            this.FoodCount.ReadOnly = true;
+            // 
+            // FoodPrice
+            // 
+            this.FoodPrice.HeaderText = "قیمت واحد";
+            this.FoodPrice.Name = "FoodPrice";
+            this.FoodPrice.ReadOnly = true;
+            // 
+            // SumPrice
+            // 
+            this.SumPrice.HeaderText = "جمع";
+            this.SumPrice.Name = "SumPrice";
+            this.SumPrice.ReadOnly = true;
+            // 
             // MainUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -514,9 +516,9 @@
             this.Load += new System.EventHandler(this.MainUserForm_Load);
             this.PanelTitleBar.ResumeLayout(false);
             this.PanelMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataCarts)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.PanelCartControls.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.PanelFoods.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -537,20 +539,15 @@
         private Label label10;
         private Label label9;
         private Label label8;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn FoodId;
-        private DataGridViewTextBoxColumn FoodName;
-        private DataGridViewTextBoxColumn FoodCount;
-        private DataGridViewTextBoxColumn FoodPrice;
-        private DataGridViewTextBoxColumn SumPrice;
+        private DataGridView DataCarts;
         private Panel panel2;
-        private Panel panel3;
+        private Panel PanelCartControls;
         private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
-        private Button button5;
-        private Label label12;
+        private Button BtnPay;
+        private Label LblCartSum;
         private Label label11;
         private Panel panel4;
         private Panel PanelLogo;
@@ -560,5 +557,10 @@
         private Button Btn3;
         private Button Btn4;
         private Button BtnExit;
+        private DataGridViewTextBoxColumn FoodId;
+        private DataGridViewTextBoxColumn FoodName;
+        private DataGridViewTextBoxColumn FoodCount;
+        private DataGridViewTextBoxColumn FoodPrice;
+        private DataGridViewTextBoxColumn SumPrice;
     }
 }
