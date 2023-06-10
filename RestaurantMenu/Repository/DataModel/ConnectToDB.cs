@@ -7,10 +7,11 @@ namespace Repository.DataModel
     public class ConnectToDB
     {
         private static SqlConnection sqlConnection = new SqlConnection();
+        private static SqlCommand command = new SqlCommand();
+        private static SqlDataAdapter adapter = new SqlDataAdapter();
 
-
-        //public static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
-        public static string strConnString = "Data Source=.;Initial Catalog=RestaurantDB;Integrated Security=True";
+        public static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
+       // public static string strConnString = "Data Source=.;Initial Catalog=RestaurantDB;Integrated Security=True";
         //public static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
 
 
@@ -69,6 +70,29 @@ namespace Repository.DataModel
                 sqlConnection.Close();
             }
         }
+
+        public void readData(string query, DataTable tblName)
+        {
+            try
+            {
+                if (sqlConnection.State == ConnectionState.Closed)
+                {
+                    CreateConnection();
+                }
+
+                command.Connection = sqlConnection;
+                command.CommandText = query;
+                command.CommandType = CommandType.Text;
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(tblName);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
     }
 }
