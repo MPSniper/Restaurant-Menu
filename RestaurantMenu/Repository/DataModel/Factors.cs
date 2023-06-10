@@ -9,6 +9,9 @@ namespace Repository.DataModel
         public int ID, UserKey, RestaurantKey;
         public decimal Sum;
 
+        public Factors()
+        {
+        }
         public Factors(int userKey, int restaurantKey, decimal sum)
         {
             UserKey = userKey;
