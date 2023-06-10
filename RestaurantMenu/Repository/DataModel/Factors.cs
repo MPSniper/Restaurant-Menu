@@ -19,13 +19,18 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection connection = new SqlConnection(ConnectToDB.strConnString);
-                connection.Open();
+                SqlConnection? connection = connect.CreateConnection();
+                if (connection is null)
+                {
+                    return -1;
+                }
                 SqlCommand command = new SqlCommand("insert into Factor_Table(UserKey, RestaurantKey, [Sum]) values(@userKey, @restaurantKey, @factorSum)", connection);
                 command.Parameters.AddWithValue("@userKey", UserKey);
                 command.Parameters.AddWithValue("@restaurantKey", RestaurantKey);
                 command.Parameters.AddWithValue("@factorSum", Sum);
-                return command.ExecuteNonQuery();
+                var result = command.ExecuteNonQuery();
+                connect.CloseConnection();
+                return result;
             }
             catch (Exception ex)
             {

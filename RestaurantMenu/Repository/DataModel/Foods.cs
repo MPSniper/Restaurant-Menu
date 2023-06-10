@@ -30,12 +30,15 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection con = new SqlConnection(ConnectToDB.strConnString);
-                con.Open();
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return new();
+                }
                 SqlCommand command = new SqlCommand("select * from Foods_Table Where RestaurantKey = @rId", con);
                 command.Parameters.AddWithValue("@rId", resturanId);
                 List<Foods> result = new List<Foods>();
-                SqlDataReader reader = command.ExecuteReader();
+                using SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -47,6 +50,7 @@ namespace Repository.DataModel
                         result.Add(food);
                     }
                 }
+                connect.CloseConnection();
                 return result;
             }
             catch (Exception ex)
@@ -60,8 +64,11 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection con = new SqlConnection(ConnectToDB.strConnString);
-                con.Open();
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return new();
+                }
                 StringBuilder sb = new();
                 sb.Append("select * from Foods_Table Where RestaurantKey = @rId");
                 if (!string.IsNullOrWhiteSpace(food))
@@ -79,7 +86,7 @@ namespace Repository.DataModel
                     command.Parameters.AddWithValue("@foodPrice", price);
                 }
                 List<Foods> result = new List<Foods>();
-                SqlDataReader reader = command.ExecuteReader();
+                using SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -91,6 +98,7 @@ namespace Repository.DataModel
                         result.Add(foodInfo);
                     }
                 }
+                connect.CloseConnection();
                 return result;
             }
             catch (Exception ex)
@@ -104,13 +112,18 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection connection = new SqlConnection(ConnectToDB.strConnString);
-                connection.Open();
-                SqlCommand command = new SqlCommand("insert into Foods_Table(Food, RestaurantKey, Price) values(@foodName, @RestaurantId, @foodPrice)", connection);
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return new();
+                }
+                SqlCommand command = new SqlCommand("insert into Foods_Table(Food, RestaurantKey, Price) values(@foodName, @RestaurantId, @foodPrice)", con);
                 command.Parameters.AddWithValue("@foodName", Food);
                 command.Parameters.AddWithValue("@RestaurantId", RestaurantKey);
                 command.Parameters.AddWithValue("@foodPrice", Price);
-                return command.ExecuteNonQuery();
+                var result = command.ExecuteNonQuery();
+                connect.CloseConnection();
+                return result;
             }
             catch (Exception ex)
             {
@@ -123,13 +136,18 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection connection = new SqlConnection(ConnectToDB.strConnString);
-                connection.Open();
-                SqlCommand command = new SqlCommand("Update Foods_Table set Food = @foodName, Price = @foodPrice Where ID = @foodId", connection);
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return new();
+                }
+                SqlCommand command = new SqlCommand("Update Foods_Table set Food = @foodName, Price = @foodPrice Where ID = @foodId", con);
                 command.Parameters.AddWithValue("@foodName", Food);
                 command.Parameters.AddWithValue("@foodPrice", Price);
                 command.Parameters.AddWithValue("@foodId", foodId);
-                return command.ExecuteNonQuery();
+                var result = command.ExecuteNonQuery();
+                connect.CloseConnection();
+                return result;
             }
             catch (Exception ex)
             {
@@ -142,11 +160,16 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection connection = new SqlConnection(ConnectToDB.strConnString);
-                connection.Open();
-                SqlCommand command = new SqlCommand("Delete From Foods_Table Where ID = @foodId", connection);
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return new();
+                }
+                SqlCommand command = new SqlCommand("Delete From Foods_Table Where ID = @foodId", con);
                 command.Parameters.AddWithValue("@foodId", foodId);
-                return command.ExecuteNonQuery();
+                var result = command.ExecuteNonQuery();
+                connect.CloseConnection();
+                return result;
             }
             catch (Exception ex)
             {

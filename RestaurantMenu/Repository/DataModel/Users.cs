@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+﻿using System.Data.SqlClient;
 
 namespace Repository.DataModel
 {
@@ -66,8 +60,11 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection con = new SqlConnection(ConnectToDB.strConnString);
-                con.Open();
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return -1;
+                }
                 SqlCommand command = new SqlCommand("select ID From User_Table Where NationalCode = @nationalCode and [Password] = @pass", con);
                 command.Parameters.AddWithValue("@nationalCode", nationalCode);
                 command.Parameters.AddWithValue("@pass", password);
@@ -80,6 +77,7 @@ namespace Repository.DataModel
                 {
                     id = 0;
                 }
+                connect.CloseConnection();
                 return id;
             }
             catch (Exception ex)

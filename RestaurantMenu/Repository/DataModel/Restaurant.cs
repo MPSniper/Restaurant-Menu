@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using Repository;
+﻿using System.Data.SqlClient;
 
 namespace Repository.DataModel
 {
@@ -72,11 +65,14 @@ namespace Repository.DataModel
         {
             try
             {
-                SqlConnection con = new SqlConnection(ConnectToDB.strConnString);
-                con.Open();
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return new();
+                }
                 SqlCommand command = new SqlCommand("Select * from Restaurant_Table", con);
                 List<Restaurant> result = new List<Restaurant>();
-                SqlDataReader reader = command.ExecuteReader();
+                using SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -87,6 +83,7 @@ namespace Repository.DataModel
                         result.Add(res);
                     }
                 }
+                connect.CloseConnection();
                 return result;
             }
             catch (Exception ex)

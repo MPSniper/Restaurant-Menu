@@ -44,7 +44,7 @@ namespace Repository.DataModel
             }
         }
 
-        public void CreateConnection()
+        public SqlConnection? CreateConnection()
         {
             try
             {
@@ -53,10 +53,20 @@ namespace Repository.DataModel
                     sqlConnection.ConnectionString = strConnString;
                     sqlConnection.Open();
                 }
+                return sqlConnection;
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "خطا در ارتباط با دیتابیس", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public void CloseConnection()
+        {
+            if (sqlConnection.State == ConnectionState.Open)
+            {
+                sqlConnection.Close();
             }
         }
 
