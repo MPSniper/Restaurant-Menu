@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 
 namespace Repository.DataModel
 {
@@ -37,6 +38,14 @@ namespace Repository.DataModel
                 MessageBox.Show(ex.Message, "خطا در ارتباط با دیتابیس", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
+        }
+
+        public DataTable ShowFactors()
+        {
+            DataTable dt = new DataTable();
+            string sqlcommand = "SELECT Factor_Table.Sum, Restaurant_Table.RestaurantName, User_Table.FirstName FROM Factor_Table JOIN Restaurant_Table ON Factor_Table.RestaurantKey = Restaurant_Table.ID JOIN User_Table ON User_Table.ID = Factor_Table.Userkey";
+            connect.readData(sqlcommand, dt);
+            return dt;
         }
     }
 }
