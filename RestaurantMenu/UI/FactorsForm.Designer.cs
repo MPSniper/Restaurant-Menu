@@ -35,8 +35,8 @@
             FactorPrice = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             groupBox1 = new GroupBox();
-            label3 = new Label();
             label12 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DataFactors).BeginInit();
             panel2.SuspendLayout();
@@ -71,18 +71,21 @@
             // 
             // FoodResturan
             // 
+            FoodResturan.DataPropertyName = "RestaurantName";
             FoodResturan.HeaderText = "نام رستوران";
             FoodResturan.Name = "FoodResturan";
             FoodResturan.ReadOnly = true;
             // 
             // FactorCostumer
             // 
+            FactorCostumer.DataPropertyName = "FirstName";
             FactorCostumer.HeaderText = "نام مشتری";
             FactorCostumer.Name = "FactorCostumer";
             FactorCostumer.ReadOnly = true;
             // 
             // FactorPrice
             // 
+            FactorPrice.DataPropertyName = "Sum";
             FactorPrice.HeaderText = "مبلغ فاکتور";
             FactorPrice.Name = "FactorPrice";
             FactorPrice.ReadOnly = true;
@@ -107,27 +110,28 @@
             groupBox1.TabIndex = 22;
             groupBox1.TabStop = false;
             // 
+            // label12
+            // 
+            label12.Cursor = Cursors.Hand;
+            label12.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.ImageAlign = ContentAlignment.MiddleRight;
+            label12.Location = new Point(9, 19);
+            label12.Name = "label12";
+            label12.Size = new Size(159, 41);
+            label12.TabIndex = 21;
+            label12.Text = "1.000.000";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            label12.Click += label12_Click;
+            // 
             // label3
             // 
-            label3.Location = new Point(181, 23);
+            label3.Location = new Point(164, 23);
             label3.Name = "label3";
             label3.Size = new Size(101, 32);
             label3.TabIndex = 20;
             label3.Text = "مجموع کل :";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             label3.Click += label3_Click;
-            // 
-            // label12
-            // 
-            label12.Cursor = Cursors.Hand;
-            label12.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.ImageAlign = ContentAlignment.MiddleRight;
-            label12.Location = new Point(30, 19);
-            label12.Name = "label12";
-            label12.Size = new Size(159, 41);
-            label12.TabIndex = 21;
-            label12.Text = "1.000.000";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FactorsForm
             // 
@@ -143,6 +147,7 @@
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "مدیریت فاکتورها";
+            Load += LoadFactors;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DataFactors).EndInit();
             panel2.ResumeLayout(false);
@@ -157,9 +162,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView DataFactors;
+        private Label label12;
         private DataGridViewTextBoxColumn FoodResturan;
         private DataGridViewTextBoxColumn FactorCostumer;
         private DataGridViewTextBoxColumn FactorPrice;
-        private Label label12;
     }
 }

@@ -43,12 +43,21 @@ namespace Repository.DataModel
             }
         }
 
-        public DataTable ShowFactors()
+        public (DataTable , string ) ShowFactors()
         {
             DataTable dt = new DataTable();
             string sqlcommand = "SELECT Factor_Table.Sum, Restaurant_Table.RestaurantName, User_Table.FirstName FROM Factor_Table JOIN Restaurant_Table ON Factor_Table.RestaurantKey = Restaurant_Table.ID JOIN User_Table ON User_Table.ID = Factor_Table.Userkey";
             connect.readData(sqlcommand, dt);
-            return dt;
+            DataColumn column = dt.Columns["Sum"];
+            DataRow[] rows = dt.Select();
+            var sum = 0;
+            foreach (DataRow row in rows)
+            {
+                object columnValue = row[column];
+                sum += Convert.ToInt32(columnValue);
+            }
+             //sum.ToString();
+            return (dt, sum.ToString());
         }
     }
 }
