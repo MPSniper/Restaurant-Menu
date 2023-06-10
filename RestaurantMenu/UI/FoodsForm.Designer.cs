@@ -30,6 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.DataFoods = new System.Windows.Forms.DataGridView();
+            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtName = new System.Windows.Forms.TextBox();
@@ -41,21 +44,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TxtNameSearch = new System.Windows.Forms.TextBox();
-            this.TxtPriceSearch = new System.Windows.Forms.NumericUpDown();
             this.BtnAll = new System.Windows.Forms.Button();
             this.BtnSearch = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPrice)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPriceSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,6 +83,25 @@
             this.DataFoods.Size = new System.Drawing.Size(894, 331);
             this.DataFoods.TabIndex = 0;
             this.DataFoods.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataFoods_CellClick);
+            // 
+            // FoodId
+            // 
+            this.FoodId.HeaderText = "کد محصول";
+            this.FoodId.Name = "FoodId";
+            this.FoodId.ReadOnly = true;
+            this.FoodId.Visible = false;
+            // 
+            // FoodName
+            // 
+            this.FoodName.HeaderText = "نام محصول";
+            this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
+            // 
+            // FoodPrice
+            // 
+            this.FoodPrice.HeaderText = "قیمت محصول";
+            this.FoodPrice.Name = "FoodPrice";
+            this.FoodPrice.ReadOnly = true;
             // 
             // panel2
             // 
@@ -163,6 +179,7 @@
             // 
             this.BtnCancell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCancell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.BtnCancell.Enabled = false;
             this.BtnCancell.FlatAppearance.BorderSize = 0;
             this.BtnCancell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancell.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -177,13 +194,13 @@
             this.BtnCancell.TabIndex = 18;
             this.BtnCancell.Text = "کنسل";
             this.BtnCancell.UseVisualStyleBackColor = false;
-            this.BtnCancell.Visible = false;
             this.BtnCancell.Click += new System.EventHandler(this.BtnCancell_Click);
             // 
             // BtnDeleteFood
             // 
             this.BtnDeleteFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDeleteFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.BtnDeleteFood.Enabled = false;
             this.BtnDeleteFood.FlatAppearance.BorderSize = 0;
             this.BtnDeleteFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDeleteFood.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -198,7 +215,6 @@
             this.BtnDeleteFood.TabIndex = 18;
             this.BtnDeleteFood.Text = "حذف";
             this.BtnDeleteFood.UseVisualStyleBackColor = false;
-            this.BtnDeleteFood.Visible = false;
             this.BtnDeleteFood.Click += new System.EventHandler(this.BtnDeleteFood_Click);
             // 
             // label2
@@ -222,10 +238,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.TxtNameSearch);
-            this.groupBox1.Controls.Add(this.TxtPriceSearch);
             this.groupBox1.Controls.Add(this.BtnAll);
             this.groupBox1.Controls.Add(this.BtnSearch);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(449, 0);
@@ -237,28 +251,11 @@
             // 
             // TxtNameSearch
             // 
-            this.TxtNameSearch.Location = new System.Drawing.Point(229, 25);
+            this.TxtNameSearch.Location = new System.Drawing.Point(40, 55);
             this.TxtNameSearch.MaxLength = 150;
             this.TxtNameSearch.Name = "TxtNameSearch";
-            this.TxtNameSearch.Size = new System.Drawing.Size(110, 32);
+            this.TxtNameSearch.Size = new System.Drawing.Size(282, 32);
             this.TxtNameSearch.TabIndex = 23;
-            // 
-            // TxtPriceSearch
-            // 
-            this.TxtPriceSearch.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.TxtPriceSearch.Location = new System.Drawing.Point(32, 28);
-            this.TxtPriceSearch.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.TxtPriceSearch.Name = "TxtPriceSearch";
-            this.TxtPriceSearch.Size = new System.Drawing.Size(129, 32);
-            this.TxtPriceSearch.TabIndex = 22;
             // 
             // BtnAll
             // 
@@ -300,42 +297,14 @@
             this.BtnSearch.UseVisualStyleBackColor = false;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(167, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 32);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "قیمت : ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(345, 26);
+            this.label3.Location = new System.Drawing.Point(328, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 32);
             this.label3.TabIndex = 20;
             this.label3.Text = "نام : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // FoodId
-            // 
-            this.FoodId.HeaderText = "کد محصول";
-            this.FoodId.Name = "FoodId";
-            this.FoodId.ReadOnly = true;
-            this.FoodId.Visible = false;
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "نام محصول";
-            this.FoodName.Name = "FoodName";
-            this.FoodName.ReadOnly = true;
-            // 
-            // FoodPrice
-            // 
-            this.FoodPrice.HeaderText = "قیمت محصول";
-            this.FoodPrice.Name = "FoodPrice";
-            this.FoodPrice.ReadOnly = true;
             // 
             // FoodsForm
             // 
@@ -360,7 +329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtPrice)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPriceSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,11 +345,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnCancell;
         private System.Windows.Forms.Button BtnAll;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown TxtPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown TxtPriceSearch;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.TextBox TxtNameSearch;
         private Button BtnDeleteFood;

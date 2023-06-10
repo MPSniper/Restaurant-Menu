@@ -60,7 +60,7 @@ namespace Repository.DataModel
             }
         }
 
-        public List<Foods> SearchFoods(int resturanId, string? food, decimal price)
+        public List<Foods> SearchFoods(int resturanId, string? food)
         {
             try
             {
@@ -75,16 +75,8 @@ namespace Repository.DataModel
                 {
                     sb.Append($" and Food LIKE N'%{food}%'");
                 }
-                if (price != 0)
-                {
-                    sb.Append(" and Price >= @foodPrice");
-                }
                 SqlCommand command = new SqlCommand(sb.ToString(), con);
                 command.Parameters.AddWithValue("@rId", resturanId);
-                if (price != 0)
-                {
-                    command.Parameters.AddWithValue("@foodPrice", price);
-                }
                 List<Foods> result = new List<Foods>();
                 using SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
