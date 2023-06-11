@@ -12,9 +12,10 @@ namespace UI
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
+            //SplashForm splashForm = new SplashForm();
             this.Hide();
-            SplashForm splashForm = new SplashForm();
-            splashForm.ShowDialog();
+
+            new SplashForm().ShowDialog();
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)

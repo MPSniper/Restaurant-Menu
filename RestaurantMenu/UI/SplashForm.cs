@@ -9,16 +9,21 @@
 
         private void BtnUserRegister_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             new UserRegisterForm().ShowDialog();
         }
 
         private void BtnResturanRegister_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             new ResturanRegisterForm().ShowDialog();
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
@@ -28,11 +33,14 @@
             //{
             //    ResturanKey = 1
             //}.ShowDialog();
+            this.Hide();
             new RestaurantLoginForm().ShowDialog();
         }
 
         private void BtnMainUser_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             new MainUserForm().ShowDialog();
         }
 
@@ -40,7 +48,7 @@
         {
             this.Hide();
             new UserLoginForm().ShowDialog();
-            this.Show();
+            //this.ShowDialog();
         }
     }
 }

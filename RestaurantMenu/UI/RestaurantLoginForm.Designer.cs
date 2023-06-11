@@ -163,8 +163,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(301, 358);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "RestaurantLoginForm";
-            Text = "RestaurantRegisterForm";
+            RightToLeft = RightToLeft.Yes;
+            Text = "ورود رستوران";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

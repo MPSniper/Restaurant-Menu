@@ -219,7 +219,8 @@ namespace UI
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            new SplashForm().ShowDialog();
         }
 
         private void MainUserForm_Load(object sender, EventArgs e)

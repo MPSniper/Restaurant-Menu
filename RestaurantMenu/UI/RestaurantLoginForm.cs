@@ -28,7 +28,7 @@ namespace UI
                 this.Hide();
                 MainResturanForm restaurantForm = new MainResturanForm();
                 restaurantForm.ID = id;
-                restaurantForm.ShowDialog();
+                restaurantForm.Show();
                 this.Close();
             }
         }
@@ -42,8 +42,6 @@ namespace UI
         {
             this.Hide();
             new SplashForm().Show();
-
-
         }
     }
 }
