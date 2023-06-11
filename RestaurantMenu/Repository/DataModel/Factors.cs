@@ -56,7 +56,6 @@ namespace Repository.DataModel
                 object columnValue = row[column];
                 sum += Convert.ToInt32(columnValue);
             }
-             //sum.ToString();
             return (dt, sum.ToString());
         }
     }

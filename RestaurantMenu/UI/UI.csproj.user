@@ -13,6 +13,9 @@
     <Compile Update="MainUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RestaurantLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ResturanRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
