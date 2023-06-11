@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Repository.DataModel
 {
@@ -27,7 +28,7 @@ namespace Repository.DataModel
         }
 
 
-        public int BtnLogin()
+        public int BtnSignUp()
         {
             if (RestaurantName.Equals("") || OwnerName.Equals("") || strStartTime.Equals("") || strEndTime.Equals("") || ResAddress.Equals("") || NationalCode.Equals("") || Password.Equals(""))
             {
@@ -58,6 +59,44 @@ namespace Repository.DataModel
                     MessageBox.Show("Error");
                     return -1;
                 }
+            }
+        }
+        
+        public int BtnLogin( string NationalCode, string Password)
+        {
+            if (NationalCode.Trim().Length != 10)
+            {
+                MessageBox.Show("کد ملی وارد شده نامعتبر است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return -1;
+            }
+            else if (string.IsNullOrWhiteSpace(Password))
+            {
+                MessageBox.Show("رمز ورود را وارد کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return -1;
+            }
+            else
+            {
+
+                SqlConnection? con = connect.CreateConnection();
+
+                SqlCommand insertcommand = new SqlCommand("select ID From Restaurant_Table Where NationalCode = @nationalCode and [Password] = @pass",con);
+                insertcommand.Parameters.AddWithValue("@nationalCode", NationalCode);
+                insertcommand.Parameters.AddWithValue("@pass", Password);
+
+                int id = 0;
+                try
+                {
+                    id = Convert.ToInt32(insertcommand.ExecuteScalar());
+                }
+                catch
+                {
+                    MessageBox.Show("اطلاعات وارد شده نادرست است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return -1;
+                }
+
+                connect.CloseConnection();
+                return id;
+               
             }
         }
 
@@ -92,5 +131,7 @@ namespace Repository.DataModel
                 return new List<Restaurant>();
             }
         }
+
+
     }
 }
