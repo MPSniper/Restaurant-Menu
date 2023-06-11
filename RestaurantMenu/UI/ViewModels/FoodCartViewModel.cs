@@ -1,4 +1,4 @@
-﻿namespace Service.ViewModels
+﻿namespace UI.ViewModels
 {
     public class FoodCartViewModel
     {
@@ -10,9 +10,9 @@
             Count = count;
         }
 
-        public int FoodId { get; set; }
-        public string FoodName { get; set; }
-        public decimal FoodPrice { get; set; }
+        public int FoodId { get; private set; }
+        public string FoodName { get; private set; }
+        public decimal FoodPrice { get; private set; }
         public int Count { get; set; }
     }
 }
