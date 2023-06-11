@@ -24,7 +24,7 @@ namespace Repository.DataModel
         }
 
 
-        public int BtnLogin()
+        public int BtnSignUp()
         {
             if (userName.Equals("") || userFamily.Equals("") || userNation.Equals("") || userAddress.Equals(""))
             {
@@ -39,8 +39,7 @@ namespace Repository.DataModel
                 insertcommand.Parameters.AddWithValue("@userFamily", userFamily);
                 insertcommand.Parameters.AddWithValue("@userNation", userNation);
                 insertcommand.Parameters.AddWithValue("@userAddress", userAddress);
-                insertcommand.Parameters.AddWithValue
-                ("@password", password);
+                insertcommand.Parameters.AddWithValue("@password", password);
                 var row = connect.ExecuteQuery(insertcommand);
 
                 if (row == 1)
@@ -53,6 +52,8 @@ namespace Repository.DataModel
                     MessageBox.Show("Error");
                     return -1;
                 }
+                connect.CloseConnection();
+
             }
         }
 

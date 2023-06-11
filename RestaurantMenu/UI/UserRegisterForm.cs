@@ -17,7 +17,7 @@ namespace UI
             splashForm.ShowDialog();
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void BtnSignUp_Click(object sender, EventArgs e)
         {
             var userName = NameTextBox.Text;
             var userFamily = FamilyTextBox.Text;
@@ -27,7 +27,7 @@ namespace UI
 
             Users userDataModel = new Users(userName, userFamily, userNation, userAddress, password);
 
-            var flag = userDataModel.BtnLogin();
+            var flag = userDataModel.BtnSignUp();
 
             if (flag == 1)
             {

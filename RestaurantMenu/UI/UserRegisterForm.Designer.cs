@@ -30,18 +30,18 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
+            PasswordTextBox = new TextBox();
+            label5 = new Label();
             NameTextBox = new TextBox();
             AddressTextBox = new TextBox();
             NationalityTextBox = new TextBox();
             FamilyTextBox = new TextBox();
             BtnBack = new Label();
-            BtnLogin = new Label();
+            BtnSignUp = new Label();
             label1 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            PasswordTextBox = new TextBox();
-            label5 = new Label();
             label6 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -70,7 +70,7 @@
             panel2.Controls.Add(NationalityTextBox);
             panel2.Controls.Add(FamilyTextBox);
             panel2.Controls.Add(BtnBack);
-            panel2.Controls.Add(BtnLogin);
+            panel2.Controls.Add(BtnSignUp);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
@@ -80,6 +80,29 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(607, 352);
             panel2.TabIndex = 3;
+            // 
+            // PasswordTextBox
+            // 
+            PasswordTextBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            PasswordTextBox.Location = new Point(56, 155);
+            PasswordTextBox.Margin = new Padding(4);
+            PasswordTextBox.Name = "PasswordTextBox";
+            PasswordTextBox.Size = new Size(241, 30);
+            PasswordTextBox.TabIndex = 4;
+            PasswordTextBox.UseSystemPasswordChar = true;
+            PasswordTextBox.TextChanged += textBox1_TextChanged_1;
+            // 
+            // label5
+            // 
+            label5.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(56, 100);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(243, 51);
+            label5.TabIndex = 3;
+            label5.Text = "رمز عبور:";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            label5.Click += label5_Click;
             // 
             // NameTextBox
             // 
@@ -141,22 +164,22 @@
             BtnBack.TextAlign = ContentAlignment.MiddleCenter;
             BtnBack.Click += BtnBack_Click;
             // 
-            // BtnLogin
+            // BtnSignUp
             // 
-            BtnLogin.BackColor = Color.FromArgb(192, 255, 192);
-            BtnLogin.BorderStyle = BorderStyle.FixedSingle;
-            BtnLogin.Cursor = Cursors.Hand;
-            BtnLogin.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnLogin.Image = Properties.Resources.icons8_add_user_group_woman_man_40px;
-            BtnLogin.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLogin.Location = new Point(316, 291);
-            BtnLogin.Margin = new Padding(4, 0, 4, 0);
-            BtnLogin.Name = "BtnLogin";
-            BtnLogin.Size = new Size(281, 53);
-            BtnLogin.TabIndex = 0;
-            BtnLogin.Text = "ثبت اطلاعات";
-            BtnLogin.TextAlign = ContentAlignment.MiddleCenter;
-            BtnLogin.Click += BtnLogin_Click;
+            BtnSignUp.BackColor = Color.FromArgb(192, 255, 192);
+            BtnSignUp.BorderStyle = BorderStyle.FixedSingle;
+            BtnSignUp.Cursor = Cursors.Hand;
+            BtnSignUp.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnSignUp.Image = Properties.Resources.icons8_add_user_group_woman_man_40px;
+            BtnSignUp.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnSignUp.Location = new Point(316, 291);
+            BtnSignUp.Margin = new Padding(4, 0, 4, 0);
+            BtnSignUp.Name = "BtnSignUp";
+            BtnSignUp.Size = new Size(281, 53);
+            BtnSignUp.TabIndex = 0;
+            BtnSignUp.Text = "ثبت اطلاعات";
+            BtnSignUp.TextAlign = ContentAlignment.MiddleCenter;
+            BtnSignUp.Click += BtnSignUp_Click;
             // 
             // label1
             // 
@@ -211,29 +234,6 @@
             label2.Text = "نام خانوادگی : ";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // PasswordTextBox
-            // 
-            PasswordTextBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            PasswordTextBox.Location = new Point(56, 155);
-            PasswordTextBox.Margin = new Padding(4);
-            PasswordTextBox.Name = "PasswordTextBox";
-            PasswordTextBox.Size = new Size(241, 30);
-            PasswordTextBox.TabIndex = 4;
-            PasswordTextBox.UseSystemPasswordChar = true;
-            PasswordTextBox.TextChanged += textBox1_TextChanged_1;
-            // 
-            // label5
-            // 
-            label5.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(56, 100);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(243, 51);
-            label5.TabIndex = 3;
-            label5.Text = "رمز عبور:";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            label5.Click += label5_Click;
-            // 
             // label6
             // 
             label6.Cursor = Cursors.Hand;
@@ -271,7 +271,7 @@
         #endregion
 
         private Panel panel1;
-        private Label BtnLogin;
+        private Label BtnSignUp;
         private Panel panel2;
         private TextBox NameTextBox;
         private TextBox AddressTextBox;

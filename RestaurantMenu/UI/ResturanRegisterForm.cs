@@ -49,7 +49,7 @@ namespace UI
         {
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void BtnSignUp_Click(object sender, EventArgs e)
         {
 
             var RestaurantName = RestaurantNameBox.Text;
@@ -69,7 +69,7 @@ namespace UI
 
             Restaurant restaurantDataModel = new Restaurant(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, Password, NationalCode);
 
-            var flag = restaurantDataModel.BtnLogin();
+            var flag = restaurantDataModel.BtnSignUp();
 
             if (flag == 1)
             {

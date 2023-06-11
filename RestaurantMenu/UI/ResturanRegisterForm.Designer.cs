@@ -263,7 +263,7 @@
             BtnLogin.TabIndex = 8;
             BtnLogin.Text = "ثبت اطلاعات";
             BtnLogin.TextAlign = ContentAlignment.MiddleCenter;
-            BtnLogin.Click += BtnLogin_Click;
+            BtnLogin.Click += BtnSignUp_Click;
             // 
             // label4
             // 
