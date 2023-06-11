@@ -15,6 +15,7 @@ namespace UI
         private Form activeForm;
         private Button currentButton;
         public int ResturanKey { get; set; }
+        public int ID { get; set; }
 
         public MainResturanForm()
         {

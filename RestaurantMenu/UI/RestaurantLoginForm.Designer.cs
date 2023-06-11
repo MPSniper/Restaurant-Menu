@@ -89,6 +89,7 @@
             TxtPassword.Size = new Size(257, 41);
             TxtPassword.TabIndex = 2;
             TxtPassword.UseSystemPasswordChar = true;
+            TxtPassword.TextChanged += TxtPassword_TextChanged;
             // 
             // BtnBack
             // 
@@ -117,6 +118,7 @@
             BtnLogin.TabIndex = 0;
             BtnLogin.Text = "ورود";
             BtnLogin.TextAlign = ContentAlignment.MiddleCenter;
+            BtnLogin.Click += BtnLogin_Click;
             // 
             // label3
             // 
