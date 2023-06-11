@@ -104,6 +104,7 @@
             BtnBack.TabIndex = 0;
             BtnBack.Text = "بازگشت";
             BtnBack.TextAlign = ContentAlignment.MiddleCenter;
+            BtnBack.Click += BtnBack_Click;
             // 
             // BtnLogin
             // 

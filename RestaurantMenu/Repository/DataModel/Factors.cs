@@ -43,10 +43,15 @@ namespace Repository.DataModel
             }
         }
 
-        public (DataTable , string ) ShowFactors()
+        public (DataTable , string ) ShowFactors(int ID)
         {
             DataTable dt = new DataTable();
-            string sqlcommand = "SELECT Factor_Table.Sum, Restaurant_Table.RestaurantName, User_Table.FirstName FROM Factor_Table JOIN Restaurant_Table ON Factor_Table.RestaurantKey = Restaurant_Table.ID JOIN User_Table ON User_Table.ID = Factor_Table.Userkey";
+            SqlConnection? con = connect.CreateConnection();
+
+            SqlCommand sqlcommand = new SqlCommand("SELECT Factor_Table.Sum, Restaurant_Table.RestaurantName, User_Table.FirstName FROM Factor_Table JOIN Restaurant_Table ON Factor_Table.RestaurantKey = Restaurant_Table.ID JOIN User_Table ON User_Table.ID = Factor_Table.Userkey WHERE RestaurantKey = @ID ", con);
+            sqlcommand.Parameters.AddWithValue("@ID", ID);
+
+
             connect.readData(sqlcommand, dt);
             DataColumn column = dt.Columns["Sum"];
             DataRow[] rows = dt.Select();

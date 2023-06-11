@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Repository.DataModel;
+﻿using Repository.DataModel;
 
 namespace UI
 {
@@ -30,7 +21,7 @@ namespace UI
             var Password = TxtPassword.Text;
 
             Restaurant restaurant = new Restaurant();
-             var id = restaurant.BtnLogin(NationalCode , Password);
+            var id = restaurant.BtnLogin(NationalCode, Password);
 
             if (id != -1)
             {
@@ -44,6 +35,12 @@ namespace UI
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+
 
         }
     }

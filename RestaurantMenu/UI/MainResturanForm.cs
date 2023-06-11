@@ -76,7 +76,7 @@ namespace UI
 
         private void BtnFactors_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FactorsForm(), sender);
+            OpenChildForm(new FactorsForm() { ID = ID }, sender);
         }
 
         private void BtnExit_Click(object sender, EventArgs e)

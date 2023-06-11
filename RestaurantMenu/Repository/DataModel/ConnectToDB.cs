@@ -71,7 +71,7 @@ namespace Repository.DataModel
             }
         }
 
-        public void readData(string query, DataTable tblName)
+        public void readData(SqlCommand  query, DataTable tblName)
         {
             try
             {
@@ -80,8 +80,7 @@ namespace Repository.DataModel
                     CreateConnection();
                 }
 
-                command.Connection = sqlConnection;
-                command.CommandText = query;
+                command = query;
                 command.CommandType = CommandType.Text;
 
                 adapter = new SqlDataAdapter(command);
