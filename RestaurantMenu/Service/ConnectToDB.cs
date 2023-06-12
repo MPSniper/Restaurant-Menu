@@ -9,9 +9,9 @@ namespace Service
         private static SqlCommand command = new SqlCommand();
         private static SqlDataAdapter adapter = new SqlDataAdapter();
 
-        //public static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
+        public static string strConnString = "Data Source=KODI\\MSSQLSERVER02;Initial Catalog=RestaurantDB;Integrated Security=True";
        // public static string strConnString = "Data Source=.;Initial Catalog=RestaurantDB;Integrated Security=True";
-        public static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
+        //public static string strConnString = "Data Source=MamadPC;Initial Catalog=NewRestaurant;Integrated Security=True";
 
 
 
