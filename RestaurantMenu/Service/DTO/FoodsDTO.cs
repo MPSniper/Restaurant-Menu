@@ -67,7 +67,7 @@ namespace Service.DTO
                         int ID = Convert.ToInt32(reader["ID"]);
                         string Food = reader["Food"].ToString();
                         decimal Price = Convert.ToDecimal(reader["Price"]);
-                        result.Add((ID, food, Price));
+                        result.Add((ID, Food, Price));
                     }
                 }
                 connect.CloseConnection();
