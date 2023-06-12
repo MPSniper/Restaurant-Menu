@@ -22,7 +22,7 @@ namespace Repository.DataModel
         {
             return dto.BtnSignUp(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, NationalCode, Password);
         }
-        public int BtnLogin()
+        public int BtnLogin(string NationalCode, string Password)
         {
             return dto.BtnLogin(NationalCode, Password);
         }
