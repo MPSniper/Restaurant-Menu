@@ -67,6 +67,12 @@ namespace UI
             var Password = PasswordBox.Text;
             var NationalCode = NationalCodeBox.Text;
 
+            if (RestaurantName.Equals("") || OwnerName.Equals("") || strStartTime.Equals("") || strEndTime.Equals("") || ResAddress.Equals("") || NationalCode.Equals("") || Password.Equals(""))
+            {
+                MessageBox.Show("Please complete all fields");
+                return;
+            }
+
             Restaurant restaurantDataModel = new Restaurant(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, Password, NationalCode);
 
             var flag = restaurantDataModel.BtnSignUp();
