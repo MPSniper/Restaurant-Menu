@@ -72,10 +72,22 @@ namespace UI
 
             Restaurant restaurantDataModel = new Restaurant(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, Password, NationalCode);
 
+
+
+
+            var id = restaurantDataModel.CheckNationalCode();
+
+           if (id != -1 && id != 0)
+            {
+                MessageBox.Show("کد ملی وارد شده قبلا ثبت شده است.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
             var flag = restaurantDataModel.BtnSignUp();
 
-            if (flag == 1)
+            if (flag == 1 && id == 0)
             {
+
+                MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 SplashForm splashForm = new SplashForm();
                 splashForm.ShowDialog();

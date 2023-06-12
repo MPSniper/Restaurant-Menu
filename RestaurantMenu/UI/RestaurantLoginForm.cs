@@ -30,6 +30,7 @@ namespace UI
             }
             else if (id != -1)
             {
+
                 this.Hide();
                 MainResturanForm restaurantForm = new MainResturanForm();
                 restaurantForm.ID = id;

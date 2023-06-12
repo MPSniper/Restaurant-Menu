@@ -18,6 +18,10 @@ namespace Repository.DataModel
             this.Password = Password;
             this.NationalCode = NationalCode;
         }
+        public int CheckNationalCode()
+        {
+            return dto.CheckNationalCode(NationalCode);
+        }
         public int BtnSignUp()
         {
             return dto.BtnSignUp(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, NationalCode, Password);

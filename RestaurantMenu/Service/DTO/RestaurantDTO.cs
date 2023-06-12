@@ -22,6 +22,37 @@ namespace Service.DTO
             return (row == 1 ? row : -1);
 
         }
+        public int CheckNationalCode(string Nation)
+        {
+            try
+            {
+                SqlConnection? con = connect.CreateConnection();
+                if (con is null)
+                {
+                    return -1;
+                }
+                SqlCommand command = new SqlCommand("select ID From Restaurant_Table Where NationalCode = @nationalCode ", con);
+                command.Parameters.AddWithValue("@nationalCode", Nation);
+                int id = 0;
+                try
+                {
+                    id = Convert.ToInt32(command.ExecuteScalar());
+                }
+                catch
+                {
+                    id = 0;
+                }
+
+                connect.CloseConnection();
+                return id;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "خطا در ارتباط با دیتابیس", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+        }
+
         public int BtnLogin(string NationalCode, string Password)
         {
 
