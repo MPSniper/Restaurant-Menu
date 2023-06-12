@@ -1,4 +1,5 @@
 ﻿using Repository.DataModel;
+using UI.ViewModels;
 
 namespace UI
 {
@@ -51,40 +52,23 @@ namespace UI
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
-
-            var RestaurantName = RestaurantNameBox.Text;
-            var OwnerName = OwnerTextBox.Text;
-            var decStartTime = StartTime.Value;
-            TimeSpan ts1 = TimeSpan.FromHours((double)decStartTime);
-            string strStartTime = ts1.ToString("h\\:mm");
-            var decEndTime = EndTime.Value;
-            TimeSpan ts2 = TimeSpan.FromHours((double)decEndTime);
-            string strEndTime = ts2.ToString("h\\:mm");
-            var ResAddress = AddressBox.Text;
-            var Password = PasswordBox.Text;
-            var NationalCode = NationalCodeBox.Text;
-
-            if (RestaurantName=="" || OwnerName=="" || strStartTime=="" || strEndTime=="" || ResAddress=="" || NationalCode=="" || Password=="")
-            {
-                MessageBox.Show("Please complete all fields");
-                return;
-            }
-
-            Restaurant restaurantDataModel = new Restaurant(RestaurantName, OwnerName, strStartTime, strEndTime, ResAddress, Password, NationalCode);
-
-
-
+            RestaurantCardViewModel restaurantCard = new RestaurantCardViewModel(RestaurantNameBox.Text, OwnerTextBox.Text, StartTime.Value, EndTime.Value, AddressBox.Text, PasswordBox.Text, NationalCodeBox.Text);
+            Restaurant restaurantDataModel = new Restaurant(restaurantCard.RestaurantName, restaurantCard.OwnerName, restaurantCard.StrStartTime(), restaurantCard.StrEndTime(), restaurantCard.ResAddress, restaurantCard.Password, restaurantCard.NationalCode);
 
             var id = restaurantDataModel.CheckNationalCode();
+            var x = restaurantCard.CheckValidation();
 
-           if (id != -1 && id != 0)
+            if (x == -2)
+                return;
+
+            else if (id != -1 && id != 0)
             {
                 MessageBox.Show("کد ملی وارد شده قبلا ثبت شده است.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             var flag = restaurantDataModel.BtnSignUp();
 
-            if (flag == 1 && id == 0)
+            if (flag == 1 && id == 0 && x == 0)
             {
 
                 MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -92,8 +76,6 @@ namespace UI
                 SplashForm splashForm = new SplashForm();
                 splashForm.ShowDialog();
             }
-
-
 
         }
 

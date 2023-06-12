@@ -14,7 +14,7 @@ namespace UI.ViewModels
             UserNation = userNation;
             UserAddress = userAddress;
             Password = password;
-             CheckValidation();
+             
 
         }
 
@@ -24,13 +24,14 @@ namespace UI.ViewModels
         public string UserAddress { get; }
         public string Password { get; }
 
-        private void CheckValidation()
+        public int CheckValidation()
         {
             if (UserName == "" || UserFamily == "" || UserNation == "" || UserAddress == "" || Password == "")
             {
                 MessageBox.Show("لطفا تمام گزینه ها را تکمیل کنید.");
-                return ;
+                return -2 ;
             }
+            return 0 ;
 
         }
           
