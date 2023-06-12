@@ -7,7 +7,7 @@ namespace UI
         string? name;
         int id;
         readonly Foods food = new Foods();
-        public int ResturanKey { get; set; }
+        public int ResturantKey { get; set; }
 
         public FoodsForm()
         {
@@ -29,19 +29,19 @@ namespace UI
 
         private void FoodsForm_Load(object sender, EventArgs e)
         {
-            AddFoods(food.SearchFoods(ResturanKey, name));
+            AddFoods(food.SearchFoods(ResturantKey, name));
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             name = TxtNameSearch.Text.Trim();
-            AddFoods(food.SearchFoods(ResturanKey, name));
+            AddFoods(food.SearchFoods(ResturantKey, name));
         }
 
         private void BtnAll_Click(object sender, EventArgs e)
         {
             name = "";
-            AddFoods(food.SearchFoods(ResturanKey, name));
+            AddFoods(food.SearchFoods(ResturantKey, name));
         }
 
         private void BtnAddOrEdit_Click(object sender, EventArgs e)
@@ -60,21 +60,21 @@ namespace UI
             {
                 if (id == 0)
                 {
-                    Foods newfood = new Foods(TxtName.Text.Trim(), ResturanKey, TxtPrice.Value);
+                    Foods newfood = new Foods(TxtName.Text.Trim(), ResturantKey, TxtPrice.Value);
                     if (newfood.AddFood() != -1)
                     {
                         MessageBox.Show("اطلاعات غذا با موفقیت ذخیره شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        AddFoods(food.SearchFoods(ResturanKey, name));
+                        AddFoods(food.SearchFoods(ResturantKey, name));
                         BtnCancell_Click(BtnCancell, new EventArgs());
                     }
                 }
                 else
                 {
-                    Foods editFood = new Foods(TxtName.Text.Trim(), ResturanKey, TxtPrice.Value);
+                    Foods editFood = new Foods(TxtName.Text.Trim(), ResturantKey, TxtPrice.Value);
                     if (editFood.EditFood(id) != -1)
                     {
                         MessageBox.Show("اطلاعات غذا با موفقیت ویرایش شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        AddFoods(food.SearchFoods(ResturanKey, name));
+                        AddFoods(food.SearchFoods(ResturantKey, name));
                         BtnCancell_Click(BtnCancell, new EventArgs());
                     }
                 }
@@ -100,7 +100,7 @@ namespace UI
                     if (food.RemoveFood(id) != -1)
                     {
                         MessageBox.Show("اطلاعات غذا با موفقیت حذف شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        AddFoods(food.SearchFoods(ResturanKey, name));
+                        AddFoods(food.SearchFoods(ResturantKey, name));
                         BtnCancell_Click(BtnCancell, new EventArgs());
                     }
                 }
