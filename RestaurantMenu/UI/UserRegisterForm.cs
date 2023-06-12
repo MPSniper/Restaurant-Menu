@@ -5,7 +5,7 @@ namespace UI
 {
     public partial class UserRegisterForm : Form
     {
-
+        ErrorCode_Enum errorCode = new ErrorCode_Enum();
         public UserRegisterForm()
         {
             InitializeComponent();
@@ -25,10 +25,10 @@ namespace UI
             Users userDataModel = new Users(userViewModel.UserName,  userViewModel.UserFamily,userViewModel.UserNation, userViewModel.UserAddress, userViewModel.Password);
             var id = userDataModel.CheckNationalCode();
             var x = userViewModel.CheckValidation();
-
-            if (x == -2)
-                return;
-            else if (id != -1 && id != 0 )
+            
+            if (x==(int) ErrorCode_Enum.ThereIsNull)
+                return; 
+            else if (id != (int)ErrorCode_Enum.ErrorInDB && id != (int)ErrorCode_Enum.Nationalcode_Correct)
             {
                 MessageBox.Show("کد ملی وارد شده قبلا ثبت شده است.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -36,7 +36,7 @@ namespace UI
 
             var flag = userDataModel.BtnSignUp();
 
-            if (flag == 1 && id == 0 && x == 0)
+            if (flag == (int)ErrorCode_Enum.Register_successfully && id==(int)ErrorCode_Enum.Nationalcode_Correct && x == (int)ErrorCode_Enum.AllFieldsComplete )
             {
 
                 MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام" );

@@ -31,7 +31,7 @@ namespace UI.ViewModels
                 MessageBox.Show("لطفا تمام گزینه ها را تکمیل کنید.");
                 return -2 ;
             }
-            return 0 ;
+            return 2 ;
 
         }
           
