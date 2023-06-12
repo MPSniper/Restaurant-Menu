@@ -57,11 +57,9 @@ namespace UI
             var decStartTime = StartTime.Value;
             TimeSpan ts1 = TimeSpan.FromHours((double)decStartTime);
             string strStartTime = ts1.ToString("h\\:mm");
-            //string strStartTime = "10:00:00";
             var decEndTime = EndTime.Value;
             TimeSpan ts2 = TimeSpan.FromHours((double)decEndTime);
             string strEndTime = ts2.ToString("h\\:mm");
-            //string strEndTime = "20:00:00";
             var ResAddress = AddressBox.Text;
             var Password = PasswordBox.Text;
             var NationalCode = NationalCodeBox.Text;

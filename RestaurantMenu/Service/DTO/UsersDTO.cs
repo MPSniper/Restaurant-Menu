@@ -19,19 +19,10 @@ namespace Service.DTO
                 insertcommand.Parameters.AddWithValue("@password", password);
                 var row = connect.ExecuteQuery(insertcommand);
             connect.CloseConnection();
+            return (row == 1 ? row : -1);
 
-            if (row == 1)
-                {
-                    MessageBox.Show("SUCCESSFULL");
-                    return 1;
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-                    return -1;
-                }
 
-            
+
         }
 
         public int Login(string nationalCode, string password)

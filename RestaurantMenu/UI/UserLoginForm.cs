@@ -36,7 +36,6 @@ namespace UI
                     MainUserForm userForm = new MainUserForm();
                     userForm.Id = id;
                     userForm.ShowDialog();
-                    //this.Close();
                 }
             }
         }

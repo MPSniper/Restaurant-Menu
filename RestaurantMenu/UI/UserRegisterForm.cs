@@ -20,21 +20,7 @@ namespace UI
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
 
-
-            //var userName = NameTextBox.Text;
-            //var userFamily = FamilyTextBox.Text;
-            //var userNation = NationalityTextBox.Text;
-            //var userAddress = AddressTextBox.Text;
-            //var password = PasswordTextBox.Text;
-
-            //if (userName == "" || userFamily == "" || userNation == "" || userAddress == "" || password == "")
-            //{
-            //    MessageBox.Show("Please complete all fields");
-            //    return;
-            //}
             UserCartViewModel userViewModel = new UserCartViewModel(NameTextBox.Text, FamilyTextBox.Text, NationalityTextBox.Text, AddressTextBox.Text, PasswordTextBox.Text);
-
-
             Users userDataModel = new Users(userViewModel.UserName,  userViewModel.UserFamily,userViewModel.UserNation, userViewModel.UserAddress, userViewModel.Password);
 
             var flag = userDataModel.BtnSignUp();

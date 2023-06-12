@@ -19,17 +19,8 @@ namespace Service.DTO
             var row = connect.ExecuteQuery(insertcommand);
 
             connect.CloseConnection();
-            
-            if (row == 1)
-            {
-                MessageBox.Show("SUCCESSFULL");
-                return 1;
-            }
-            else
-            {
-                MessageBox.Show("Error");
-                return -1;
-            }
+            return (row == 1 ? row : -1);
+ 
         }
         public int BtnLogin(string NationalCode, string Password)
         {

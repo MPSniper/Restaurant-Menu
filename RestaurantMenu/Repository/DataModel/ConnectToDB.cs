@@ -18,13 +18,7 @@ namespace Repository.DataModel
 
         public int ExecuteQuery(SqlCommand dbCommand)
         {
-            if (sqlConnection.State == 0)
-            {
-                MessageBox.Show("00");
-                CreateConnection();
-            }
-            if (sqlConnection.State != 0)
-                MessageBox.Show("111");
+            
 
             try
             {
