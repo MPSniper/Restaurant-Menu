@@ -44,6 +44,7 @@ namespace Service.DTO
                 object columnValue = row[column];
                 sum += Convert.ToInt32(columnValue);
             }
+            connect.CloseConnection();
             return (dt, sum.ToString());
         }
     }

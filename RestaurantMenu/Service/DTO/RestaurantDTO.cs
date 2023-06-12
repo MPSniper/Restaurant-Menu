@@ -18,6 +18,8 @@ namespace Service.DTO
             insertcommand.Parameters.AddWithValue("@NationalCode", NationalCode);
             var row = connect.ExecuteQuery(insertcommand);
 
+            connect.CloseConnection();
+            
             if (row == 1)
             {
                 MessageBox.Show("SUCCESSFULL");

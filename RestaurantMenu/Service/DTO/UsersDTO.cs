@@ -18,8 +18,9 @@ namespace Service.DTO
                 insertcommand.Parameters.AddWithValue("@userAddress", userAddress);
                 insertcommand.Parameters.AddWithValue("@password", password);
                 var row = connect.ExecuteQuery(insertcommand);
+            connect.CloseConnection();
 
-                if (row == 1)
+            if (row == 1)
                 {
                     MessageBox.Show("SUCCESSFULL");
                     return 1;
@@ -29,7 +30,6 @@ namespace Service.DTO
                     MessageBox.Show("Error");
                     return -1;
                 }
-                //connect.CloseConnection();
 
             
         }
