@@ -23,16 +23,13 @@
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
+            Application.Exit();
 
-            this.Close();
         }
 
         private void BtnMainResturan_Click(object sender, EventArgs e)
         {
-            //new MainResturanForm()
-            //{
-            //    ResturanKey = 1
-            //}.ShowDialog();
+
             this.Hide();
             new RestaurantLoginForm().ShowDialog();
         }
@@ -48,7 +45,6 @@
         {
             this.Hide();
             new UserLoginForm().ShowDialog();
-            //this.ShowDialog();
         }
     }
 }
