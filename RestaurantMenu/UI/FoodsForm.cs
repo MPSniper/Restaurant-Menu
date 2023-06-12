@@ -4,7 +4,7 @@ namespace UI
 {
     public partial class FoodsForm : Form
     {
-        string name;
+        string? name;
         int id;
         readonly Foods food = new Foods();
         public int ResturantKey { get; set; }
@@ -14,7 +14,7 @@ namespace UI
             InitializeComponent();
         }
 
-        private void AddFoods(List<(int ID, string Food, decimal Price)> foods)
+        private void AddFoods(List<Foods> foods)
         {
             DataFoods.Rows.Clear();
             foreach (var item in foods)
