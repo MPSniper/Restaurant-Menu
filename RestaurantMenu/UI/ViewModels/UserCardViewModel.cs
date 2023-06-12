@@ -1,8 +1,12 @@
 ﻿
+using System.Data.SqlClient;
+
+
 namespace UI.ViewModels
 {
     public class UserCardViewModel
     {
+
         public UserCardViewModel(string userName, string userFamily, string userNation, string userAddress, string password) 
         {
             UserName = userName;
@@ -10,7 +14,8 @@ namespace UI.ViewModels
             UserNation = userNation;
             UserAddress = userAddress;
             Password = password;
-            CheckValidation();
+             CheckValidation();
+
         }
 
         public string UserName { get; }
@@ -24,8 +29,9 @@ namespace UI.ViewModels
             if (UserName == "" || UserFamily == "" || UserNation == "" || UserAddress == "" || Password == "")
             {
                 MessageBox.Show("لطفا تمام گزینه ها را تکمیل کنید.");
-                return;
+                return ;
             }
+
         }
           
 }

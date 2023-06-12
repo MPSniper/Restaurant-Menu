@@ -19,6 +19,10 @@ namespace Repository.DataModel
             this.userAddress = userAddress;
             this.password = password;
         }
+        public int  CheckNationalCode()
+        {
+            return  dto.CheckNationalCode(userNation);
+        }
         public int BtnSignUp()
         {
             return dto.BtnSignUp(userName, userFamily, userNation, userAddress, password);

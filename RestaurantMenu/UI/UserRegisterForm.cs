@@ -22,11 +22,23 @@ namespace UI
 
             UserCardViewModel userViewModel = new UserCardViewModel(NameTextBox.Text, FamilyTextBox.Text, NationalityTextBox.Text, AddressTextBox.Text, PasswordTextBox.Text);
             Users userDataModel = new Users(userViewModel.UserName,  userViewModel.UserFamily,userViewModel.UserNation, userViewModel.UserAddress, userViewModel.Password);
+            var id = userDataModel.CheckNationalCode();
+
+          
+           if (id != -1 && id != 0 )
+            {
+                MessageBox.Show("کد ملی وارد شده قبلا ثبت شده است.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
 
             var flag = userDataModel.BtnSignUp();
 
-            if (flag == 1)
+            if (flag == 1 && id == 0)
             {
+
+                MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام" );
                 this.Hide();
                 new SplashForm().ShowDialog();
             }
