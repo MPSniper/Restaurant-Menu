@@ -1,4 +1,6 @@
 ﻿using Service.DTO;
+//using UI.ViewModels;
+
 namespace Repository.DataModel
 {
     public class Users
@@ -8,6 +10,7 @@ namespace Repository.DataModel
         string userName, userFamily, userNation, userAddress, password;
         public Users()
         {
+           // UserCartViewModel userViewModel
         }
         public Users(string userName, string userFamily, string userNation, string userAddress, string password)
         {

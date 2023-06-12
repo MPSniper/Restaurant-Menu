@@ -10,14 +10,12 @@
         private void BtnUserRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             new UserRegisterForm().ShowDialog();
         }
 
         private void BtnResturanRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             new ResturanRegisterForm().ShowDialog();
         }
 
