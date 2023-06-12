@@ -28,120 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnExit = new System.Windows.Forms.Label();
-            this.BtnResturanRegister = new System.Windows.Forms.Label();
-            this.BtnMainResturan = new System.Windows.Forms.Label();
-            this.BtnLoginUser = new System.Windows.Forms.Label();
-            this.BtnUserRegister = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            BtnExit = new Label();
+            BtnResturanRegister = new Label();
+            BtnMainResturan = new Label();
+            BtnLoginUser = new Label();
+            BtnUserRegister = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.BtnExit);
-            this.panel1.Controls.Add(this.BtnResturanRegister);
-            this.panel1.Controls.Add(this.BtnMainResturan);
-            this.panel1.Controls.Add(this.BtnLoginUser);
-            this.panel1.Controls.Add(this.BtnUserRegister);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 316);
-            this.panel1.TabIndex = 20;
+            panel1.BackColor = Color.Transparent;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(BtnExit);
+            panel1.Controls.Add(BtnResturanRegister);
+            panel1.Controls.Add(BtnMainResturan);
+            panel1.Controls.Add(BtnLoginUser);
+            panel1.Controls.Add(BtnUserRegister);
+            panel1.Location = new Point(12, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(525, 316);
+            panel1.TabIndex = 20;
             // 
             // BtnExit
             // 
-            this.BtnExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExit.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnExit.Image = global::UI.Properties.Resources.shutdown_40px;
-            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnExit.Location = new System.Drawing.Point(252, 269);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(182, 43);
-            this.BtnExit.TabIndex = 0;
-            this.BtnExit.Text = "خروج";
-            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            BtnExit.BorderStyle = BorderStyle.FixedSingle;
+            BtnExit.Cursor = Cursors.Hand;
+            BtnExit.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnExit.Image = Properties.Resources.shutdown_40px;
+            BtnExit.ImageAlign = ContentAlignment.MiddleRight;
+            BtnExit.Location = new Point(252, 269);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new Size(182, 43);
+            BtnExit.TabIndex = 0;
+            BtnExit.Text = "خروج";
+            BtnExit.TextAlign = ContentAlignment.MiddleCenter;
+            BtnExit.Click += BtnExit_Click;
             // 
             // BtnResturanRegister
             // 
-            this.BtnResturanRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BtnResturanRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnResturanRegister.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnResturanRegister.Image = global::UI.Properties.Resources.check_40px;
-            this.BtnResturanRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnResturanRegister.Location = new System.Drawing.Point(252, 217);
-            this.BtnResturanRegister.Name = "BtnResturanRegister";
-            this.BtnResturanRegister.Size = new System.Drawing.Size(182, 43);
-            this.BtnResturanRegister.TabIndex = 0;
-            this.BtnResturanRegister.Text = "ثبت رستوران";
-            this.BtnResturanRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnResturanRegister.Click += new System.EventHandler(this.BtnResturanRegister_Click);
+            BtnResturanRegister.BorderStyle = BorderStyle.FixedSingle;
+            BtnResturanRegister.Cursor = Cursors.Hand;
+            BtnResturanRegister.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnResturanRegister.Image = Properties.Resources.check_40px;
+            BtnResturanRegister.ImageAlign = ContentAlignment.MiddleRight;
+            BtnResturanRegister.Location = new Point(252, 217);
+            BtnResturanRegister.Name = "BtnResturanRegister";
+            BtnResturanRegister.Size = new Size(182, 43);
+            BtnResturanRegister.TabIndex = 0;
+            BtnResturanRegister.Text = "ثبت رستوران";
+            BtnResturanRegister.TextAlign = ContentAlignment.MiddleCenter;
+            BtnResturanRegister.Click += BtnResturanRegister_Click;
             // 
             // BtnMainResturan
             // 
-            this.BtnMainResturan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BtnMainResturan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMainResturan.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMainResturan.Image = global::UI.Properties.Resources.ifood_40px;
-            this.BtnMainResturan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnMainResturan.Location = new System.Drawing.Point(252, 53);
-            this.BtnMainResturan.Name = "BtnMainResturan";
-            this.BtnMainResturan.Size = new System.Drawing.Size(182, 43);
-            this.BtnMainResturan.TabIndex = 0;
-            this.BtnMainResturan.Text = "صفحه اصلی رستوران";
-            this.BtnMainResturan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMainResturan.Click += new System.EventHandler(this.BtnMainResturan_Click);
+            BtnMainResturan.BorderStyle = BorderStyle.FixedSingle;
+            BtnMainResturan.Cursor = Cursors.Hand;
+            BtnMainResturan.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnMainResturan.Image = Properties.Resources.add_fingerprint_40px;
+            BtnMainResturan.ImageAlign = ContentAlignment.MiddleRight;
+            BtnMainResturan.Location = new Point(252, 53);
+            BtnMainResturan.Name = "BtnMainResturan";
+            BtnMainResturan.Size = new Size(182, 43);
+            BtnMainResturan.TabIndex = 0;
+            BtnMainResturan.Text = "ورود رستوران";
+            BtnMainResturan.TextAlign = ContentAlignment.MiddleCenter;
+            BtnMainResturan.Click += BtnMainResturan_Click;
             // 
             // BtnLoginUser
             // 
-            this.BtnLoginUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BtnLoginUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnLoginUser.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnLoginUser.Image = global::UI.Properties.Resources.add_fingerprint_40px;
-            this.BtnLoginUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnLoginUser.Location = new System.Drawing.Point(252, 106);
-            this.BtnLoginUser.Name = "BtnLoginUser";
-            this.BtnLoginUser.Size = new System.Drawing.Size(182, 43);
-            this.BtnLoginUser.TabIndex = 0;
-            this.BtnLoginUser.Text = "ورود کاربر";
-            this.BtnLoginUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnLoginUser.Click += new System.EventHandler(this.BtnLoginUser_Click);
+            BtnLoginUser.BorderStyle = BorderStyle.FixedSingle;
+            BtnLoginUser.Cursor = Cursors.Hand;
+            BtnLoginUser.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnLoginUser.Image = Properties.Resources.add_fingerprint_40px;
+            BtnLoginUser.ImageAlign = ContentAlignment.MiddleRight;
+            BtnLoginUser.Location = new Point(252, 106);
+            BtnLoginUser.Name = "BtnLoginUser";
+            BtnLoginUser.Size = new Size(182, 43);
+            BtnLoginUser.TabIndex = 0;
+            BtnLoginUser.Text = "ورود کاربر";
+            BtnLoginUser.TextAlign = ContentAlignment.MiddleCenter;
+            BtnLoginUser.Click += BtnLoginUser_Click;
             // 
             // BtnUserRegister
             // 
-            this.BtnUserRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BtnUserRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnUserRegister.Font = new System.Drawing.Font("B Zar", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnUserRegister.Image = global::UI.Properties.Resources.add_fingerprint_40px;
-            this.BtnUserRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnUserRegister.Location = new System.Drawing.Point(252, 162);
-            this.BtnUserRegister.Name = "BtnUserRegister";
-            this.BtnUserRegister.Size = new System.Drawing.Size(182, 43);
-            this.BtnUserRegister.TabIndex = 0;
-            this.BtnUserRegister.Text = "ثبت نام کاربر";
-            this.BtnUserRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnUserRegister.Click += new System.EventHandler(this.BtnUserRegister_Click);
+            BtnUserRegister.BorderStyle = BorderStyle.FixedSingle;
+            BtnUserRegister.Cursor = Cursors.Hand;
+            BtnUserRegister.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnUserRegister.Image = Properties.Resources.icons8_add_user_group_woman_man_40px;
+            BtnUserRegister.ImageAlign = ContentAlignment.MiddleRight;
+            BtnUserRegister.Location = new Point(252, 162);
+            BtnUserRegister.Name = "BtnUserRegister";
+            BtnUserRegister.Size = new Size(182, 43);
+            BtnUserRegister.TabIndex = 0;
+            BtnUserRegister.Text = "ثبت نام کاربر";
+            BtnUserRegister.TextAlign = ContentAlignment.MiddleCenter;
+            BtnUserRegister.Click += BtnUserRegister_Click;
             // 
             // SplashForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::UI.Properties.Resources._2_;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(549, 340);
-            this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("B Zar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "SplashForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 27F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources._2_;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(549, 340);
+            Controls.Add(panel1);
+            Font = new Font("B Zar", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "SplashForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
