@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
+﻿
 namespace UI.ViewModels
 {
-    public class UserCartViewModel
+    public class UserCardViewModel
     {
-        public UserCartViewModel(string userName, string userFamily, string userNation, string userAddress, string password) 
+        public UserCardViewModel(string userName, string userFamily, string userNation, string userAddress, string password) 
         {
             UserName = userName;
             UserFamily = userFamily;
@@ -25,11 +19,11 @@ namespace UI.ViewModels
         public string UserAddress { get; }
         public string Password { get; }
 
-        public void CheckValidation()
+        private void CheckValidation()
         {
             if (UserName == "" || UserFamily == "" || UserNation == "" || UserAddress == "" || Password == "")
             {
-                MessageBox.Show("Please complete all fields");
+                MessageBox.Show("لطفا تمام گزینه ها را تکمیل کنید.");
                 return;
             }
         }

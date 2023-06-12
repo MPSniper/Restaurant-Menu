@@ -46,6 +46,7 @@ namespace Service.DTO
                 {
                     id = 0;
                 }
+
                 connect.CloseConnection();
                 return id;
             }

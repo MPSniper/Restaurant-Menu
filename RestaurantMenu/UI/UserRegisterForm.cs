@@ -20,7 +20,7 @@ namespace UI
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
 
-            UserCartViewModel userViewModel = new UserCartViewModel(NameTextBox.Text, FamilyTextBox.Text, NationalityTextBox.Text, AddressTextBox.Text, PasswordTextBox.Text);
+            UserCardViewModel userViewModel = new UserCardViewModel(NameTextBox.Text, FamilyTextBox.Text, NationalityTextBox.Text, AddressTextBox.Text, PasswordTextBox.Text);
             Users userDataModel = new Users(userViewModel.UserName,  userViewModel.UserFamily,userViewModel.UserNation, userViewModel.UserAddress, userViewModel.Password);
 
             var flag = userDataModel.BtnSignUp();

@@ -5,9 +5,9 @@ namespace Repository.DataModel
 {
     public class Users
     {
-        UsersDTO dto = new UsersDTO();
+        private UsersDTO dto = new UsersDTO();
 
-        string userName, userFamily, userNation, userAddress, password;
+        private string userName, userFamily, userNation, userAddress, password;
         public Users()
         {
         }

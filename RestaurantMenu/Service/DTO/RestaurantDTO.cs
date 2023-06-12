@@ -20,40 +20,48 @@ namespace Service.DTO
 
             connect.CloseConnection();
             return (row == 1 ? row : -1);
- 
+
         }
         public int BtnLogin(string NationalCode, string Password)
         {
-            if (NationalCode.Trim().Length != 10)
-            {
-                MessageBox.Show("کد ملی وارد شده نامعتبر است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return -1;
-            }
-            else if (string.IsNullOrWhiteSpace(Password))
-            {
-                MessageBox.Show("رمز ورود را وارد کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return -1;
-            }
-            else
-            {
-                SqlConnection? con = connect.CreateConnection();
 
-                SqlCommand insertcommand = new SqlCommand("select ID From Restaurant_Table Where NationalCode = @nationalCode and [Password] = @pass", con);
-                insertcommand.Parameters.AddWithValue("@nationalCode", NationalCode);
-                insertcommand.Parameters.AddWithValue("@pass", Password);
-
-                int id = 0;
-                try
+            try
+            {
+                if (NationalCode.Trim().Length != 10)
                 {
-                    id = Convert.ToInt32(insertcommand.ExecuteScalar());
-                }
-                catch
-                {
-                    MessageBox.Show("اطلاعات وارد شده نادرست است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("کد ملی وارد شده نامعتبر است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return -1;
                 }
-                connect.CloseConnection();
-                return id;
+                else if (string.IsNullOrWhiteSpace(Password))
+                {
+                    MessageBox.Show("رمز ورود را وارد کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return -1;
+                }
+                else
+                {
+                    SqlConnection? con = connect.CreateConnection();
+
+                    SqlCommand insertcommand = new SqlCommand("select ID From Restaurant_Table Where NationalCode = @nationalCode and [Password] = @pass", con);
+                    insertcommand.Parameters.AddWithValue("@nationalCode", NationalCode);
+                    insertcommand.Parameters.AddWithValue("@pass", Password);
+
+                    int id = 0;
+                    try
+                    {
+                        id = Convert.ToInt32(insertcommand.ExecuteScalar());
+                    }
+                    catch
+                    {
+                        id = 0;
+                    }
+                    connect.CloseConnection();
+                    return id;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "خطا در ارتباط با دیتابیس", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
             }
         }
         public List<(int, string)> GetRestaurants()
