@@ -54,7 +54,6 @@ namespace UI
 
             var RestaurantName = RestaurantNameBox.Text;
             var OwnerName = OwnerTextBox.Text;
-
             var decStartTime = StartTime.Value;
             TimeSpan ts1 = TimeSpan.FromHours((double)decStartTime);
             string strStartTime = ts1.ToString("h\\:mm");
@@ -67,7 +66,7 @@ namespace UI
             var Password = PasswordBox.Text;
             var NationalCode = NationalCodeBox.Text;
 
-            if (RestaurantName.Equals("") || OwnerName.Equals("") || strStartTime.Equals("") || strEndTime.Equals("") || ResAddress.Equals("") || NationalCode.Equals("") || Password.Equals(""))
+            if (RestaurantName=="" || OwnerName=="" || strStartTime=="" || strEndTime=="" || ResAddress=="" || NationalCode=="" || Password=="")
             {
                 MessageBox.Show("Please complete all fields");
                 return;
