@@ -77,8 +77,8 @@ namespace UI
             if (flag == 1)
             {
                 this.Hide();
-                MainResturanForm mainResturanForm = new MainResturanForm();
-                mainResturanForm.Show();
+                SplashForm splashForm = new SplashForm();
+                splashForm.ShowDialog();
             }
 
 

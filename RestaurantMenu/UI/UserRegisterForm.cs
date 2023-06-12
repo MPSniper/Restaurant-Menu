@@ -28,8 +28,7 @@ namespace UI
             if (flag == 1)
             {
                 this.Hide();
-                MainUserForm mainUserForm = new MainUserForm();
-                mainUserForm.Show();
+                new SplashForm().ShowDialog();
             }
         }
 
