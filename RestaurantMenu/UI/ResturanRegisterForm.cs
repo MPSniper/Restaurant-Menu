@@ -52,6 +52,7 @@ namespace UI
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
+
             RestaurantCardViewModel restaurantCard = new RestaurantCardViewModel(RestaurantNameBox.Text, OwnerTextBox.Text, StartTime.Value, EndTime.Value, AddressBox.Text, PasswordBox.Text, NationalCodeBox.Text);
             Restaurant restaurantDataModel = new Restaurant(restaurantCard.RestaurantName, restaurantCard.OwnerName, restaurantCard.StrStartTime(), restaurantCard.StrEndTime(), restaurantCard.ResAddress, restaurantCard.Password, restaurantCard.NationalCode);
 
@@ -76,7 +77,6 @@ namespace UI
                 SplashForm splashForm = new SplashForm();
                 splashForm.ShowDialog();
             }
-
         }
 
 
@@ -118,6 +118,13 @@ namespace UI
         {
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
 
