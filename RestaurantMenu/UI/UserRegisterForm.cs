@@ -21,13 +21,13 @@ namespace UI
         {
 
             UserCardViewModel userViewModel = new UserCardViewModel(NameTextBox.Text, FamilyTextBox.Text, NationalityTextBox.Text, AddressTextBox.Text, PasswordTextBox.Text);
-          
-            Users userDataModel = new Users(userViewModel.UserName,  userViewModel.UserFamily,userViewModel.UserNation, userViewModel.UserAddress, userViewModel.Password);
+
+            Users userDataModel = new Users(userViewModel.UserName, userViewModel.UserFamily, userViewModel.UserNation, userViewModel.UserAddress, userViewModel.Password);
             var id = userDataModel.CheckNationalCode();
             var x = userViewModel.CheckValidation();
-            
-            if (x==(int) ErrorCode_Enum.ThereIsNull)
-                return; 
+
+            if (x == (int)ErrorCode_Enum.ThereIsNull)
+                return;
             else if (id != (int)ErrorCode_Enum.ErrorInDB && id != (int)ErrorCode_Enum.Nationalcode_Correct)
             {
                 MessageBox.Show("کد ملی وارد شده قبلا ثبت شده است.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -36,10 +36,10 @@ namespace UI
 
             var flag = userDataModel.BtnSignUp();
 
-            if (flag == (int)ErrorCode_Enum.Register_successfully && id==(int)ErrorCode_Enum.Nationalcode_Correct && x == (int)ErrorCode_Enum.AllFieldsComplete )
+            if (flag == (int)ErrorCode_Enum.Register_successfully && id == (int)ErrorCode_Enum.Nationalcode_Correct && x == (int)ErrorCode_Enum.AllFieldsComplete)
             {
 
-                MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام" );
+                MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام");
                 this.Hide();
                 new SplashForm().ShowDialog();
             }
@@ -76,6 +76,21 @@ namespace UI
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
