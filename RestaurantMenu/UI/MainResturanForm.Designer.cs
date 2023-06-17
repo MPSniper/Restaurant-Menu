@@ -28,150 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PanelMenu = new System.Windows.Forms.Panel();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.BtnFactors = new System.Windows.Forms.Button();
-            this.BtnFoods = new System.Windows.Forms.Button();
-            this.PanelLogo = new System.Windows.Forms.Panel();
-            this.PanelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.PanelMain = new System.Windows.Forms.Panel();
-            this.PanelMenu.SuspendLayout();
-            this.PanelTitleBar.SuspendLayout();
-            this.SuspendLayout();
+            PanelMenu = new Panel();
+            BtnExit = new Button();
+            BtnFactors = new Button();
+            BtnFoods = new Button();
+            PanelLogo = new Panel();
+            PanelTitleBar = new Panel();
+            lblTitle = new Label();
+            PanelMain = new Panel();
+            PanelMenu.SuspendLayout();
+            PanelTitleBar.SuspendLayout();
+            SuspendLayout();
             // 
             // PanelMenu
             // 
-            this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(252)))));
-            this.PanelMenu.Controls.Add(this.BtnExit);
-            this.PanelMenu.Controls.Add(this.BtnFactors);
-            this.PanelMenu.Controls.Add(this.BtnFoods);
-            this.PanelMenu.Controls.Add(this.PanelLogo);
-            this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelMenu.Location = new System.Drawing.Point(894, 0);
-            this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(220, 581);
-            this.PanelMenu.TabIndex = 0;
+            PanelMenu.BackColor = Color.FromArgb(252, 194, 252);
+            PanelMenu.Controls.Add(BtnExit);
+            PanelMenu.Controls.Add(BtnFactors);
+            PanelMenu.Controls.Add(BtnFoods);
+            PanelMenu.Controls.Add(PanelLogo);
+            PanelMenu.Dock = DockStyle.Right;
+            PanelMenu.Location = new Point(894, 0);
+            PanelMenu.Name = "PanelMenu";
+            PanelMenu.Size = new Size(220, 581);
+            PanelMenu.TabIndex = 0;
             // 
             // BtnExit
             // 
-            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnExit.ForeColor = System.Drawing.Color.Black;
-            this.BtnExit.Image = global::UI.Properties.Resources.icons8_close_window_40px;
-            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(0, 200);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnExit.Size = new System.Drawing.Size(220, 60);
-            this.BtnExit.TabIndex = 5;
-            this.BtnExit.Text = "خروج";
-            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            BtnExit.Dock = DockStyle.Top;
+            BtnExit.FlatAppearance.BorderSize = 0;
+            BtnExit.FlatStyle = FlatStyle.Flat;
+            BtnExit.Font = new Font("B Zar", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnExit.ForeColor = Color.Black;
+            BtnExit.Image = Properties.Resources.icons8_close_window_40px;
+            BtnExit.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnExit.Location = new Point(0, 200);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Padding = new Padding(0, 0, 8, 0);
+            BtnExit.Size = new Size(220, 60);
+            BtnExit.TabIndex = 5;
+            BtnExit.Text = "خروج";
+            BtnExit.TextAlign = ContentAlignment.MiddleLeft;
+            BtnExit.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnExit.UseVisualStyleBackColor = true;
+            BtnExit.Click += BtnExit_Click;
             // 
             // BtnFactors
             // 
-            this.BtnFactors.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnFactors.FlatAppearance.BorderSize = 0;
-            this.BtnFactors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFactors.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnFactors.ForeColor = System.Drawing.Color.Black;
-            this.BtnFactors.Image = global::UI.Properties.Resources.arabic_book_40px;
-            this.BtnFactors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFactors.Location = new System.Drawing.Point(0, 140);
-            this.BtnFactors.Name = "BtnFactors";
-            this.BtnFactors.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnFactors.Size = new System.Drawing.Size(220, 60);
-            this.BtnFactors.TabIndex = 4;
-            this.BtnFactors.Text = "فاکتور ها ";
-            this.BtnFactors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFactors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnFactors.UseVisualStyleBackColor = true;
-            this.BtnFactors.Click += new System.EventHandler(this.BtnFactors_Click);
+            BtnFactors.Dock = DockStyle.Top;
+            BtnFactors.FlatAppearance.BorderSize = 0;
+            BtnFactors.FlatStyle = FlatStyle.Flat;
+            BtnFactors.Font = new Font("B Zar", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnFactors.ForeColor = Color.Black;
+            BtnFactors.Image = Properties.Resources.arabic_book_40px;
+            BtnFactors.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnFactors.Location = new Point(0, 140);
+            BtnFactors.Name = "BtnFactors";
+            BtnFactors.Padding = new Padding(0, 0, 8, 0);
+            BtnFactors.Size = new Size(220, 60);
+            BtnFactors.TabIndex = 4;
+            BtnFactors.Text = "فاکتور ها ";
+            BtnFactors.TextAlign = ContentAlignment.MiddleLeft;
+            BtnFactors.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnFactors.UseVisualStyleBackColor = true;
+            BtnFactors.Click += BtnFactors_Click;
             // 
             // BtnFoods
             // 
-            this.BtnFoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(194)))), ((int)(((byte)(252)))));
-            this.BtnFoods.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnFoods.FlatAppearance.BorderSize = 0;
-            this.BtnFoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFoods.Font = new System.Drawing.Font("B Zar", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnFoods.ForeColor = System.Drawing.Color.Black;
-            this.BtnFoods.Image = global::UI.Properties.Resources.food_cart_40px;
-            this.BtnFoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFoods.Location = new System.Drawing.Point(0, 80);
-            this.BtnFoods.Name = "BtnFoods";
-            this.BtnFoods.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnFoods.Size = new System.Drawing.Size(220, 60);
-            this.BtnFoods.TabIndex = 3;
-            this.BtnFoods.Text = "محصولات";
-            this.BtnFoods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFoods.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnFoods.UseVisualStyleBackColor = false;
-            this.BtnFoods.Click += new System.EventHandler(this.BtnFoods_Click);
+            BtnFoods.BackColor = Color.FromArgb(252, 194, 252);
+            BtnFoods.Dock = DockStyle.Top;
+            BtnFoods.FlatAppearance.BorderSize = 0;
+            BtnFoods.FlatStyle = FlatStyle.Flat;
+            BtnFoods.Font = new Font("B Zar", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnFoods.ForeColor = Color.Black;
+            BtnFoods.Image = Properties.Resources.food_cart_40px;
+            BtnFoods.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnFoods.Location = new Point(0, 80);
+            BtnFoods.Name = "BtnFoods";
+            BtnFoods.Padding = new Padding(0, 0, 8, 0);
+            BtnFoods.Size = new Size(220, 60);
+            BtnFoods.TabIndex = 3;
+            BtnFoods.Text = "محصولات";
+            BtnFoods.TextAlign = ContentAlignment.MiddleLeft;
+            BtnFoods.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnFoods.UseVisualStyleBackColor = false;
+            BtnFoods.Click += BtnFoods_Click;
             // 
             // PanelLogo
             // 
-            this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(244)))), ((int)(((byte)(170)))));
-            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(220, 80);
-            this.PanelLogo.TabIndex = 0;
+            PanelLogo.BackColor = Color.FromArgb(201, 244, 170);
+            PanelLogo.Dock = DockStyle.Top;
+            PanelLogo.Location = new Point(0, 0);
+            PanelLogo.Name = "PanelLogo";
+            PanelLogo.Size = new Size(220, 80);
+            PanelLogo.TabIndex = 0;
             // 
             // PanelTitleBar
             // 
-            this.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.PanelTitleBar.Controls.Add(this.lblTitle);
-            this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelTitleBar.Name = "PanelTitleBar";
-            this.PanelTitleBar.Size = new System.Drawing.Size(894, 80);
-            this.PanelTitleBar.TabIndex = 1;
+            PanelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            PanelTitleBar.Controls.Add(lblTitle);
+            PanelTitleBar.Dock = DockStyle.Top;
+            PanelTitleBar.Location = new Point(0, 0);
+            PanelTitleBar.Name = "PanelTitleBar";
+            PanelTitleBar.Size = new Size(894, 80);
+            PanelTitleBar.TabIndex = 1;
             // 
             // lblTitle
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("B Zar", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(894, 80);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "مدیریت رستوران";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTitle.BackColor = Color.FromArgb(201, 244, 170);
+            lblTitle.Dock = DockStyle.Fill;
+            lblTitle.Font = new Font("B Zar", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.ForeColor = SystemColors.ActiveCaptionText;
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(894, 80);
+            lblTitle.TabIndex = 2;
+            lblTitle.Text = "مدیریت رستوران                    ";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PanelMain
             // 
-            this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelMain.Location = new System.Drawing.Point(0, 80);
-            this.PanelMain.Name = "PanelMain";
-            this.PanelMain.Size = new System.Drawing.Size(894, 501);
-            this.PanelMain.TabIndex = 2;
+            PanelMain.Dock = DockStyle.Fill;
+            PanelMain.Location = new Point(0, 80);
+            PanelMain.Name = "PanelMain";
+            PanelMain.Size = new Size(894, 501);
+            PanelMain.TabIndex = 2;
             // 
             // MainResturanForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 581);
-            this.Controls.Add(this.PanelMain);
-            this.Controls.Add(this.PanelTitleBar);
-            this.Controls.Add(this.PanelMenu);
-            this.Font = new System.Drawing.Font("B Zar", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "MainResturanForm";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.PanelMenu.ResumeLayout(false);
-            this.PanelTitleBar.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1114, 581);
+            Controls.Add(PanelMain);
+            Controls.Add(PanelTitleBar);
+            Controls.Add(PanelMenu);
+            Font = new Font("B Zar", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "MainResturanForm";
+            RightToLeft = RightToLeft.Yes;
+            StartPosition = FormStartPosition.CenterScreen;
+            PanelMenu.ResumeLayout(false);
+            PanelTitleBar.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion

@@ -28,309 +28,302 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.DataFoods = new System.Windows.Forms.DataGridView();
-            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TxtName = new System.Windows.Forms.TextBox();
-            this.TxtPrice = new System.Windows.Forms.NumericUpDown();
-            this.BtnAddOrEdit = new System.Windows.Forms.Button();
-            this.BtnCancell = new System.Windows.Forms.Button();
-            this.BtnDeleteFood = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TxtNameSearch = new System.Windows.Forms.TextBox();
-            this.BtnAll = new System.Windows.Forms.Button();
-            this.BtnSearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPrice)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            DataFoods = new DataGridView();
+            FoodId = new DataGridViewTextBoxColumn();
+            FoodName = new DataGridViewTextBoxColumn();
+            FoodPrice = new DataGridViewTextBoxColumn();
+            panel2 = new Panel();
+            groupBox2 = new GroupBox();
+            TxtName = new TextBox();
+            TxtPrice = new NumericUpDown();
+            BtnAddOrEdit = new Button();
+            BtnCancell = new Button();
+            BtnDeleteFood = new Button();
+            label2 = new Label();
+            label6 = new Label();
+            groupBox1 = new GroupBox();
+            TxtNameSearch = new TextBox();
+            BtnAll = new Button();
+            BtnSearch = new Button();
+            label3 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DataFoods).BeginInit();
+            panel2.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)TxtPrice).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.DataFoods);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 331);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(DataFoods);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(894, 331);
+            panel1.TabIndex = 0;
             // 
             // DataFoods
             // 
-            this.DataFoods.AllowUserToAddRows = false;
-            this.DataFoods.AllowUserToDeleteRows = false;
-            this.DataFoods.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataFoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataFoods.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FoodId,
-            this.FoodName,
-            this.FoodPrice});
-            this.DataFoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataFoods.Location = new System.Drawing.Point(0, 0);
-            this.DataFoods.Name = "DataFoods";
-            this.DataFoods.ReadOnly = true;
-            this.DataFoods.RowTemplate.Height = 25;
-            this.DataFoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataFoods.Size = new System.Drawing.Size(894, 331);
-            this.DataFoods.TabIndex = 0;
-            this.DataFoods.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataFoods_CellClick);
+            DataFoods.AllowUserToAddRows = false;
+            DataFoods.AllowUserToDeleteRows = false;
+            DataFoods.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataFoods.BackgroundColor = SystemColors.GradientInactiveCaption;
+            DataFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataFoods.Columns.AddRange(new DataGridViewColumn[] { FoodId, FoodName, FoodPrice });
+            DataFoods.Dock = DockStyle.Fill;
+            DataFoods.Location = new Point(0, 0);
+            DataFoods.Name = "DataFoods";
+            DataFoods.ReadOnly = true;
+            DataFoods.RowHeadersWidth = 51;
+            DataFoods.RowTemplate.Height = 25;
+            DataFoods.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DataFoods.Size = new Size(894, 331);
+            DataFoods.TabIndex = 0;
+            DataFoods.CellClick += DataFoods_CellClick;
             // 
             // FoodId
             // 
-            this.FoodId.HeaderText = "کد محصول";
-            this.FoodId.Name = "FoodId";
-            this.FoodId.ReadOnly = true;
-            this.FoodId.Visible = false;
+            FoodId.HeaderText = "کد محصول";
+            FoodId.MinimumWidth = 6;
+            FoodId.Name = "FoodId";
+            FoodId.ReadOnly = true;
+            FoodId.Visible = false;
             // 
             // FoodName
             // 
-            this.FoodName.HeaderText = "نام محصول";
-            this.FoodName.Name = "FoodName";
-            this.FoodName.ReadOnly = true;
+            FoodName.HeaderText = "نام محصول";
+            FoodName.MinimumWidth = 6;
+            FoodName.Name = "FoodName";
+            FoodName.ReadOnly = true;
             // 
             // FoodPrice
             // 
-            this.FoodPrice.HeaderText = "قیمت محصول";
-            this.FoodPrice.Name = "FoodPrice";
-            this.FoodPrice.ReadOnly = true;
+            FoodPrice.HeaderText = "قیمت محصول";
+            FoodPrice.MinimumWidth = 6;
+            FoodPrice.Name = "FoodPrice";
+            FoodPrice.ReadOnly = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 331);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 170);
-            this.panel2.TabIndex = 0;
+            panel2.Controls.Add(groupBox2);
+            panel2.Controls.Add(groupBox1);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 331);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(894, 170);
+            panel2.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.TxtName);
-            this.groupBox2.Controls.Add(this.TxtPrice);
-            this.groupBox2.Controls.Add(this.BtnAddOrEdit);
-            this.groupBox2.Controls.Add(this.BtnCancell);
-            this.groupBox2.Controls.Add(this.BtnDeleteFood);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(449, 170);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "حذف، ویرایش، افزودن";
+            groupBox2.Controls.Add(TxtName);
+            groupBox2.Controls.Add(TxtPrice);
+            groupBox2.Controls.Add(BtnAddOrEdit);
+            groupBox2.Controls.Add(BtnCancell);
+            groupBox2.Controls.Add(BtnDeleteFood);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.Location = new Point(0, 0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(449, 170);
+            groupBox2.TabIndex = 23;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "حذف، ویرایش، افزودن";
             // 
             // TxtName
             // 
-            this.TxtName.Location = new System.Drawing.Point(147, 26);
-            this.TxtName.MaxLength = 150;
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(219, 32);
-            this.TxtName.TabIndex = 23;
+            TxtName.Location = new Point(168, 26);
+            TxtName.MaxLength = 150;
+            TxtName.Name = "TxtName";
+            TxtName.Size = new Size(198, 38);
+            TxtName.TabIndex = 23;
             // 
             // TxtPrice
             // 
-            this.TxtPrice.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.TxtPrice.Location = new System.Drawing.Point(147, 71);
-            this.TxtPrice.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.TxtPrice.Name = "TxtPrice";
-            this.TxtPrice.Size = new System.Drawing.Size(219, 32);
-            this.TxtPrice.TabIndex = 22;
+            TxtPrice.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
+            TxtPrice.Location = new Point(168, 71);
+            TxtPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
+            TxtPrice.Name = "TxtPrice";
+            TxtPrice.Size = new Size(198, 38);
+            TxtPrice.TabIndex = 22;
             // 
             // BtnAddOrEdit
             // 
-            this.BtnAddOrEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAddOrEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.BtnAddOrEdit.FlatAppearance.BorderSize = 0;
-            this.BtnAddOrEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddOrEdit.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAddOrEdit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnAddOrEdit.Image = global::UI.Properties.Resources.add_32px;
-            this.BtnAddOrEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAddOrEdit.Location = new System.Drawing.Point(3, 27);
-            this.BtnAddOrEdit.Name = "BtnAddOrEdit";
-            this.BtnAddOrEdit.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnAddOrEdit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnAddOrEdit.Size = new System.Drawing.Size(135, 40);
-            this.BtnAddOrEdit.TabIndex = 18;
-            this.BtnAddOrEdit.Text = "افزودن";
-            this.BtnAddOrEdit.UseVisualStyleBackColor = false;
-            this.BtnAddOrEdit.Click += new System.EventHandler(this.BtnAddOrEdit_Click);
+            BtnAddOrEdit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnAddOrEdit.BackColor = Color.DarkOrange;
+            BtnAddOrEdit.FlatAppearance.BorderSize = 0;
+            BtnAddOrEdit.FlatStyle = FlatStyle.Flat;
+            BtnAddOrEdit.Font = new Font("B Nazanin", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnAddOrEdit.ForeColor = SystemColors.ControlText;
+            BtnAddOrEdit.Image = Properties.Resources.add_32px;
+            BtnAddOrEdit.ImageAlign = ContentAlignment.MiddleRight;
+            BtnAddOrEdit.Location = new Point(3, 27);
+            BtnAddOrEdit.Name = "BtnAddOrEdit";
+            BtnAddOrEdit.Padding = new Padding(0, 0, 8, 0);
+            BtnAddOrEdit.RightToLeft = RightToLeft.No;
+            BtnAddOrEdit.Size = new Size(159, 40);
+            BtnAddOrEdit.TabIndex = 18;
+            BtnAddOrEdit.Text = "افزودن";
+            BtnAddOrEdit.UseVisualStyleBackColor = false;
+            BtnAddOrEdit.Click += BtnAddOrEdit_Click;
             // 
             // BtnCancell
             // 
-            this.BtnCancell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCancell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.BtnCancell.Enabled = false;
-            this.BtnCancell.FlatAppearance.BorderSize = 0;
-            this.BtnCancell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancell.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancell.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnCancell.Image = global::UI.Properties.Resources.cancel_32px;
-            this.BtnCancell.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancell.Location = new System.Drawing.Point(3, 119);
-            this.BtnCancell.Name = "BtnCancell";
-            this.BtnCancell.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnCancell.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnCancell.Size = new System.Drawing.Size(135, 40);
-            this.BtnCancell.TabIndex = 18;
-            this.BtnCancell.Text = "کنسل";
-            this.BtnCancell.UseVisualStyleBackColor = false;
-            this.BtnCancell.Click += new System.EventHandler(this.BtnCancell_Click);
+            BtnCancell.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnCancell.BackColor = Color.DarkOrange;
+            BtnCancell.Enabled = false;
+            BtnCancell.FlatAppearance.BorderSize = 0;
+            BtnCancell.FlatStyle = FlatStyle.Flat;
+            BtnCancell.Font = new Font("B Nazanin", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnCancell.ForeColor = SystemColors.ControlText;
+            BtnCancell.Image = Properties.Resources.cancel_32px;
+            BtnCancell.ImageAlign = ContentAlignment.MiddleRight;
+            BtnCancell.Location = new Point(3, 119);
+            BtnCancell.Name = "BtnCancell";
+            BtnCancell.Padding = new Padding(0, 0, 8, 0);
+            BtnCancell.RightToLeft = RightToLeft.No;
+            BtnCancell.Size = new Size(159, 40);
+            BtnCancell.TabIndex = 18;
+            BtnCancell.Text = "کنسل";
+            BtnCancell.UseVisualStyleBackColor = false;
+            BtnCancell.Click += BtnCancell_Click;
             // 
             // BtnDeleteFood
             // 
-            this.BtnDeleteFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDeleteFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.BtnDeleteFood.Enabled = false;
-            this.BtnDeleteFood.FlatAppearance.BorderSize = 0;
-            this.BtnDeleteFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeleteFood.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnDeleteFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnDeleteFood.Image = global::UI.Properties.Resources.unavailable_32px;
-            this.BtnDeleteFood.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnDeleteFood.Location = new System.Drawing.Point(3, 73);
-            this.BtnDeleteFood.Name = "BtnDeleteFood";
-            this.BtnDeleteFood.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnDeleteFood.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnDeleteFood.Size = new System.Drawing.Size(135, 40);
-            this.BtnDeleteFood.TabIndex = 18;
-            this.BtnDeleteFood.Text = "حذف";
-            this.BtnDeleteFood.UseVisualStyleBackColor = false;
-            this.BtnDeleteFood.Click += new System.EventHandler(this.BtnDeleteFood_Click);
+            BtnDeleteFood.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnDeleteFood.BackColor = Color.DarkOrange;
+            BtnDeleteFood.Enabled = false;
+            BtnDeleteFood.FlatAppearance.BorderSize = 0;
+            BtnDeleteFood.FlatStyle = FlatStyle.Flat;
+            BtnDeleteFood.Font = new Font("B Nazanin", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnDeleteFood.ForeColor = SystemColors.ControlText;
+            BtnDeleteFood.Image = Properties.Resources.unavailable_32px;
+            BtnDeleteFood.ImageAlign = ContentAlignment.MiddleRight;
+            BtnDeleteFood.Location = new Point(3, 73);
+            BtnDeleteFood.Name = "BtnDeleteFood";
+            BtnDeleteFood.Padding = new Padding(0, 0, 8, 0);
+            BtnDeleteFood.RightToLeft = RightToLeft.No;
+            BtnDeleteFood.Size = new Size(159, 40);
+            BtnDeleteFood.TabIndex = 18;
+            BtnDeleteFood.Text = "حذف";
+            BtnDeleteFood.UseVisualStyleBackColor = false;
+            BtnDeleteFood.Click += BtnDeleteFood_Click;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(372, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 32);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "نام : ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.Location = new Point(372, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(71, 32);
+            label2.TabIndex = 20;
+            label2.Text = "نام : ";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(372, 69);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 32);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "قیمت : ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label6.Location = new Point(372, 69);
+            label6.Name = "label6";
+            label6.Size = new Size(71, 32);
+            label6.TabIndex = 20;
+            label6.Text = "قیمت : ";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TxtNameSearch);
-            this.groupBox1.Controls.Add(this.BtnAll);
-            this.groupBox1.Controls.Add(this.BtnSearch);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(449, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(445, 170);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "جست و جو";
+            groupBox1.Controls.Add(TxtNameSearch);
+            groupBox1.Controls.Add(BtnAll);
+            groupBox1.Controls.Add(BtnSearch);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Dock = DockStyle.Right;
+            groupBox1.Location = new Point(449, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(445, 170);
+            groupBox1.TabIndex = 22;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "جست و جو";
             // 
             // TxtNameSearch
             // 
-            this.TxtNameSearch.Location = new System.Drawing.Point(40, 55);
-            this.TxtNameSearch.MaxLength = 150;
-            this.TxtNameSearch.Name = "TxtNameSearch";
-            this.TxtNameSearch.Size = new System.Drawing.Size(282, 32);
-            this.TxtNameSearch.TabIndex = 23;
+            TxtNameSearch.Location = new Point(40, 55);
+            TxtNameSearch.MaxLength = 150;
+            TxtNameSearch.Name = "TxtNameSearch";
+            TxtNameSearch.Size = new Size(282, 38);
+            TxtNameSearch.TabIndex = 23;
             // 
             // BtnAll
             // 
-            this.BtnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.BtnAll.FlatAppearance.BorderSize = 0;
-            this.BtnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAll.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAll.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnAll.Image = global::UI.Properties.Resources.search_32px;
-            this.BtnAll.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAll.Location = new System.Drawing.Point(99, 120);
-            this.BtnAll.Name = "BtnAll";
-            this.BtnAll.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnAll.Size = new System.Drawing.Size(135, 40);
-            this.BtnAll.TabIndex = 21;
-            this.BtnAll.Text = "مشاهده همه";
-            this.BtnAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAll.UseVisualStyleBackColor = false;
-            this.BtnAll.Click += new System.EventHandler(this.BtnAll_Click);
+            BtnAll.BackColor = Color.DarkOrange;
+            BtnAll.FlatAppearance.BorderSize = 0;
+            BtnAll.FlatStyle = FlatStyle.Flat;
+            BtnAll.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnAll.ForeColor = SystemColors.ControlText;
+            BtnAll.Image = Properties.Resources.search_32px;
+            BtnAll.ImageAlign = ContentAlignment.MiddleRight;
+            BtnAll.Location = new Point(40, 112);
+            BtnAll.Name = "BtnAll";
+            BtnAll.Padding = new Padding(0, 0, 8, 0);
+            BtnAll.RightToLeft = RightToLeft.No;
+            BtnAll.Size = new Size(152, 47);
+            BtnAll.TabIndex = 21;
+            BtnAll.Text = "مشاهده همه";
+            BtnAll.TextAlign = ContentAlignment.MiddleLeft;
+            BtnAll.UseVisualStyleBackColor = false;
+            BtnAll.Click += BtnAll_Click;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.BtnSearch.FlatAppearance.BorderSize = 0;
-            this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSearch.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.BtnSearch.Image = global::UI.Properties.Resources.search_32px;
-            this.BtnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSearch.Location = new System.Drawing.Point(240, 120);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.BtnSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnSearch.Size = new System.Drawing.Size(135, 40);
-            this.BtnSearch.TabIndex = 21;
-            this.BtnSearch.Text = "جست و جو";
-            this.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSearch.UseVisualStyleBackColor = false;
-            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            BtnSearch.BackColor = Color.DarkOrange;
+            BtnSearch.FlatAppearance.BorderSize = 0;
+            BtnSearch.FlatStyle = FlatStyle.Flat;
+            BtnSearch.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnSearch.ForeColor = SystemColors.ControlText;
+            BtnSearch.Image = Properties.Resources.search_32px;
+            BtnSearch.ImageAlign = ContentAlignment.MiddleRight;
+            BtnSearch.Location = new Point(198, 112);
+            BtnSearch.Name = "BtnSearch";
+            BtnSearch.Padding = new Padding(0, 0, 8, 0);
+            BtnSearch.RightToLeft = RightToLeft.No;
+            BtnSearch.Size = new Size(145, 47);
+            BtnSearch.TabIndex = 21;
+            BtnSearch.Text = "جست و جو";
+            BtnSearch.TextAlign = ContentAlignment.MiddleLeft;
+            BtnSearch.UseVisualStyleBackColor = false;
+            BtnSearch.Click += BtnSearch_Click;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(328, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 32);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "نام : ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.Location = new Point(328, 56);
+            label3.Name = "label3";
+            label3.Size = new Size(71, 32);
+            label3.TabIndex = 20;
+            label3.Text = "نام : ";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FoodsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 501);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("B Zar", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FoodsForm";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "مدیریت محصولات";
-            this.Load += new System.EventHandler(this.FoodsForm_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataFoods)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPrice)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 30F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(894, 501);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
+            Font = new Font("B Zar", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "FoodsForm";
+            RightToLeft = RightToLeft.Yes;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "مدیریت محصولات";
+            Load += FoodsForm_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)DataFoods).EndInit();
+            panel2.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)TxtPrice).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

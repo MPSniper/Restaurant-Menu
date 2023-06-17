@@ -57,6 +57,7 @@
             DataFactors.AllowUserToAddRows = false;
             DataFactors.AllowUserToDeleteRows = false;
             DataFactors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataFactors.BackgroundColor = SystemColors.GradientInactiveCaption;
             DataFactors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataFactors.Columns.AddRange(new DataGridViewColumn[] { FoodResturan, FactorCostumer, FactorPrice });
             DataFactors.Dock = DockStyle.Fill;
@@ -64,6 +65,7 @@
             DataFactors.MultiSelect = false;
             DataFactors.Name = "DataFactors";
             DataFactors.ReadOnly = true;
+            DataFactors.RowHeadersWidth = 51;
             DataFactors.RowTemplate.Height = 25;
             DataFactors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataFactors.Size = new Size(894, 429);
@@ -73,6 +75,7 @@
             // 
             FoodResturan.DataPropertyName = "RestaurantName";
             FoodResturan.HeaderText = "نام رستوران";
+            FoodResturan.MinimumWidth = 6;
             FoodResturan.Name = "FoodResturan";
             FoodResturan.ReadOnly = true;
             // 
@@ -80,6 +83,7 @@
             // 
             FactorCostumer.DataPropertyName = "FirstName";
             FactorCostumer.HeaderText = "نام مشتری";
+            FactorCostumer.MinimumWidth = 6;
             FactorCostumer.Name = "FactorCostumer";
             FactorCostumer.ReadOnly = true;
             // 
@@ -87,6 +91,7 @@
             // 
             FactorPrice.DataPropertyName = "Sum";
             FactorPrice.HeaderText = "مبلغ فاکتور";
+            FactorPrice.MinimumWidth = 6;
             FactorPrice.Name = "FactorPrice";
             FactorPrice.ReadOnly = true;
             // 
@@ -135,7 +140,7 @@
             // 
             // FactorsForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 25F);
+            AutoScaleDimensions = new SizeF(10F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(894, 501);
             Controls.Add(panel1);
