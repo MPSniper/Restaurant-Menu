@@ -59,7 +59,7 @@
             // label1
             // 
             label1.Cursor = Cursors.Hand;
-            label1.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(8, 8, 8);
             label1.ImageAlign = ContentAlignment.MiddleRight;
             label1.Location = new Point(531, 7);
@@ -72,7 +72,7 @@
             // label2
             // 
             label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(8, 8, 8);
             label2.ImageAlign = ContentAlignment.MiddleRight;
             label2.Location = new Point(535, 81);
@@ -98,7 +98,6 @@
             // 
             // panel2
             // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(AddressBox);
             panel2.Controls.Add(PasswordBox);
             panel2.Controls.Add(NationalCodeBox);
@@ -140,7 +139,7 @@
             PasswordBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             PasswordBox.Location = new Point(534, 262);
             PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(241, 30);
+            PasswordBox.Size = new Size(241, 36);
             PasswordBox.TabIndex = 4;
             // 
             // NationalCodeBox
@@ -149,7 +148,7 @@
             NationalCodeBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             NationalCodeBox.Location = new Point(532, 194);
             NationalCodeBox.Name = "NationalCodeBox";
-            NationalCodeBox.Size = new Size(241, 30);
+            NationalCodeBox.Size = new Size(241, 36);
             NationalCodeBox.TabIndex = 3;
             // 
             // RestaurantNameBox
@@ -158,7 +157,7 @@
             RestaurantNameBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             RestaurantNameBox.Location = new Point(532, 47);
             RestaurantNameBox.Name = "RestaurantNameBox";
-            RestaurantNameBox.Size = new Size(241, 30);
+            RestaurantNameBox.Size = new Size(241, 36);
             RestaurantNameBox.TabIndex = 1;
             // 
             // OwnerTextBox
@@ -167,7 +166,7 @@
             OwnerTextBox.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             OwnerTextBox.Location = new Point(532, 121);
             OwnerTextBox.Name = "OwnerTextBox";
-            OwnerTextBox.Size = new Size(241, 30);
+            OwnerTextBox.Size = new Size(241, 36);
             OwnerTextBox.TabIndex = 2;
             // 
             // panel3
@@ -185,7 +184,7 @@
             EndTime.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             EndTime.Location = new Point(551, 454);
             EndTime.Name = "EndTime";
-            EndTime.Size = new Size(67, 30);
+            EndTime.Size = new Size(67, 36);
             EndTime.TabIndex = 7;
             // 
             // StartTime
@@ -194,13 +193,13 @@
             StartTime.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             StartTime.Location = new Point(669, 454);
             StartTime.Name = "StartTime";
-            StartTime.Size = new Size(67, 30);
+            StartTime.Size = new Size(67, 36);
             StartTime.TabIndex = 6;
             // 
             // label8
             // 
             label8.Cursor = Cursors.Hand;
-            label8.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(8, 8, 8);
             label8.ImageAlign = ContentAlignment.MiddleRight;
             label8.Location = new Point(623, 448);
@@ -213,7 +212,7 @@
             // label7
             // 
             label7.Cursor = Cursors.Hand;
-            label7.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(8, 8, 8);
             label7.ImageAlign = ContentAlignment.MiddleRight;
             label7.Location = new Point(733, 448);
@@ -226,7 +225,7 @@
             // label10
             // 
             label10.Cursor = Cursors.Hand;
-            label10.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.FromArgb(8, 8, 8);
             label10.ImageAlign = ContentAlignment.MiddleLeft;
             label10.Location = new Point(537, 406);
@@ -241,7 +240,7 @@
             // label9
             // 
             label9.Cursor = Cursors.Hand;
-            label9.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(8, 8, 8);
             label9.Location = new Point(534, 219);
             label9.Name = "label9";
@@ -253,7 +252,7 @@
             // label5
             // 
             label5.Cursor = Cursors.Hand;
-            label5.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(8, 8, 8);
             label5.Location = new Point(532, 155);
             label5.Name = "label5";
@@ -267,7 +266,7 @@
             BtnBack.BackColor = Color.DarkOrange;
             BtnBack.BorderStyle = BorderStyle.FixedSingle;
             BtnBack.Cursor = Cursors.Hand;
-            BtnBack.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnBack.Font = new Font("B Nazanin", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             BtnBack.ForeColor = Color.FromArgb(8, 8, 8);
             BtnBack.Image = Properties.Resources.icons8_back_to_40px_1;
             BtnBack.ImageAlign = ContentAlignment.MiddleLeft;
@@ -283,7 +282,7 @@
             // 
             BtnLogin.BackColor = Color.DarkOrange;
             BtnLogin.Cursor = Cursors.Hand;
-            BtnLogin.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnLogin.Font = new Font("B Nazanin", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             BtnLogin.ForeColor = Color.FromArgb(8, 8, 8);
             BtnLogin.Image = Properties.Resources.icons8_asian_street_food_40px;
             BtnLogin.ImageAlign = ContentAlignment.MiddleLeft;
@@ -298,7 +297,7 @@
             // label4
             // 
             label4.Cursor = Cursors.Hand;
-            label4.Font = new Font("B Nazanin", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(8, 8, 8);
             label4.ImageAlign = ContentAlignment.MiddleRight;
             label4.Location = new Point(532, 288);
@@ -311,7 +310,6 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(label6);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(12, 5);
@@ -323,7 +321,7 @@
             // 
             // ResturanRegisterForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 84, 50);
             BackgroundImageLayout = ImageLayout.Stretch;
