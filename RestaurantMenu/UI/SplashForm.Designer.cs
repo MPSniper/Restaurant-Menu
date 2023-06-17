@@ -143,7 +143,7 @@
             // 
             // SplashForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 27F);
+            AutoScaleDimensions = new SizeF(12F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(43, 84, 50);
             BackgroundImageLayout = ImageLayout.Stretch;
