@@ -23,7 +23,7 @@ namespace UI
 
             Restaurant restaurant = new Restaurant();
             var id = restaurant.BtnLogin(NationalCode, Password);
-            if ( id == 0 )
+            if (id == 0)
             {
                 MessageBox.Show("اطلاعات وارد شده نادرست است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -48,6 +48,11 @@ namespace UI
         {
             this.Hide();
             new SplashForm().Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
