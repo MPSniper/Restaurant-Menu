@@ -44,5 +44,10 @@
             this.Hide();
             new UserLoginForm().ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

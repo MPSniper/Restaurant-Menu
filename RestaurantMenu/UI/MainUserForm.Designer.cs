@@ -80,20 +80,20 @@
             PanelTitleBar.Dock = DockStyle.Top;
             PanelTitleBar.Location = new Point(0, 0);
             PanelTitleBar.Name = "PanelTitleBar";
-            PanelTitleBar.Size = new Size(828, 80);
+            PanelTitleBar.Size = new Size(950, 80);
             PanelTitleBar.TabIndex = 1;
             // 
             // lblTitle
             // 
-            lblTitle.BackColor = Color.FromArgb(181, 241, 204);
+            lblTitle.BackColor = Color.FromArgb(43, 84, 50);
             lblTitle.Dock = DockStyle.Fill;
             lblTitle.Font = new Font("B Zar", 25F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitle.ForeColor = SystemColors.ActiveCaptionText;
             lblTitle.Location = new Point(0, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(828, 80);
+            lblTitle.Size = new Size(950, 80);
             lblTitle.TabIndex = 2;
-            lblTitle.Text = "دسته بندی ها و غذاها";
+            lblTitle.Text = "منو رستوران                  ";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PanelMain
@@ -104,54 +104,67 @@
             PanelMain.Dock = DockStyle.Fill;
             PanelMain.Location = new Point(0, 80);
             PanelMain.Name = "PanelMain";
-            PanelMain.Size = new Size(828, 430);
+            PanelMain.Size = new Size(950, 602);
             PanelMain.TabIndex = 2;
             // 
             // DataCarts
             // 
             DataCarts.AllowUserToAddRows = false;
             DataCarts.AllowUserToDeleteRows = false;
+            DataCarts.BackgroundColor = SystemColors.GradientInactiveCaption;
+            DataCarts.BorderStyle = BorderStyle.Fixed3D;
             DataCarts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataCarts.Columns.AddRange(new DataGridViewColumn[] { FoodId, FoodName, FoodCount, FoodPrice, SumPrice });
             DataCarts.Dock = DockStyle.Fill;
             DataCarts.Location = new Point(0, 0);
             DataCarts.Name = "DataCarts";
             DataCarts.ReadOnly = true;
+            DataCarts.RowHeadersWidth = 51;
             DataCarts.RowTemplate.Height = 25;
             DataCarts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DataCarts.Size = new Size(456, 323);
+            DataCarts.Size = new Size(578, 495);
             DataCarts.TabIndex = 1;
             // 
             // FoodId
             // 
             FoodId.HeaderText = "کد غذا";
+            FoodId.MinimumWidth = 6;
             FoodId.Name = "FoodId";
             FoodId.ReadOnly = true;
             FoodId.Visible = false;
+            FoodId.Width = 125;
             // 
             // FoodName
             // 
             FoodName.HeaderText = "نام غذا";
+            FoodName.MinimumWidth = 6;
             FoodName.Name = "FoodName";
             FoodName.ReadOnly = true;
+            FoodName.Width = 155;
             // 
             // FoodCount
             // 
             FoodCount.HeaderText = "تعداد";
+            FoodCount.MinimumWidth = 6;
             FoodCount.Name = "FoodCount";
             FoodCount.ReadOnly = true;
+            FoodCount.Width = 120;
             // 
             // FoodPrice
             // 
             FoodPrice.HeaderText = "قیمت واحد";
+            FoodPrice.MinimumWidth = 6;
             FoodPrice.Name = "FoodPrice";
             FoodPrice.ReadOnly = true;
+            FoodPrice.Width = 125;
             // 
             // SumPrice
             // 
             SumPrice.HeaderText = "جمع";
+            SumPrice.MinimumWidth = 6;
             SumPrice.Name = "SumPrice";
             SumPrice.ReadOnly = true;
+            SumPrice.Width = 125;
             // 
             // panel2
             // 
@@ -160,9 +173,9 @@
             panel2.Controls.Add(BtnPay);
             panel2.Controls.Add(PanelCartControls);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 323);
+            panel2.Location = new Point(0, 495);
             panel2.Name = "panel2";
-            panel2.Size = new Size(456, 107);
+            panel2.Size = new Size(578, 107);
             panel2.TabIndex = 2;
             // 
             // LblCartSum
@@ -191,7 +204,7 @@
             // 
             // BtnPay
             // 
-            BtnPay.BackColor = SystemColors.ActiveCaption;
+            BtnPay.BackColor = Color.DarkOrange;
             BtnPay.FlatStyle = FlatStyle.Popup;
             BtnPay.Font = new Font("B Zar", 17F, FontStyle.Regular, GraphicsUnit.Point);
             BtnPay.Image = Properties.Resources.payment_history_40px;
@@ -213,7 +226,7 @@
             PanelCartControls.Dock = DockStyle.Top;
             PanelCartControls.Location = new Point(0, 0);
             PanelCartControls.Name = "PanelCartControls";
-            PanelCartControls.Size = new Size(456, 46);
+            PanelCartControls.Size = new Size(578, 46);
             PanelCartControls.TabIndex = 0;
             // 
             // BtnDeleteAllRow
@@ -260,23 +273,23 @@
             // 
             panel1.Controls.Add(PanelFoods);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(456, 0);
+            panel1.Location = new Point(578, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(372, 430);
+            panel1.Size = new Size(372, 602);
             panel1.TabIndex = 0;
             // 
             // PanelFoods
             // 
+            PanelFoods.BackColor = SystemColors.GradientInactiveCaption;
             PanelFoods.Controls.Add(label5);
             PanelFoods.Controls.Add(label6);
             PanelFoods.Controls.Add(label7);
             PanelFoods.Controls.Add(label10);
             PanelFoods.Controls.Add(label9);
             PanelFoods.Controls.Add(label8);
-            PanelFoods.Dock = DockStyle.Fill;
             PanelFoods.Location = new Point(0, 0);
             PanelFoods.Name = "PanelFoods";
-            PanelFoods.Size = new Size(372, 430);
+            PanelFoods.Size = new Size(369, 602);
             PanelFoods.TabIndex = 1;
             // 
             // label5
@@ -285,7 +298,7 @@
             label5.BorderStyle = BorderStyle.FixedSingle;
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("B Zar", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(254, 5);
+            label5.Location = new Point(251, 5);
             label5.Margin = new Padding(5);
             label5.Name = "label5";
             label5.Padding = new Padding(5);
@@ -300,7 +313,7 @@
             label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Cursor = Cursors.Hand;
             label6.Font = new Font("B Zar", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(131, 5);
+            label6.Location = new Point(128, 5);
             label6.Margin = new Padding(5);
             label6.Name = "label6";
             label6.Padding = new Padding(5);
@@ -315,7 +328,7 @@
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Cursor = Cursors.Hand;
             label7.Font = new Font("B Zar", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(8, 5);
+            label7.Location = new Point(5, 5);
             label7.Margin = new Padding(5);
             label7.Name = "label7";
             label7.Padding = new Padding(5);
@@ -330,7 +343,7 @@
             label10.BorderStyle = BorderStyle.FixedSingle;
             label10.Cursor = Cursors.Hand;
             label10.Font = new Font("B Zar", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(254, 55);
+            label10.Location = new Point(251, 55);
             label10.Margin = new Padding(5);
             label10.Name = "label10";
             label10.Padding = new Padding(5);
@@ -345,7 +358,7 @@
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Cursor = Cursors.Hand;
             label9.Font = new Font("B Zar", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(131, 55);
+            label9.Location = new Point(128, 55);
             label9.Margin = new Padding(5);
             label9.Name = "label9";
             label9.Padding = new Padding(5);
@@ -360,7 +373,7 @@
             label8.BorderStyle = BorderStyle.FixedSingle;
             label8.Cursor = Cursors.Hand;
             label8.Font = new Font("B Zar", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(8, 55);
+            label8.Location = new Point(5, 55);
             label8.Margin = new Padding(5);
             label8.Name = "label8";
             label8.Padding = new Padding(5);
@@ -374,9 +387,9 @@
             panel4.Controls.Add(PanelMenu);
             panel4.Controls.Add(PanelLogo);
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(828, 0);
+            panel4.Location = new Point(950, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(178, 510);
+            panel4.Size = new Size(211, 682);
             panel4.TabIndex = 7;
             // 
             // PanelMenu
@@ -388,10 +401,10 @@
             PanelMenu.Controls.Add(Btn3);
             PanelMenu.Controls.Add(Btn4);
             PanelMenu.Controls.Add(BtnExit);
-            PanelMenu.Dock = DockStyle.Fill;
+            PanelMenu.FlowDirection = FlowDirection.RightToLeft;
             PanelMenu.Location = new Point(0, 80);
             PanelMenu.Name = "PanelMenu";
-            PanelMenu.Size = new Size(178, 430);
+            PanelMenu.Size = new Size(217, 602);
             PanelMenu.TabIndex = 3;
             // 
             // Btn1
@@ -492,18 +505,18 @@
             // 
             // PanelLogo
             // 
-            PanelLogo.BackColor = Color.FromArgb(201, 244, 170);
+            PanelLogo.BackColor = Color.FromArgb(43, 84, 50);
             PanelLogo.Dock = DockStyle.Top;
             PanelLogo.Location = new Point(0, 0);
             PanelLogo.Name = "PanelLogo";
-            PanelLogo.Size = new Size(178, 80);
+            PanelLogo.Size = new Size(211, 80);
             PanelLogo.TabIndex = 2;
             // 
             // MainUserForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 25F);
+            AutoScaleDimensions = new SizeF(10F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1006, 510);
+            ClientSize = new Size(1161, 682);
             Controls.Add(PanelMain);
             Controls.Add(PanelTitleBar);
             Controls.Add(panel4);

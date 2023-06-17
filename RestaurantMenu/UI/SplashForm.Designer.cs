@@ -51,6 +51,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(342, 525);
             panel1.TabIndex = 20;
+            panel1.Paint += panel1_Paint;
             // 
             // BtnExit
             // 
@@ -62,7 +63,7 @@
             BtnExit.ImageAlign = ContentAlignment.MiddleRight;
             BtnExit.Location = new Point(57, 391);
             BtnExit.Name = "BtnExit";
-            BtnExit.Size = new Size(182, 43);
+            BtnExit.Size = new Size(213, 56);
             BtnExit.TabIndex = 0;
             BtnExit.Text = "خروج";
             BtnExit.TextAlign = ContentAlignment.MiddleCenter;
@@ -78,7 +79,7 @@
             BtnResturanRegister.ImageAlign = ContentAlignment.MiddleRight;
             BtnResturanRegister.Location = new Point(57, 317);
             BtnResturanRegister.Name = "BtnResturanRegister";
-            BtnResturanRegister.Size = new Size(182, 43);
+            BtnResturanRegister.Size = new Size(213, 51);
             BtnResturanRegister.TabIndex = 0;
             BtnResturanRegister.Text = "ثبت رستوران";
             BtnResturanRegister.TextAlign = ContentAlignment.MiddleCenter;
@@ -94,7 +95,7 @@
             BtnMainResturan.ImageAlign = ContentAlignment.MiddleRight;
             BtnMainResturan.Location = new Point(57, 80);
             BtnMainResturan.Name = "BtnMainResturan";
-            BtnMainResturan.Size = new Size(182, 43);
+            BtnMainResturan.Size = new Size(213, 52);
             BtnMainResturan.TabIndex = 0;
             BtnMainResturan.Text = "ورود رستوران";
             BtnMainResturan.TextAlign = ContentAlignment.MiddleCenter;
@@ -110,7 +111,7 @@
             BtnLoginUser.ImageAlign = ContentAlignment.MiddleRight;
             BtnLoginUser.Location = new Point(57, 161);
             BtnLoginUser.Name = "BtnLoginUser";
-            BtnLoginUser.Size = new Size(182, 43);
+            BtnLoginUser.Size = new Size(213, 51);
             BtnLoginUser.TabIndex = 0;
             BtnLoginUser.Text = "ورود کاربر";
             BtnLoginUser.TextAlign = ContentAlignment.MiddleCenter;
@@ -126,7 +127,7 @@
             BtnUserRegister.ImageAlign = ContentAlignment.MiddleRight;
             BtnUserRegister.Location = new Point(57, 241);
             BtnUserRegister.Name = "BtnUserRegister";
-            BtnUserRegister.Size = new Size(182, 43);
+            BtnUserRegister.Size = new Size(213, 50);
             BtnUserRegister.TabIndex = 0;
             BtnUserRegister.Text = "ثبت نام کاربر";
             BtnUserRegister.TextAlign = ContentAlignment.MiddleCenter;
