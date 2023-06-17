@@ -45,7 +45,7 @@
             // 
             // TxtNationalCode
             // 
-            TxtNationalCode.BackColor = Color.MistyRose;
+            TxtNationalCode.BackColor = SystemColors.Window;
             TxtNationalCode.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNationalCode.Location = new Point(498, 136);
             TxtNationalCode.Margin = new Padding(3, 4, 3, 4);
@@ -128,7 +128,7 @@
             // 
             // TxtPassword
             // 
-            TxtPassword.BackColor = Color.MistyRose;
+            TxtPassword.BackColor = SystemColors.Window;
             TxtPassword.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
             TxtPassword.Location = new Point(498, 276);
             TxtPassword.Margin = new Padding(3, 4, 3, 4);
