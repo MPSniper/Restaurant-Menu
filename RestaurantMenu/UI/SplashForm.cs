@@ -10,13 +10,13 @@
         private void BtnUserRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new UserRegisterForm().ShowDialog();
+            new UserRegisterForm().Show();
         }
 
         private void BtnResturanRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new ResturanRegisterForm().ShowDialog();
+            new ResturanRegisterForm().Show();
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -29,20 +29,20 @@
         {
 
             this.Hide();
-            new RestaurantLoginForm().ShowDialog();
+            new RestaurantLoginForm().Show();
         }
 
         private void BtnMainUser_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            new MainUserForm().ShowDialog();
+            new MainUserForm().Show();
         }
 
         private void BtnLoginUser_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new UserLoginForm().ShowDialog();
+            new UserLoginForm().Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

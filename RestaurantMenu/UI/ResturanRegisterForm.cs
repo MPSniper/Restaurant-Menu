@@ -14,7 +14,7 @@ namespace UI
         {
             this.Hide();
             SplashForm splashForm = new SplashForm();
-            splashForm.ShowDialog();
+            splashForm.Show();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace UI
                 MessageBox.Show("حساب کاربری با موفقیت ایجاد شد.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 SplashForm splashForm = new SplashForm();
-                splashForm.ShowDialog();
+                splashForm.Show();
             }
         }
 

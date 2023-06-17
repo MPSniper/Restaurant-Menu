@@ -14,7 +14,6 @@ namespace Repository.DataModel
         {
 
         }
-
         public Foods(string food, int restaurantKey, decimal price)
         {
             Food = food;

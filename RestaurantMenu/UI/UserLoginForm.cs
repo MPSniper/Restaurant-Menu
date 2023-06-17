@@ -44,7 +44,7 @@ namespace UI
         {
             this.Hide();
 
-            new SplashForm().ShowDialog();
+            new SplashForm().Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

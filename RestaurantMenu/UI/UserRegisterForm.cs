@@ -14,7 +14,7 @@ namespace UI
         private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new SplashForm().ShowDialog();
+            new SplashForm().Show();
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)

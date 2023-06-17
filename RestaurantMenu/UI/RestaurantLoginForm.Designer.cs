@@ -39,6 +39,7 @@
             label3 = new Label();
             label2 = new Label();
             label6 = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -47,7 +48,7 @@
             // 
             TxtNationalCode.BackColor = SystemColors.Window;
             TxtNationalCode.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNationalCode.Location = new Point(498, 136);
+            TxtNationalCode.Location = new Point(496, 170);
             TxtNationalCode.Margin = new Padding(3, 4, 3, 4);
             TxtNationalCode.MaxLength = 10;
             TxtNationalCode.Name = "TxtNationalCode";
@@ -70,6 +71,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(label1);
             panel2.Controls.Add(BtnLogin);
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(BtnBack);
@@ -104,10 +106,10 @@
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Location = new Point(45, 77);
+            panel3.Location = new Point(66, 118);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(392, 334);
+            panel3.Size = new Size(344, 255);
             panel3.TabIndex = 22;
             // 
             // BtnBack
@@ -130,7 +132,7 @@
             // 
             TxtPassword.BackColor = SystemColors.Window;
             TxtPassword.Font = new Font("B Zar", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtPassword.Location = new Point(498, 276);
+            TxtPassword.Location = new Point(497, 306);
             TxtPassword.Margin = new Padding(3, 4, 3, 4);
             TxtPassword.MaxLength = 10;
             TxtPassword.Name = "TxtPassword";
@@ -145,7 +147,7 @@
             label3.Cursor = Cursors.Hand;
             label3.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ImageAlign = ContentAlignment.MiddleRight;
-            label3.Location = new Point(497, 77);
+            label3.Location = new Point(495, 111);
             label3.Name = "label3";
             label3.Size = new Size(294, 55);
             label3.TabIndex = 1;
@@ -157,7 +159,7 @@
             label2.Cursor = Cursors.Hand;
             label2.Font = new Font("B Nazanin", 13F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ImageAlign = ContentAlignment.MiddleRight;
-            label2.Location = new Point(498, 217);
+            label2.Location = new Point(496, 247);
             label2.Name = "label2";
             label2.Size = new Size(294, 55);
             label2.TabIndex = 1;
@@ -175,6 +177,20 @@
             label6.TabIndex = 1;
             label6.Text = "اطلاعات کاربری";
             label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.DarkOrange;
+            label1.Cursor = Cursors.Hand;
+            label1.Font = new Font("B Nazanin", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ImageAlign = ContentAlignment.MiddleRight;
+            label1.Location = new Point(-17, 4);
+            label1.Name = "label1";
+            label1.Size = new Size(858, 41);
+            label1.TabIndex = 23;
+            label1.Text = "اطلاعات رستوران";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // RestaurantLoginForm
             // 
@@ -207,5 +223,6 @@
         private Label label2;
         private Label label6;
         private Panel panel3;
+        private Label label1;
     }
 }
