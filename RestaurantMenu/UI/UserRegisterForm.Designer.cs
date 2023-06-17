@@ -104,7 +104,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(285, 268);
             panel3.TabIndex = 6;
-            panel3.Paint += panel3_Paint;
+            //panel3.Paint += panel3_Paint;
             // 
             // PasswordTextBox
             // 
@@ -115,7 +115,7 @@
             PasswordTextBox.Size = new Size(241, 36);
             PasswordTextBox.TabIndex = 4;
             PasswordTextBox.UseSystemPasswordChar = true;
-            PasswordTextBox.TextChanged += textBox1_TextChanged_1;
+            //PasswordTextBox.TextChanged += textBox1_TextChanged_1;
             // 
             // label5
             // 
@@ -127,7 +127,7 @@
             label5.TabIndex = 3;
             label5.Text = "رمز عبور:";
             label5.TextAlign = ContentAlignment.MiddleCenter;
-            label5.Click += label5_Click;
+            //label5.Click += label5_Click;
             // 
             // NameTextBox
             // 
@@ -137,7 +137,7 @@
             NameTextBox.Name = "NameTextBox";
             NameTextBox.Size = new Size(241, 36);
             NameTextBox.TabIndex = 1;
-            NameTextBox.TextChanged += textBox1_TextChanged;
+           // NameTextBox.TextChanged += textBox1_TextChanged;
             // 
             // AddressTextBox
             // 
@@ -150,7 +150,7 @@
             AddressTextBox.ScrollBars = ScrollBars.Vertical;
             AddressTextBox.Size = new Size(241, 85);
             AddressTextBox.TabIndex = 5;
-            AddressTextBox.TextChanged += textBox4_TextChanged;
+           // AddressTextBox.TextChanged += textBox4_TextChanged;
             // 
             // NationalityTextBox
             // 
@@ -160,7 +160,7 @@
             NationalityTextBox.Name = "NationalityTextBox";
             NationalityTextBox.Size = new Size(241, 36);
             NationalityTextBox.TabIndex = 3;
-            NationalityTextBox.TextChanged += textBox3_TextChanged;
+           // NationalityTextBox.TextChanged += textBox3_TextChanged;
             // 
             // FamilyTextBox
             // 
@@ -170,7 +170,7 @@
             FamilyTextBox.Name = "FamilyTextBox";
             FamilyTextBox.Size = new Size(241, 36);
             FamilyTextBox.TabIndex = 2;
-            FamilyTextBox.TextChanged += textBox2_TextChanged;
+            //FamilyTextBox.TextChanged += textBox2_TextChanged;
             // 
             // BtnBack
             // 
@@ -218,7 +218,7 @@
             label1.TabIndex = 1;
             label1.Text = "نام : ";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+           // label1.Click += label1_Click;
             // 
             // label4
             // 
@@ -232,7 +232,7 @@
             label4.TabIndex = 1;
             label4.Text = "آدرس : ";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            label4.Click += label4_Click;
+            //label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -246,7 +246,7 @@
             label3.TabIndex = 1;
             label3.Text = "کد ملی : ";
             label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
+          //  label3.Click += label3_Click;
             // 
             // label2
             // 

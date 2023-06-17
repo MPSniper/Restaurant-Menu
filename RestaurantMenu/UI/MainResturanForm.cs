@@ -72,7 +72,7 @@
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new SplashForm().ShowDialog();
+            new SplashForm().Show();
         }
     }
 }

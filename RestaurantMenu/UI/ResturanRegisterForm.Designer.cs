@@ -95,7 +95,6 @@
             label6.TabIndex = 1;
             label6.Text = "اطلاعات رستوران";
             label6.TextAlign = ContentAlignment.MiddleCenter;
-            label6.Click += label6_Click_1;
             // 
             // panel2
             // 
@@ -184,18 +183,24 @@
             EndTime.BackColor = SystemColors.Window;
             EndTime.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             EndTime.Location = new Point(130, 86);
+            EndTime.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
+            EndTime.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             EndTime.Name = "EndTime";
             EndTime.Size = new Size(67, 36);
             EndTime.TabIndex = 7;
+            EndTime.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // StartTime
             // 
             StartTime.BackColor = SystemColors.Window;
             StartTime.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point);
             StartTime.Location = new Point(248, 86);
+            StartTime.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
+            StartTime.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             StartTime.Name = "StartTime";
             StartTime.Size = new Size(67, 36);
             StartTime.TabIndex = 6;
+            StartTime.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label8
             // 
@@ -236,7 +241,6 @@
             label10.TabIndex = 11;
             label10.Text = "شیفت کاری : ";
             label10.TextAlign = ContentAlignment.BottomCenter;
-            label10.Click += label10_Click;
             // 
             // label9
             // 
@@ -318,7 +322,6 @@
             panel1.RightToLeft = RightToLeft.Yes;
             panel1.Size = new Size(874, 553);
             panel1.TabIndex = 20;
-            panel1.Paint += panel1_Paint_1;
             // 
             // ResturanRegisterForm
             // 

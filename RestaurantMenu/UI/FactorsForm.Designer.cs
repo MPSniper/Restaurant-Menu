@@ -126,7 +126,7 @@
             label12.TabIndex = 21;
             label12.Text = "1.000.000";
             label12.TextAlign = ContentAlignment.MiddleCenter;
-            label12.Click += label12_Click;
+//            label12.Click += label12_Click;
             // 
             // label3
             // 
@@ -136,7 +136,7 @@
             label3.TabIndex = 20;
             label3.Text = "مجموع کل :";
             label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
+          //  label3.Click += label3_Click;
             // 
             // FactorsForm
             // 

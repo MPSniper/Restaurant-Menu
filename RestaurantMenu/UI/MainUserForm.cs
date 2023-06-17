@@ -14,7 +14,7 @@ namespace UI
 {
     public partial class MainUserForm : Form
     {
-        List<FoodCartViewModel> Cart = new();
+        List<FoodCartViewModel> FoodCard = new();
         public int Id { get; set; }
         int ResturanKey;
 
@@ -101,7 +101,7 @@ namespace UI
         private void AddCartFoods()
         {
             DataCarts.Rows.Clear();
-            foreach (var item in Cart)
+            foreach (var item in FoodCard)
             {
                 object[] ob = new object[5];
                 ob[0] = item.FoodId;
@@ -112,7 +112,7 @@ namespace UI
                 DataCarts.Rows.Add(ob);
             }
             CalcCartSum();
-            if (Cart.Count == 0)
+            if (FoodCard.Count == 0)
             {
                 PanelCartControls.Enabled = false;
                 BtnPay.Enabled = false;
@@ -127,7 +127,7 @@ namespace UI
         private decimal CalcCartSum()
         {
             decimal sum = 0;
-            foreach (var item in Cart)
+            foreach (var item in FoodCard)
             {
                 sum += item.FoodPrice * item.Count;
             }
@@ -149,7 +149,7 @@ namespace UI
                         var food = foodLabel.Tag as Foods;
                         if (food != null)
                         {
-                            if (Cart.Any(x => x.FoodId == food.ID))
+                            if (FoodCard.Any(x => x.FoodId == food.ID))
                                 foodLabel.BackColor = Color.Goldenrod;
                             else
                                 foodLabel.BackColor = SystemColors.ScrollBar;
@@ -173,9 +173,9 @@ namespace UI
             {
                 return;
             }
-            if (!Cart.Any(x => x.FoodId == food.ID))
+            if (!FoodCard.Any(x => x.FoodId == food.ID))
             {
-                Cart.Add(new FoodCartViewModel(food.ID, food.Food, food.Price, 1));
+                FoodCard.Add(new FoodCartViewModel(food.ID, food.Food, food.Price, 1));
                 AddCartFoods();
                 ResetFoodsButton();
             }
@@ -183,18 +183,19 @@ namespace UI
 
         private void BtnResturan_Click(object? sender, EventArgs e)
         {
-            if (Cart.Count > 0)
+            if (FoodCard.Count > 0)
             {
                 if (MessageBox.Show("با تغییر رستوران غذاهای اضافه شده با سبد خرید حذف خواهند شد ادامه می دهید؟", "هشدار", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 {
                     return;
                 }
             }
-            Cart = new();
+            FoodCard = new();
             AddCartFoods();
             var resturanButton = sender as Button;
             if (resturanButton is null)
                 return;
+
             int id = Convert.ToInt32(resturanButton.Tag);
             ResturanKey = id;
             AddFoods(id);
@@ -220,7 +221,7 @@ namespace UI
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new SplashForm().ShowDialog();
+            new SplashForm().Show();
         }
 
         private void MainUserForm_Load(object sender, EventArgs e)
@@ -234,7 +235,7 @@ namespace UI
             try
             {
                 int id = Convert.ToInt32(DataCarts.SelectedRows[0].Cells[0].Value);
-                foreach (var item in Cart)
+                foreach (var item in FoodCard)
                 {
                     if (item.FoodId == id)
                     {
@@ -254,7 +255,7 @@ namespace UI
             try
             {
                 int id = Convert.ToInt32(DataCarts.SelectedRows[0].Cells[0].Value);
-                foreach (var item in Cart)
+                foreach (var item in FoodCard)
                 {
                     if (item.FoodId == id)
                     {
@@ -281,11 +282,11 @@ namespace UI
             try
             {
                 int id = Convert.ToInt32(DataCarts.SelectedRows[0].Cells[0].Value);
-                Cart.RemoveAll(x => x.FoodId == id);
+                FoodCard.RemoveAll(x => x.FoodId == id);
                 DataCarts.Rows.RemoveAt(DataCarts.SelectedRows[0].Index);
                 ResetFoodsButton();
                 CalcCartSum();
-                if (Cart.Count == 0)
+                if (FoodCard.Count == 0)
                 {
                     PanelCartControls.Enabled = false;
                     BtnPay.Enabled = false;
@@ -302,7 +303,7 @@ namespace UI
         private void BtnDeleteAllRow_Click(object sender, EventArgs e)
         {
             DataCarts.Rows.Clear();
-            Cart.Clear();
+            FoodCard.Clear();
             ResetFoodsButton();
             CalcCartSum();
             PanelCartControls.Enabled = false;
@@ -317,7 +318,7 @@ namespace UI
                 if (factor.InsertFactor() != -1)
                 {
                     DataCarts.Rows.Clear();
-                    Cart.Clear();
+                    FoodCard.Clear();
                     ResetFoodsButton();
                     CalcCartSum();
                     PanelCartControls.Enabled = false;

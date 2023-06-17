@@ -10,11 +10,6 @@ namespace UI
             InitializeComponent();
         }
 
-        private void TxtNationalCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnLogin_Click(object sender, EventArgs e)
         {
 
@@ -38,26 +33,10 @@ namespace UI
                 this.Close();
             }
         }
-
-        private void TxtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             new SplashForm().Show();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

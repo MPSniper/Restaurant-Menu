@@ -55,7 +55,7 @@
             TxtNationalCode.RightToLeft = RightToLeft.No;
             TxtNationalCode.Size = new Size(293, 49);
             TxtNationalCode.TabIndex = 2;
-            TxtNationalCode.TextChanged += TxtNationalCode_TextChanged;
+//            TxtNationalCode.TextChanged += TxtNationalCode_TextChanged;
             // 
             // panel1
             // 
@@ -84,7 +84,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(830, 539);
             panel2.TabIndex = 3;
-            panel2.Paint += panel2_Paint;
+          //  panel2.Paint += panel2_Paint;
             // 
             // BtnLogin
             // 
@@ -140,7 +140,7 @@
             TxtPassword.Size = new Size(293, 49);
             TxtPassword.TabIndex = 2;
             TxtPassword.UseSystemPasswordChar = true;
-            TxtPassword.TextChanged += TxtPassword_TextChanged;
+           // TxtPassword.TextChanged += TxtPassword_TextChanged;
             // 
             // label3
             // 
@@ -190,7 +190,7 @@
             label1.TabIndex = 23;
             label1.Text = "اطلاعات رستوران";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+           // label1.Click += label1_Click;
             // 
             // RestaurantLoginForm
             // 
